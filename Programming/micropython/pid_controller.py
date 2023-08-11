@@ -3,7 +3,7 @@ Refer to iPad notes Project 'PCB-etching machine' for detailed math and explanat
 '''
 from machine import Pin, PWM, ADC, Timer
 from math import log
-from time import ticks_ms, ticks_ms
+from time import ticks_ms, ticks_ms, sleep
 
 
 class Heater:
@@ -26,17 +26,17 @@ class Heater:
         '''
         controls pwm with 16-bit value
 
-        NOTE: it also inverts the percentage (65535-value_u_16) as the pwm value is put through an inverter npn first for buffering the darlington npn
+        NOTE: it also inverts the percentage (65534-value_u_16) as the pwm value is put through an inverter npn first for buffering the darlington npn
         '''
-        self.pwm.duty_u16((65535-value_u_16))
+        self.pwm.duty_u16((65534-value_u_16))
 
     def set_heat(self, percentage):
         '''
-        controls pwm with percentage out of 100% instead of 65535
+        controls pwm with percentage out of 100% instead of 65534
 
         NOTE: it also inverts the percentage (100-percentage) as the pwm value is put through an inverter npn first for buffering the darlington npn
         '''
-        self.pwm.duty_u16(int(((100-percentage)/100)*65535))
+        self.pwm.duty_u16(int(((100-percentage)/100)*65534))
 
     def off(self):
         '''
@@ -49,7 +49,7 @@ class Heater:
         '''
         return current heating value
         '''
-        return int(100-(self.pwm.duty_u16()/65535)*100)
+        return round(100-(self.pwm.duty_u16()/65534)*100, 3)
 
     @property
     def raw_value(self):
@@ -58,7 +58,7 @@ class Heater:
         '''
         return self.pwm.duty_u16() 
 
-    def __str__(self):
+    def __repr__(self):
         '''
         displays current heating value
         '''
@@ -97,7 +97,7 @@ class Thermistor:
         '''
         returns voltage value read 
         '''
-        return ((self.adc.read_u16()*self.Vcc)/65535)
+        return ((self.adc.read_u16()*self.Vcc)/65534)
 
     def read_V_averaged(self):
         '''
@@ -219,7 +219,8 @@ class PID:
 
         self._last_error = None
         self._last_time = None
-        # self._last_input = None  # will be used in differential_on_measurement mode
+        self._last_input = None  # will be used in differential_on_measurement mode
+        self._last_output = None
 
     def calc(self, input_):
         '''
@@ -254,7 +255,8 @@ class PID:
         # setting previous variables
         self._last_error = error  # for next derivative term
         self._last_time = now
-        # self._last_input = input_  # will be used in differential_on_measurement mode
+        self._last_input = input_  # will be used in differential_on_measurement mode, and for monitor purposes
+        self._last_output = output  # no functional usage, just for monitoring
 
         return output
 
@@ -265,7 +267,7 @@ class PID:
         :NOTE: This function shouldn't be called by user at any time as it assumes constant dt, 
                 aka it is called at VERY CONSTANT intervals!
                 This is done by using the Timer Module in micropython device which 
-                is automatically activated using the .activate_pid_control() method.
+                is automatically activated using the .activate() method.
 
         the dt in the pid calculations is self.timer_mode_dt which is calculated automatically upon object init
 
@@ -291,7 +293,8 @@ class PID:
 
         # setting previous variables
         self._last_error = error  # for next derivative term
-        # self._last_input = input_  # will be used in differential_on_measurement mode
+        self._last_output = output  # no functional usage, just for monitoring
+        self._last_input = input_  # will be used in differential_on_measurement mode and for monitoring purposes
 
         return output
 
@@ -303,55 +306,100 @@ class PID:
         '''
         self.output_func(self._calc(self.input_func()))
 
-    def activate_pid(self, input_func, output_func):
+    def activate(self, input_func=None, output_func=None, monitor=False):
         '''
         When this method is called a Hardware Timer block is used to call self._calc() at regular 
         time intervals. 
 
         :param input_func: the function to return the current input of the system
         :param output_func: the function to set plant output
+        :param activating
         '''
+        #  Reseting pid internal variables
+        self.reset()
+
+        # saving new input/output funcs if passed
+        self.input_func = input_func if input_func is not None else self.input_func
+        self.output_func = output_func if output_func is not None else self.output_func
+
+        # Initializing the Hardware timer to start continiously calling .execute method
         self._pid_timer = Timer(period=PID.HARDWARE_TIMER_dt, mode=Timer.PERIODIC, callback=self.execute)
+
+        # activating Monitor if wanted
+        if monitor:
+            self.monitor()
         
-    def deactivate_pid(self):
+    def deactivate(self):
         '''
         Deactivates the Timer and the constant calling of self._calc()
         '''
         self._pid_timer.deinit()
+        self.output_func(min_output)
+
+    def monitor(self):
+        '''
+        continiously print __repr__ for monitoring
+
+        could be used with terminal command tee to pull data off the micorpython device
+        '''
+        try:
+            while True:
+                print(repr(self))
+                sleep(0.2)
+
+        except KeyboardInterrupt:
+            return
+
+    def __repr__(self):
+        '''
+        returns current internal variables states
+        '''
+        return f"""
+           Current PID values:
+
+            {'_last_input': {self._last_input},
+            'Kp': {self.Kp},
+            'Ki': {self.Ki},
+            'Kd': {self.Kd},
+            'setpoint': {self.setpoint},
+            '_proportional': {self._proportional},
+            '_integral': {self._integral},
+            '_derivative': {self._derivative},
+            '_last_output': {self._last_output}}
+            """
 
 
-def main():
-    '''
-    ### Main Routine ###
-    Creating Input Object -> Thermistor
-    Creating Control Algorithm Object -> PID
-    Creating Output Object -> Heater
-    '''
-    ### Initialize Thermistor Object 
-    Vcc = 3.28
-    R_10k = 9880
-    num_samples = 5
-    B_factor = 4300
-    R_nominal = 9360
-    room_temp = 25  # input here in celcuis, but in calculations, it will be converted to kelvin
-    global thermistor
-    thermistor = Thermistor(Vcc, R_10k, num_samples, B_factor, R_nominal, room_temp)
+### Main Routine ###
+# Creating Input Object -> Thermistor
+# Creating Control Algorithm Object -> PID
+# Creating Output Object -> Heater
 
-    ### Initialize PID Control Object
-    Kp = 5
-    Ki = 0.01
-    Kd = 0.1
-    setpoint = 40  # degrees celcuis
-    min_output = 0  # output power unit in percentage
-    max_output = 100
-    global pid
-    pid = PID(Kp, Ki, Kd, setpoint, min_output, max_output)
+### Initialize Thermistor Object 
+Vcc = 3.28
+R_10k = 9880
+num_samples = 5
+B_factor = 4300
+R_nominal = 9360
+room_temp = 25  # input here in celcuis, but in calculations, it will be converted to kelvin
+thermistor = Thermistor(Vcc, R_10k, num_samples, B_factor, R_nominal, room_temp)
 
-    ### Initialize Heater Object
-    global heater
-    heater = Heater()
+### Initialize Heater Object
+heater = Heater()
 
+### Initialize PID Control Object
+Kp = 5
+Ki = 0.005
+Kd = 2 
+setpoint = 45  # degrees celcuis
+min_output = 0  # output power unit in percentage
+max_output = 100
+
+pid = PID(Kp, Ki, Kd, setpoint, min_output, max_output, input_func=thermistor.read_T, output_func=heater.set_heat)
+
+
+if __name__ == '__main__':
     ### Activating System :)
-    pid.activate_pid(thermistor.read_T, heater.set_heat)
+    # for ampyrun
+    pid.activate(monitor=True)
 
 

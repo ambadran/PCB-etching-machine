@@ -1,0 +1,9752 @@
+
+}Current PID values:
+
+{'_last_input': None,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0,
+'_integral': 0,
+'_derivative': 0,
+'_last_output': None
+
+
+}Current PID values:
+
+{'_last_input': 25.95642,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 95.2179,
+'_integral': 18.99052,
+'_derivative': -0.001791992,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 25.92386,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 95.38071,
+'_integral': 38.06563,
+'_derivative': 0.000489502,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 25.95236,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 95.23819,
+'_integral': 57.16106,
+'_derivative': -0.0004882813,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 25.94421,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 95.27893,
+'_integral': 76.24942,
+'_derivative': -0.0004882813,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 25.92386,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 95.38071,
+'_integral': 95.30928,
+'_derivative': 0.001791992,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.07871,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 94.60648,
+'_integral': 100,
+'_derivative': -0.0008154297,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 25.91571,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 95.42145,
+'_integral': 100,
+'_derivative': 0.007825928,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.00534,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 94.9733,
+'_integral': 100,
+'_derivative': -0.001304932,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.05017,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 94.74915,
+'_integral': 100,
+'_derivative': -0.001793213,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.05426,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 94.7287,
+'_integral': 100,
+'_derivative': -0.003424072,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 25.9809,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 95.09552,
+'_integral': 100,
+'_derivative': 0.00782959,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.13583,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 94.32083,
+'_integral': 100,
+'_derivative': 0.002449951,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.17258,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 94.13712,
+'_integral': 100,
+'_derivative': -0.003591309,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.22156,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 93.89221,
+'_integral': 100,
+'_derivative': 0.002614746,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.28693,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 93.56537,
+'_integral': 100,
+'_derivative': -0.001470947,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.31555,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 93.42224,
+'_integral': 100,
+'_derivative': 0.0006530762,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.21341,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 93.93295,
+'_integral': 100,
+'_derivative': 0.008829346,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.44232,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 92.78839,
+'_integral': 100,
+'_derivative': -0.00114502,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.49554,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 92.52228,
+'_integral': 100,
+'_derivative': -0.002619629,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.49963,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 92.50183,
+'_integral': 100,
+'_derivative': 0.003277588,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.63077,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 91.84616,
+'_integral': 100,
+'_derivative': 0.002788086,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.63077,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 91.84616,
+'_integral': 100,
+'_derivative': 0.003444824,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.82364,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 90.88181,
+'_integral': 100,
+'_derivative': -0.003778076,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.72101,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 91.39496,
+'_integral': 100,
+'_derivative': 0.005256348,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.88529,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 90.57358,
+'_integral': 100,
+'_derivative': -0.001809082,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.94696,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 90.2652,
+'_integral': 100,
+'_derivative': 0.002139893,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 26.97986,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 90.10071,
+'_integral': 100,
+'_derivative': 0.005269775,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.03751,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 89.81247,
+'_integral': 100,
+'_derivative': 0.0004931641,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.24768,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 88.7616,
+'_integral': 100,
+'_derivative': -0.004619141,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.26416,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 88.6792,
+'_integral': 100,
+'_derivative': 0.003798828,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.32608,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 88.3696,
+'_integral': 100,
+'_derivative': -0.0004943848,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.37567,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 88.12164,
+'_integral': 100,
+'_derivative': -0.001983643,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.33023,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 88.34885,
+'_integral': 100,
+'_derivative': 0.007937011,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.5535,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 87.23251,
+'_integral': 100,
+'_derivative': -0.0001660156,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.70676,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 86.46622,
+'_integral': 100,
+'_derivative': -0.002817383,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.61972,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 86.9014,
+'_integral': 100,
+'_derivative': 0.006800537,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.81049,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 85.94757,
+'_integral': 100,
+'_derivative': -0.001992188,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 27.98084,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 85.09583,
+'_integral': 100,
+'_derivative': -0.002161865,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.05573,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 84.72137,
+'_integral': 100,
+'_derivative': 0.001665039,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.18488,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 84.07562,
+'_integral': 100,
+'_derivative': -0.002167969,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.23908,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 83.80463,
+'_integral': 100,
+'_derivative': -0.003502197,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.39355,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 83.03223,
+'_integral': 100,
+'_derivative': 0.0001660156,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.43115,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 82.84424,
+'_integral': 100,
+'_derivative': 0.0006689453,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.56503,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 82.17484,
+'_integral': 100,
+'_derivative': -0.002176514,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.64883,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 81.75583,
+'_integral': 100,
+'_derivative': 0.0,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.86734,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 80.6633,
+'_integral': 100,
+'_derivative': -0.003370361,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.92172,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 80.39139,
+'_integral': 100,
+'_derivative': 0.003892822,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 28.99353,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 80.03235,
+'_integral': 100,
+'_derivative': -0.0003271484,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 29.03564,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 79.82178,
+'_integral': 100,
+'_derivative': 0.0003466797,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 29.2644,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 78.67798,
+'_integral': 100,
+'_derivative': -0.008309326,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 29.30664,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 78.4668,
+'_integral': 100,
+'_derivative': -0.001530762,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 29.47162,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 77.64191,
+'_integral': 100,
+'_derivative': 0.002373047,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 29.61572,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 76.92139,
+'_integral': 100,
+'_derivative': -0.002883301,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 29.71335,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 76.43326,
+'_integral': 100,
+'_derivative': 0.0,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 29.892,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 75.54001,
+'_integral': 100,
+'_derivative': -0.004936523,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 29.85367,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 75.73166,
+'_integral': 100,
+'_derivative': 0.0001708984,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.07529,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 74.62357,
+'_integral': 100,
+'_derivative': -0.005969238,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.31043,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 73.44788,
+'_integral': 100,
+'_derivative': -0.007697754,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.30615,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 73.46924,
+'_integral': 100,
+'_derivative': -0.008894043,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.27618,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 73.61908,
+'_integral': 100,
+'_derivative': -0.0003430176,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.49906,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 72.50473,
+'_integral': 100,
+'_derivative': -0.000513916,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.63226,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 71.83868,
+'_integral': 100,
+'_derivative': -0.009102783,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.80454,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 70.97733,
+'_integral': 100,
+'_derivative': -0.005341797,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.74851,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 71.25748,
+'_integral': 100,
+'_derivative': 0.002241211,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 30.89514,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 70.52429,
+'_integral': 100,
+'_derivative': 0.001035156,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 31.03772,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 69.8114,
+'_integral': 100,
+'_derivative': 0.001212158,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 31.15897,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 69.20517,
+'_integral': 100,
+'_derivative': -0.002945557,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 31.25003,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 68.74985,
+'_integral': 100,
+'_derivative': 0.0008679199,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 31.44556,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 67.77222,
+'_integral': 100,
+'_derivative': -0.01735107,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 31.57623,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 67.11884,
+'_integral': 100,
+'_derivative': -0.003659668,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 31.65042,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 66.74789,
+'_integral': 100,
+'_derivative': 0.001396484,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 31.73776,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 66.31119,
+'_integral': 100,
+'_derivative': -0.001922607,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 31.89969,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 65.50156,
+'_integral': 100,
+'_derivative': 0.002104492,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 32.04443,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 64.77783,
+'_integral': 100,
+'_derivative': -0.004562988,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 32.19391,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 64.03046,
+'_integral': 100,
+'_derivative': -0.0003527832,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 32.30844,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 63.45779,
+'_integral': 100,
+'_derivative': -0.004405518,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 32.32608,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 63.3696,
+'_integral': 100,
+'_derivative': 0.0,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 32.44968,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 62.75162,
+'_integral': 100,
+'_derivative': 0.003184814,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 32.52487,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 62.37564,
+'_integral': 100,
+'_derivative': 0.001062012,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 32.80865,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 60.95673,
+'_integral': 100,
+'_derivative': -0.003552246,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.00897,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 59.95514,
+'_integral': 100,
+'_derivative': -0.007834473,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 32.99115,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 60.04425,
+'_integral': 100,
+'_derivative': 0.002675781,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.01343,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 59.93286,
+'_integral': 100,
+'_derivative': 0.003928223,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.28607,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 58.56964,
+'_integral': 100,
+'_derivative': -0.0005383301,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.3757,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 58.12149,
+'_integral': 100,
+'_derivative': -0.0003588867,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.55539,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 57.22305,
+'_integral': 100,
+'_derivative': -0.001618652,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.65448,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 56.7276,
+'_integral': 100,
+'_derivative': -0.002883301,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.76721,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 56.16394,
+'_integral': 100,
+'_derivative': -0.00270752,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.91644,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 55.41779,
+'_integral': 100,
+'_derivative': -0.003076172,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 33.98438,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 55.07813,
+'_integral': 100,
+'_derivative': -0.007781982,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.14777,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 54.26117,
+'_integral': 100,
+'_derivative': -0.0003637695,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.29337,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 53.53317,
+'_integral': 100,
+'_derivative': -0.006005859,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.37546,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 53.12271,
+'_integral': 100,
+'_derivative': 0.002921143,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.5491,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 52.25449,
+'_integral': 100,
+'_derivative': -0.007310791,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.69604,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 51.51978,
+'_integral': 100,
+'_derivative': -0.002763672,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.71957,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 51.40213,
+'_integral': 100,
+'_derivative': -0.006989746,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.77066,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 51.1467,
+'_integral': 100,
+'_derivative': -0.0005627441,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.77957,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 51.10214,
+'_integral': 100,
+'_derivative': 0.003322754,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 34.98242,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 50.08789,
+'_integral': 100,
+'_derivative': 0.0,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 35.13947,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 49.30267,
+'_integral': 100,
+'_derivative': -0.005739746,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 35.19501,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 49.02496,
+'_integral': 100,
+'_derivative': 0.0022229,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 35.38519,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 48.07404,
+'_integral': 100,
+'_derivative': -0.004641113,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 35.49213,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 47.53937,
+'_integral': 100,
+'_derivative': -0.004835205,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 35.64133,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 46.79337,
+'_integral': 100,
+'_derivative': 0.003364258,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 35.73477,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 46.32614,
+'_integral': 100,
+'_derivative': -0.00541748,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 35.85181,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 45.74097,
+'_integral': 100,
+'_derivative': -0.001685791,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 35.98322,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 45.08392,
+'_integral': 100,
+'_derivative': -0.00112793,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 36.0914,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 44.543,
+'_integral': 100,
+'_derivative': 0.002825928,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 36.23282,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 43.83591,
+'_integral': 100,
+'_derivative': 0.0003771973,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 36.30368,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 43.4816,
+'_integral': 100,
+'_derivative': -0.001512451,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 36.56433,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 42.17834,
+'_integral': 100,
+'_derivative': -0.007966309,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 36.54056,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 42.29721,
+'_integral': 100,
+'_derivative': -0.0007592773,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 36.67847,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 41.60767,
+'_integral': 100,
+'_derivative': 0.0003808594,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 36.90277,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 40.48615,
+'_integral': 100,
+'_derivative': -0.003250732,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 36.96494,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 40.17532,
+'_integral': 100,
+'_derivative': -0.001722412,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.02722,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 39.86389,
+'_integral': 100,
+'_derivative': 0.001152344,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.20013,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 38.99933,
+'_integral': 100,
+'_derivative': -0.0005773926,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.24344,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 38.78281,
+'_integral': 100,
+'_derivative': 0.004240723,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.36877,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 38.15613,
+'_integral': 100,
+'_derivative': 0.003671875,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.59616,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 37.0192,
+'_integral': 100,
+'_derivative': -0.004842529,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.71265,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 36.43677,
+'_integral': 100,
+'_derivative': -0.002719727,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.98071,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 35.09644,
+'_integral': 100,
+'_derivative': -0.007219238,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.85382,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 35.7309,
+'_integral': 100,
+'_derivative': -0.004285889,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 37.90259,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 35.48706,
+'_integral': 100,
+'_derivative': 0.005863037,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 38.24042,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 33.79791,
+'_integral': 100,
+'_derivative': -0.006866455,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 38.34369,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 33.28156,
+'_integral': 100,
+'_derivative': 0.001182861,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 38.4028,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 32.98599,
+'_integral': 100,
+'_derivative': 0.001973877,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 38.4867,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 32.56653,
+'_integral': 100,
+'_derivative': 0.002174072,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 38.62021,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 31.89896,
+'_integral': 100,
+'_derivative': -0.0003967285,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 38.82868,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 30.85663,
+'_integral': 100,
+'_derivative': -0.003776855,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.08304,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 29.58481,
+'_integral': 100,
+'_derivative': -0.008582764,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.04803,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 29.75983,
+'_integral': 100,
+'_derivative': 0.001599121,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.11304,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 29.43481,
+'_integral': 100,
+'_derivative': 0.002403564,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.41928,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 27.90359,
+'_integral': 100,
+'_derivative': -0.006033936,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.48483,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 27.57584,
+'_integral': 100,
+'_derivative': -0.003226318,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.60098,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 26.99509,
+'_integral': 100,
+'_derivative': -0.002224121,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.82404,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 25.87982,
+'_integral': 100,
+'_derivative': -0.00649292,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.82404,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 25.87982,
+'_integral': 100,
+'_derivative': 0.003459473,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 39.87488,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 25.62561,
+'_integral': 100,
+'_derivative': 0.005299072,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 40.19141,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 24.04297,
+'_integral': 100,
+'_derivative': -0.002253418,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 40.24777,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 23.76114,
+'_integral': 100,
+'_derivative': -0.002254638,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 40.39163,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 23.04184,
+'_integral': 100,
+'_derivative': -0.002056885,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 40.46375,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 22.68127,
+'_integral': 100,
+'_derivative': 0.002061768,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 40.82599,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 20.87006,
+'_integral': 100,
+'_derivative': -0.00144165,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 40.81039,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 20.94803,
+'_integral': 100,
+'_derivative': -0.0074646,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 40.88348,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 20.58258,
+'_integral': 100,
+'_derivative': -0.0004284668,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 41.04084,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 19.79584,
+'_integral': 100,
+'_derivative': -0.004223632,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 41.15555,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 19.22226,
+'_integral': 100,
+'_derivative': 0.001911621,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 41.14048,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 19.29764,
+'_integral': 100,
+'_derivative': 0.007342529,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 41.47144,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 17.64282,
+'_integral': 100,
+'_derivative': 0.0008447266,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 41.61405,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 16.92978,
+'_integral': 100,
+'_derivative': 0.001694336,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 41.80493,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 15.97534,
+'_integral': 100,
+'_derivative': 0.003190918,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 41.9007,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 15.49652,
+'_integral': 100,
+'_derivative': -0.001916504,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 41.95398,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 15.2301,
+'_integral': 100,
+'_derivative': 0.0008532715,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 42.16782,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 14.16092,
+'_integral': 100,
+'_derivative': -0.00321167,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 42.10889,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 14.45557,
+'_integral': 100,
+'_derivative': 0.003000488,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 42.3558,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 13.22098,
+'_integral': 100,
+'_derivative': -0.0004309082,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 42.56629,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 12.16858,
+'_integral': 100,
+'_derivative': -0.003027344,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 42.62043,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 11.89789,
+'_integral': 100,
+'_derivative': 0.001083984,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 42.71802,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 11.40991,
+'_integral': 100,
+'_derivative': 0.0006518555,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 42.94669,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 10.26657,
+'_integral': 100,
+'_derivative': -0.004361572,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 43.05603,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 9.719849,
+'_integral': 100,
+'_derivative': -0.0122168,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 43.14371,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 9.281464,
+'_integral': 100,
+'_derivative': 0.000657959,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 43.29758,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 8.512115,
+'_integral': 100,
+'_derivative': 0.001541748,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 43.3913,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 8.043518,
+'_integral': 100,
+'_derivative': -0.002207031,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 43.58487,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 7.075653,
+'_integral': 100,
+'_derivative': -0.002216797,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 43.82956,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 5.852203,
+'_integral': 100,
+'_derivative': -0.01067383,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 43.70148,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 6.492615,
+'_integral': 100,
+'_derivative': 0.002003174,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 43.81839,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 5.908051,
+'_integral': 100,
+'_derivative': 0.001116943,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 44.22189,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.890533,
+'_integral': 100,
+'_derivative': -0.01077759,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 44.24442,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.777924,
+'_integral': 100,
+'_derivative': -0.003602295,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 44.21063,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.946838,
+'_integral': 100,
+'_derivative': 0.004510498,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 44.44778,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.761078,
+'_integral': 100,
+'_derivative': -0.003620605,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 44.60102,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.994934,
+'_integral': 100,
+'_derivative': -0.01178223,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 44.77194,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.140289,
+'_integral': 100,
+'_derivative': -0.002966309,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 44.9895,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.05249023,
+'_integral': 100,
+'_derivative': -0.00321167,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 44.94358,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.282135,
+'_integral': 100,
+'_derivative': 0.001376953,
+'_last_output': 100
+
+
+}Current PID values:
+
+{'_last_input': 45.20828,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.041412,
+'_integral': 99.91702,
+'_derivative': -0.005302734,
+'_last_output': 98.87031
+
+
+}Current PID values:
+
+{'_last_input': 45.41086,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.054291,
+'_integral': 99.65811,
+'_derivative': -0.009027099,
+'_last_output': 97.59479
+
+
+}Current PID values:
+
+{'_last_input': 45.44568,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.228394,
+'_integral': 99.28924,
+'_derivative': -0.003713379,
+'_last_output': 97.05712
+
+
+}Current PID values:
+
+{'_last_input': 45.58533,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.926636,
+'_integral': 98.7897,
+'_derivative': -0.002562256,
+'_last_output': 95.86051
+
+
+}Current PID values:
+
+{'_last_input': 45.78986,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.94928,
+'_integral': 98.03642,
+'_derivative': -0.004680176,
+'_last_output': 94.08247
+
+
+}Current PID values:
+
+{'_last_input': 45.87198,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.359894,
+'_integral': 96.91237,
+'_derivative': 0.0110791,
+'_last_output': 92.56356
+
+
+}Current PID values:
+
+{'_last_input': 46.04852,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.242615,
+'_integral': 95.91244,
+'_derivative': -0.00541748,
+'_last_output': 90.66441
+
+
+}Current PID values:
+
+{'_last_input': 46.36243,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.812134,
+'_integral': 94.8222,
+'_derivative': -0.01961792,
+'_last_output': 87.99045
+
+
+}Current PID values:
+
+{'_last_input': 46.3327,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.663513,
+'_integral': 93.41057,
+'_derivative': 0.005715332,
+'_last_output': 86.75277
+
+
+}Current PID values:
+
+{'_last_input': 46.49945,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.497253,
+'_integral': 91.9036,
+'_derivative': 0.003345947,
+'_last_output': 84.40969
+
+
+}Current PID values:
+
+{'_last_input': 46.67295,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.364716,
+'_integral': 90.3025,
+'_derivative': -0.005506592,
+'_last_output': 81.93227
+
+
+}Current PID values:
+
+{'_last_input': 46.5831,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.915497,
+'_integral': 88.65651,
+'_derivative': 0.004312745,
+'_last_output': 80.74533
+
+
+}Current PID values:
+
+{'_last_input': 47.03436,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.17181,
+'_integral': 86.38773,
+'_derivative': -0.002177734,
+'_last_output': 76.21374
+
+
+}Current PID values:
+
+{'_last_input': 46.96179,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.80896,
+'_integral': 84.3667,
+'_derivative': -0.004825439,
+'_last_output': 74.55292
+
+
+}Current PID values:
+
+{'_last_input': 47.61991,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.09952,
+'_integral': 82.21456,
+'_derivative': -0.018573,
+'_last_output': 69.09647
+
+
+}Current PID values:
+
+{'_last_input': 47.19812,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.9906,
+'_integral': 79.88978,
+'_derivative': 0.01344849,
+'_last_output': 68.91263
+
+
+}Current PID values:
+
+{'_last_input': 47.61991,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.09952,
+'_integral': 77.45515,
+'_derivative': -0.005888672,
+'_last_output': 64.34974
+
+
+}Current PID values:
+
+{'_last_input': 47.50366,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -12.51831,
+'_integral': 74.8919,
+'_derivative': 0.007111816,
+'_last_output': 62.3807
+
+
+}Current PID values:
+
+{'_last_input': 47.89176,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -14.45877,
+'_integral': 72.27295,
+'_derivative': -0.01627442,
+'_last_output': 57.7979
+
+
+}Current PID values:
+
+{'_last_input': 47.73111,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.65555,
+'_integral': 69.49427,
+'_derivative': 0.005419922,
+'_last_output': 55.84414
+
+
+}Current PID values:
+
+{'_last_input': 48.15314,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -15.76569,
+'_integral': 65.85902,
+'_derivative': -0.005740967,
+'_last_output': 50.08759
+
+
+}Current PID values:
+
+{'_last_input': 45.19095,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.9547424,
+'_integral': 63.46472,
+'_derivative': 0.114502,
+'_last_output': 62.62448
+
+
+}Current PID values:
+
+{'_last_input': 48.4859,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.4295,
+'_integral': 60.29685,
+'_derivative': -0.008798828,
+'_last_output': 42.85854
+
+
+}Current PID values:
+
+{'_last_input': 48.5611,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.80548,
+'_integral': 56.13454,
+'_derivative': 0.09918457,
+'_last_output': 38.42825
+
+
+}Current PID values:
+
+{'_last_input': 48.89123,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.45618,
+'_integral': 52.63416,
+'_derivative': -0.02227173,
+'_last_output': 33.15572
+
+
+}Current PID values:
+
+{'_last_input': 48.66254,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.31268,
+'_integral': 48.90805,
+'_derivative': 0.008638915,
+'_last_output': 30.60401
+
+
+}Current PID values:
+
+{'_last_input': 49.12741,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.63705,
+'_integral': 45.05481,
+'_derivative': -0.01403564,
+'_last_output': 24.40372
+
+
+}Current PID values:
+
+{'_last_input': 48.99316,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.96582,
+'_integral': 40.99771,
+'_derivative': 0.005626221,
+'_last_output': 21.03751
+
+
+}Current PID values:
+
+{'_last_input': 49.21075,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.05377,
+'_integral': 35.82701,
+'_derivative': 0.003083496,
+'_last_output': 14.77632
+
+
+}Current PID values:
+
+{'_last_input': 49.0954,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.47699,
+'_integral': 31.55308,
+'_derivative': 0.008212891,
+'_last_output': 11.08431
+
+
+}Current PID values:
+
+{'_last_input': 49.5072,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.53601,
+'_integral': 27.05067,
+'_derivative': 0.00362793,
+'_last_output': 4.518291
+
+
+}Current PID values:
+
+{'_last_input': 49.61734,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.0867,
+'_integral': 22.47382,
+'_derivative': 0.0007800293,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.61734,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.0867,
+'_integral': 17.8191,
+'_derivative': 0.003120117,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.66931,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.34656,
+'_integral': 13.14977,
+'_derivative': -0.0007788086,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.85831,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -24.29153,
+'_integral': 8.301224,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.96301,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -24.81506,
+'_integral': 2.219193,
+'_derivative': 0.006568604,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.91718,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -24.58588,
+'_integral': 0,
+'_derivative': 0.005245361,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.08115,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.40573,
+'_integral': 0,
+'_derivative': -0.003939209,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.0943,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.4715,
+'_integral': 0,
+'_derivative': -0.002890625,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.25909,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.29547,
+'_integral': 0,
+'_derivative': -0.006065674,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.10746,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.53726,
+'_integral': 0,
+'_derivative': 0.001843262,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.23929,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.19644,
+'_integral': 0,
+'_derivative': 0.003173828,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.35175,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.75873,
+'_integral': 0,
+'_derivative': 0.00291748,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.21289,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.06445,
+'_integral': 0,
+'_derivative': 0.004229737,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.45789,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.28943,
+'_integral': 0,
+'_derivative': -0.00265625,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.63776,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.18878,
+'_integral': 0,
+'_derivative': -0.004534913,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.49112,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.4556,
+'_integral': 0,
+'_derivative': -0.002657471,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.50443,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.52213,
+'_integral': 0,
+'_derivative': 0.002930908,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.83194,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.1597,
+'_integral': 0,
+'_derivative': -0.01070313,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.55106,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.75528,
+'_integral': 0,
+'_derivative': -0.0007995605,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.87225,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.36127,
+'_integral': 0,
+'_derivative': -0.008044434,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.69122,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.45612,
+'_integral': 0,
+'_derivative': 0.001070557,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.63776,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.18878,
+'_integral': 0,
+'_derivative': 0.005352783,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.71799,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.58994,
+'_integral': 0,
+'_derivative': 0.001070557,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.8118,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.05899,
+'_integral': 0,
+'_derivative': 0.001611328,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.55771,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.78854,
+'_integral': 0,
+'_derivative': 0.003201904,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.88568,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.42841,
+'_integral': 0,
+'_derivative': -0.004832764,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.8588,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.29398,
+'_integral': 0,
+'_derivative': -0.001342773,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.75812,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.79059,
+'_integral': 0,
+'_derivative': 0.0005383301,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.80509,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.02542,
+'_integral': 0,
+'_derivative': -0.002145996,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.8588,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.29398,
+'_integral': 0,
+'_derivative': -0.002954102,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.73804,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.69019,
+'_integral': 0,
+'_derivative': 0.009676513,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.85208,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.26041,
+'_integral': 0,
+'_derivative': -0.001612549,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.8588,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.29398,
+'_integral': 0,
+'_derivative': -0.00107544,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.89242,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.46213,
+'_integral': 0,
+'_derivative': -0.001345215,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.78495,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.92471,
+'_integral': 0,
+'_derivative': 0.006184082,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.97995,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.89975,
+'_integral': 0,
+'_derivative': 0.001080322,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.03397,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -30.16983,
+'_integral': 0,
+'_derivative': -0.00243042,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.89914,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.4957,
+'_integral': 0,
+'_derivative': 0.0008081055,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.85208,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.26041,
+'_integral': 0,
+'_derivative': 0.00161377,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.78495,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.92471,
+'_integral': 0,
+'_derivative': 0.003760986,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.0137,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -30.06851,
+'_integral': 0,
+'_derivative': -0.009685058,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.20319,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -31.01593,
+'_integral': 0,
+'_derivative': -0.01108521,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.10153,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -30.50766,
+'_integral': 0,
+'_derivative': -0.002702637,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.953,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.76501,
+'_integral': 0,
+'_derivative': 0.001887207,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.00019,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -30.00092,
+'_integral': 0,
+'_derivative': -0.0005383301,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.09479,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -30.47394,
+'_integral': 0,
+'_derivative': -0.008094482,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.0137,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -30.06851,
+'_integral': 0,
+'_derivative': -0.005926514,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.02719,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -30.13596,
+'_integral': 0,
+'_derivative': -0.00458374,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.9126,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.56299,
+'_integral': 0,
+'_derivative': -0.002957764,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.93955,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.69772,
+'_integral': 0,
+'_derivative': -0.001884766,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.92606,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.63028,
+'_integral': 0,
+'_derivative': 0.001885986,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.83866,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.19327,
+'_integral': 0,
+'_derivative': 0.003227539,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.87225,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.36127,
+'_integral': 0,
+'_derivative': 0.00322998,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.80509,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.02542,
+'_integral': 0,
+'_derivative': 0.005107422,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.80509,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.02542,
+'_integral': 0,
+'_derivative': 0.005646973,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.8588,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.29398,
+'_integral': 0,
+'_derivative': 0.0005383301,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 51.08124,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -30.40619,
+'_integral': 0,
+'_derivative': -0.01185181,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.61105,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.05527,
+'_integral': 0,
+'_derivative': -0.000534668,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.58435,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.92175,
+'_integral': 0,
+'_derivative': 0.006416016,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.71799,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.58994,
+'_integral': 0,
+'_derivative': 0.002947998,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.77826,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.8913,
+'_integral': 0,
+'_derivative': 0.006181641,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.65778,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.28888,
+'_integral': 0,
+'_derivative': 0.003746338,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.73135,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.65677,
+'_integral': 0,
+'_derivative': 0.004560547,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.96649,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.83246,
+'_integral': 0,
+'_derivative': -0.00886963,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.89914,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.4957,
+'_integral': 0,
+'_derivative': -0.002687988,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.77157,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.85788,
+'_integral': 0,
+'_derivative': 0.003758545,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.68451,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.42255,
+'_integral': 0,
+'_derivative': 0.004287109,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.82523,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.12613,
+'_integral': 0,
+'_derivative': -0.0005383301,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.97321,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.86603,
+'_integral': 0,
+'_derivative': -0.007797852,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.72467,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.62335,
+'_integral': 0,
+'_derivative': 0.001876221,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.80509,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.02542,
+'_integral': 0,
+'_derivative': -0.001878662,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.62439,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.12195,
+'_integral': 0,
+'_derivative': 0.005887451,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.80509,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.02542,
+'_integral': 0,
+'_derivative': 0.001074219,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.73804,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.69019,
+'_integral': 0,
+'_derivative': 0.004830322,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.74475,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.72375,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.75812,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.79059,
+'_integral': 0,
+'_derivative': -0.000534668,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.69791,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.48953,
+'_integral': 0,
+'_derivative': 0.005629883,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.71799,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.58994,
+'_integral': 0,
+'_derivative': 0.001070557,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.73135,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.65677,
+'_integral': 0,
+'_derivative': 0.0005358887,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.91934,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.59671,
+'_integral': 0,
+'_derivative': -0.009927979,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.69788,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.48938,
+'_integral': 0,
+'_derivative': -0.003740234,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.59103,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.95517,
+'_integral': 0,
+'_derivative': 0.005345459,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.77157,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.85788,
+'_integral': 0,
+'_derivative': -0.004552002,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.63104,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.15521,
+'_integral': 0,
+'_derivative': 0.003745117,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.61771,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.08853,
+'_integral': 0,
+'_derivative': 0.000267334,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.61771,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.08853,
+'_integral': 0,
+'_derivative': 0.000267334,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.83866,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.19327,
+'_integral': 0,
+'_derivative': -0.01177246,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.5777,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.88849,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.55771,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.78854,
+'_integral': 0,
+'_derivative': 0.005072021,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.58435,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.92175,
+'_integral': 0,
+'_derivative': -0.0005334473,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.73804,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.69019,
+'_integral': 0,
+'_derivative': -0.007746582,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.59103,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.95517,
+'_integral': 0,
+'_derivative': -0.0008007813,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.90589,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -29.52942,
+'_integral': 0,
+'_derivative': -0.01579224,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.51108,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.55539,
+'_integral': 0,
+'_derivative': -0.001330566,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.43796,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.18979,
+'_integral': 0,
+'_derivative': 0.0055896,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.56436,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.82181,
+'_integral': 0,
+'_derivative': -0.002663574,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.35175,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.75873,
+'_integral': 0,
+'_derivative': 0.005574951,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.58435,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.92175,
+'_integral': 0,
+'_derivative': -0.001065674,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.43134,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.15668,
+'_integral': 0,
+'_derivative': 0.007188721,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.60437,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -28.02185,
+'_integral': 0,
+'_derivative': -0.005062256,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.41803,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -27.09015,
+'_integral': 0,
+'_derivative': 0.001594238,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.29877,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.49384,
+'_integral': 0,
+'_derivative': -0.002907715,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.28555,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.42776,
+'_integral': 0,
+'_derivative': 0.002382813,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.22607,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.13037,
+'_integral': 0,
+'_derivative': 0.002114258,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.26572,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.32858,
+'_integral': 0,
+'_derivative': 0.002646484,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.82522,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -24.12613,
+'_integral': 0,
+'_derivative': 0.01867676,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.14035,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.70175,
+'_integral': 0,
+'_derivative': 0.004749756,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.30539,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.52695,
+'_integral': 0,
+'_derivative': 0.002648926,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.34513,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.72562,
+'_integral': 0,
+'_derivative': -0.005025635,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.1865,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.93246,
+'_integral': 0,
+'_derivative': 0.01404785,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.16672,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.83359,
+'_integral': 0,
+'_derivative': 0.00131958,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.11405,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.57022,
+'_integral': 0,
+'_derivative': 0.005274658,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.22607,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -26.13037,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.16016,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.80078,
+'_integral': 0,
+'_derivative': -0.0005285645,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.07459,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.37292,
+'_integral': 0,
+'_derivative': -0.001051025,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.06143,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.30716,
+'_integral': 0,
+'_derivative': 0.008964844,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.98267,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -24.91333,
+'_integral': 0,
+'_derivative': 0.002888184,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.12064,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.60318,
+'_integral': 0,
+'_derivative': -0.003419189,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.05487,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.27435,
+'_integral': 0,
+'_derivative': 0.001051025,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.08774,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.43869,
+'_integral': 0,
+'_derivative': -0.01074463,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.16016,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.80078,
+'_integral': 0,
+'_derivative': -0.009981688,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.07459,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.37292,
+'_integral': 0,
+'_derivative': -0.0018396,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.01547,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.07736,
+'_integral': 0,
+'_derivative': -0.002098389,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.00235,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.01175,
+'_integral': 0,
+'_derivative': -0.004454346,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.0286,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.14297,
+'_integral': 0,
+'_derivative': -0.004719238,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.83871,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -24.19357,
+'_integral': 0,
+'_derivative': 0.004709473,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.90408,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -24.52042,
+'_integral': 0,
+'_derivative': -0.004964599,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.77997,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.89984,
+'_integral': 0,
+'_derivative': 0.00522583,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.69534,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.47672,
+'_integral': 0,
+'_derivative': 0.009919434,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.79956,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.9978,
+'_integral': 0,
+'_derivative': 0.002611084,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 50.08115,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -25.40573,
+'_integral': 0,
+'_derivative': -0.01152588,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.72785,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.63922,
+'_integral': 0,
+'_derivative': 0.001303711,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.68884,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.44421,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.73438,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.67188,
+'_integral': 0,
+'_derivative': -0.005977783,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.76694,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.83469,
+'_integral': 0,
+'_derivative': -0.00857666,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.793,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.965,
+'_integral': 0,
+'_derivative': -0.007545166,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.69534,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.47672,
+'_integral': 0,
+'_derivative': -0.0002600098,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.45545,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.27722,
+'_integral': 0,
+'_derivative': 0.009335938,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.65631,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.28156,
+'_integral': 0,
+'_derivative': -0.001038818,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.75391,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.76953,
+'_integral': 0,
+'_derivative': -0.0002600098,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.63034,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.1517,
+'_integral': 0,
+'_derivative': 0.002078858,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.63034,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.1517,
+'_integral': 0,
+'_derivative': -0.004667969,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.47485,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.37427,
+'_integral': 0,
+'_derivative': 0.006739502,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.50073,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.50366,
+'_integral': 0,
+'_derivative': -0.002327881,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.48133,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.40662,
+'_integral': 0,
+'_derivative': 0.004144287,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.54602,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.7301,
+'_integral': 0,
+'_derivative': -0.002070312,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.4878,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.43896,
+'_integral': 0,
+'_derivative': -0.003875732,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.40381,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.01904,
+'_integral': 0,
+'_derivative': 0.002324219,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.61087,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -23.05435,
+'_integral': 0,
+'_derivative': -0.00647583,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.45545,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -22.27722,
+'_integral': 0,
+'_derivative': -0.002839355,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.35864,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.79321,
+'_integral': 0,
+'_derivative': 0.0005163574,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.33933,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.69662,
+'_integral': 0,
+'_derivative': 0.01319946,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.3522,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.76102,
+'_integral': 0,
+'_derivative': 0.00387085,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.21716,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.08582,
+'_integral': 0,
+'_derivative': 0.007208252,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.19791,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.98953,
+'_integral': 0,
+'_derivative': 0.00901001,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.29428,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.47141,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.33933,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.69662,
+'_integral': 0,
+'_derivative': 0.002062988,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.18509,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.92545,
+'_integral': 0,
+'_derivative': -0.001281738,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.22357,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.11786,
+'_integral': 0,
+'_derivative': -0.002052002,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.20432,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.02158,
+'_integral': 0,
+'_derivative': 0.001798096,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.25568,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -21.27838,
+'_integral': 0,
+'_derivative': 0.002059326,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.92307,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.61533,
+'_integral': 0,
+'_derivative': 0.002548828,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.08899,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.44495,
+'_integral': 0,
+'_derivative': -0.003322754,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.05704,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.28519,
+'_integral': 0,
+'_derivative': 0.001022949,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.98041,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.90204,
+'_integral': 0,
+'_derivative': 0.001531982,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.11459,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.57297,
+'_integral': 0,
+'_derivative': -0.006386719,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.01233,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.06165,
+'_integral': 0,
+'_derivative': -0.001531982,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 49.00592,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -20.0296,
+'_integral': 0,
+'_derivative': -0.001530762,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.96765,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.83826,
+'_integral': 0,
+'_derivative': -0.00152832,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.75153,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.75763,
+'_integral': 0,
+'_derivative': 0.001776123,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.61197,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.05984,
+'_integral': 0,
+'_derivative': 0.002528076,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.85309,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.26544,
+'_integral': 0,
+'_derivative': -0.00888672,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.75787,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.78937,
+'_integral': 0,
+'_derivative': 0.003300781,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.80863,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.04312,
+'_integral': 0,
+'_derivative': 0.0007617188,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.69455,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.47275,
+'_integral': 0,
+'_derivative': 0.006087646,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.87851,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.39255,
+'_integral': 0,
+'_derivative': 0.001782227,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.79593,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.97964,
+'_integral': 0,
+'_derivative': 0.00279541,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.88489,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.42444,
+'_integral': 0,
+'_derivative': 0.001782227,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.85309,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.26544,
+'_integral': 0,
+'_derivative': -0.0007629395,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.7262,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.63098,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.92307,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.61533,
+'_integral': 0,
+'_derivative': -0.006101074,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.71985,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.59924,
+'_integral': 0,
+'_derivative': 0.002789307,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.68188,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.40942,
+'_integral': 0,
+'_derivative': 0.005577393,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.82767,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.13834,
+'_integral': 0,
+'_derivative': -0.006605225,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.77689,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.88443,
+'_integral': 0,
+'_derivative': 0.005083008,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.84674,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.2337,
+'_integral': 0,
+'_derivative': -0.003300781,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.73251,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.66257,
+'_integral': 0,
+'_derivative': 0.004569092,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.6503,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.2515,
+'_integral': 0,
+'_derivative': 0.002022705,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.80863,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -19.04312,
+'_integral': 0,
+'_derivative': -0.0002539063,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.62461,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.12302,
+'_integral': 0,
+'_derivative': -0.001751709,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.69455,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.47275,
+'_integral': 0,
+'_derivative': 0.005070801,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.58673,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.93365,
+'_integral': 0,
+'_derivative': 0.00456543,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.71353,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.56766,
+'_integral': 0,
+'_derivative': -0.0005065918,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.63132,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.15659,
+'_integral': 0,
+'_derivative': -0.003533936,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.61237,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.06183,
+'_integral': 0,
+'_derivative': 0.003540039,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.68824,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.44116,
+'_integral': 0,
+'_derivative': 0.001518555,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.61237,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.06183,
+'_integral': 0,
+'_derivative': -0.002286377,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.60565,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.02826,
+'_integral': 0,
+'_derivative': 0.006849365,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.66293,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.31467,
+'_integral': 0,
+'_derivative': 0.006081543,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.68824,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.44116,
+'_integral': 0,
+'_derivative': -0.003034668,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.59344,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.96722,
+'_integral': 0,
+'_derivative': -0.01686401,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.6503,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.2515,
+'_integral': 0,
+'_derivative': -0.005048828,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.61237,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.06183,
+'_integral': 0,
+'_derivative': -0.003027344,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.67557,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.37784,
+'_integral': 0,
+'_derivative': 0.0007592773,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.51779,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.58896,
+'_integral': 0,
+'_derivative': 0.0005029297,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.63763,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -18.18817,
+'_integral': 0,
+'_derivative': -0.004542236,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.54297,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.71484,
+'_integral': 0,
+'_derivative': 0.0005041504,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.50519,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.52594,
+'_integral': 0,
+'_derivative': -0.002028809,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.51151,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.55753,
+'_integral': 0,
+'_derivative': -0.0015271,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.4989,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.49451,
+'_integral': 0,
+'_derivative': -0.007049561,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.53631,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.68158,
+'_integral': 0,
+'_derivative': 1.464844e-05,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.46036,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.30179,
+'_integral': 0,
+'_derivative': 0.000267334,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.56818,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.84088,
+'_integral': 0,
+'_derivative': -0.004296875,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.37284,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -16.86417,
+'_integral': 0,
+'_derivative': 0.003013916,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.36618,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -16.8309,
+'_integral': 0,
+'_derivative': 0.001254883,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.4415,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.20749,
+'_integral': 0,
+'_derivative': -0.00803833,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.39792,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -16.98959,
+'_integral': 0,
+'_derivative': 0.006558838,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.45407,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.27036,
+'_integral': 0,
+'_derivative': -0.004268799,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.41049,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.05246,
+'_integral': 0,
+'_derivative': -0.008281249,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.30936,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -16.54678,
+'_integral': 0,
+'_derivative': -0.002736816,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.44858,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -17.24289,
+'_integral': 0,
+'_derivative': -0.007070313,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.30896,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -16.5448,
+'_integral': 0,
+'_derivative': -0.003502197,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.18979,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -15.94894,
+'_integral': 0,
+'_derivative': 0.001763916,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.18979,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -15.94894,
+'_integral': 0,
+'_derivative': 0.00201416,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.3595,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -16.79749,
+'_integral': 0,
+'_derivative': -0.009765625,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.13989,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -15.69946,
+'_integral': 0,
+'_derivative': -0.002989502,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.97818,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -14.8909,
+'_integral': 0,
+'_derivative': 0.005736084,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.05274,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -15.26367,
+'_integral': 0,
+'_derivative': 0.005748291,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.97818,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -14.8909,
+'_integral': 0,
+'_derivative': -0.0004980469,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 48.03406,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -15.17029,
+'_integral': 0,
+'_derivative': 0.0007470703,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.84189,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -14.20944,
+'_integral': 0,
+'_derivative': 0.007686768,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.86661,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -14.33304,
+'_integral': 0,
+'_derivative': 0.002229004,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.87281,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -14.36401,
+'_integral': 0,
+'_derivative': 0.0004956055,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.66296,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.31482,
+'_integral': 0,
+'_derivative': 0.01012695,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.87281,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -14.36401,
+'_integral': 0,
+'_derivative': -0.007900391,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.72458,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.62289,
+'_integral': 0,
+'_derivative': 0.006176758,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.66913,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.34564,
+'_integral': 0,
+'_derivative': 0.004932861,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.74304,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.71521,
+'_integral': 0,
+'_derivative': -0.0007385254,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.74304,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.71521,
+'_integral': 0,
+'_derivative': -0.004925537,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.5585,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -12.79251,
+'_integral': 0,
+'_derivative': 0.003686523,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.6322,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -13.16101,
+'_integral': 0,
+'_derivative': -0.002702637,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.5585,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -12.79251,
+'_integral': 0,
+'_derivative': -0.004168702,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.55234,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -12.76169,
+'_integral': 0,
+'_derivative': 0.001719971,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.46042,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -12.30209,
+'_integral': 0,
+'_derivative': 0.004168702,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.3504,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.75201,
+'_integral': 0,
+'_derivative': 0.004400635,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.39316,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.96579,
+'_integral': 0,
+'_derivative': -0.002442627,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.39926,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.99631,
+'_integral': 0,
+'_derivative': 0.001712646,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.41147,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -12.05734,
+'_integral': 0,
+'_derivative': 0.000489502,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.37485,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.87424,
+'_integral': 0,
+'_derivative': 0.004648438,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.26505,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.32523,
+'_integral': 0,
+'_derivative': 0.002681885,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.12524,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.62622,
+'_integral': 0,
+'_derivative': 0.007785645,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.25287,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.26434,
+'_integral': 0,
+'_derivative': -0.002919922,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.22244,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.11221,
+'_integral': 0,
+'_derivative': -0.003887939,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.10098,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.50491,
+'_integral': 0,
+'_derivative': 0.001213379,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.11313,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.56564,
+'_integral': 0,
+'_derivative': 0.00534668,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.13739,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.68695,
+'_integral': 0,
+'_derivative': -0.0002429199,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.23459,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.17294,
+'_integral': 0,
+'_derivative': -0.005828857,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.14951,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.74753,
+'_integral': 0,
+'_derivative': -0.001940918,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.99805,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.990234,
+'_integral': 0,
+'_derivative': 0.00581665,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.3443,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -11.7215,
+'_integral': 0,
+'_derivative': -0.009974365,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.16168,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.80841,
+'_integral': 0,
+'_derivative': 0.00243042,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.15558,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.77789,
+'_integral': 0,
+'_derivative': -0.001455078,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.07672,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.38361,
+'_integral': 0,
+'_derivative': 1.220703e-06,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.05252,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.2626,
+'_integral': 0,
+'_derivative': -0.006043701,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.02829,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.14145,
+'_integral': 0,
+'_derivative': 0.0007263184,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.99805,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.990234,
+'_integral': 0,
+'_derivative': -0.001208496,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.00409,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.02045,
+'_integral': 0,
+'_derivative': 0.001937256,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.01016,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.05081,
+'_integral': 0,
+'_derivative': -0.005554199,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.06464,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.32318,
+'_integral': 0,
+'_derivative': -0.004355469,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.98596,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.92981,
+'_integral': 0,
+'_derivative': -0.002657471,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.98596,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.92981,
+'_integral': 0,
+'_derivative': -0.0007250977,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.99201,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.960022,
+'_integral': 0,
+'_derivative': 0.002905273,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 47.00409,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -10.02045,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.89542,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.477081,
+'_integral': 0,
+'_derivative': 0.001204834,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.89542,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.477081,
+'_integral': 0,
+'_derivative': -0.001206055,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.83515,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.17572,
+'_integral': 0,
+'_derivative': 0.00192749,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.85922,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.296112,
+'_integral': 0,
+'_derivative': 0.002652588,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.73892,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.694611,
+'_integral': 0,
+'_derivative': 0.006983643,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.92554,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.627686,
+'_integral': 0,
+'_derivative': -0.006021729,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.79303,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.965149,
+'_integral': 0,
+'_derivative': -0.004324951,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.81107,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.055328,
+'_integral': 0,
+'_derivative': -0.001202393,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.61899,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.09494,
+'_integral': 0,
+'_derivative': 0.007442627,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.70892,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.544617,
+'_integral': 0,
+'_derivative': -0.007183838,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.59506,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.975311,
+'_integral': 0,
+'_derivative': 0.005515137,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.67295,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.364716,
+'_integral': 0,
+'_derivative': -0.00359375,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.97388,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -9.869385,
+'_integral': 0,
+'_derivative': -0.009398193,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.53528,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.676392,
+'_integral': 0,
+'_derivative': 0.005266113,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.59506,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.975311,
+'_integral': 0,
+'_derivative': -0.004541016,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.60703,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.035126,
+'_integral': 0,
+'_derivative': 0.000958252,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.64298,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.214874,
+'_integral': 0,
+'_derivative': -0.001677246,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.45771,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.288513,
+'_integral': 0,
+'_derivative': 0.01726685,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.60706,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.035278,
+'_integral': 0,
+'_derivative': 0.001915283,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.64298,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.214874,
+'_integral': 0,
+'_derivative': -0.005979004,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.64896,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.244781,
+'_integral': 0,
+'_derivative': -0.002155762,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.63696,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.184814,
+'_integral': 0,
+'_derivative': -0.005500488,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.45771,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.288513,
+'_integral': 0,
+'_derivative': 0.003103027,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.53528,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.676392,
+'_integral': 0,
+'_derivative': 0.001195068,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.43982,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.199097,
+'_integral': 0,
+'_derivative': 0.002147217,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.31488,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.574402,
+'_integral': 0,
+'_derivative': 0.00237793,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.30301,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.515045,
+'_integral': 0,
+'_derivative': 0.01625122,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.33865,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.693268,
+'_integral': 0,
+'_derivative': 0.003094482,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.45771,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.288513,
+'_integral': 0,
+'_derivative': -0.004523926,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.43982,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.199097,
+'_integral': 0,
+'_derivative': -0.003095703,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.27332,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.366577,
+'_integral': 0,
+'_derivative': -0.0002368164,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.33865,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.693268,
+'_integral': 0,
+'_derivative': -0.004984131,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.36838,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.841888,
+'_integral': 0,
+'_derivative': -0.0002380371,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.30301,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.515045,
+'_integral': 0,
+'_derivative': 0.002614746,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.32083,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.604156,
+'_integral': 0,
+'_derivative': -0.001187744,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.2496,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.248016,
+'_integral': 0,
+'_derivative': -0.0009484863,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.14304,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.715179,
+'_integral': 0,
+'_derivative': 0.004737549,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.19629,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.981445,
+'_integral': 0,
+'_derivative': 0.0002368164,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.23776,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.188812,
+'_integral': 0,
+'_derivative': -0.003552246,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.26144,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.30722,
+'_integral': 0,
+'_derivative': -0.0040271,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.44577,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.228851,
+'_integral': 0,
+'_derivative': -0.01824707,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.08984,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.449219,
+'_integral': 0,
+'_derivative': -0.003303223,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.10757,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.537872,
+'_integral': 0,
+'_derivative': -0.002597656,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.01904,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.095215,
+'_integral': 0,
+'_derivative': 0.003304443,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.97782,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.889069,
+'_integral': 0,
+'_derivative': 0.006845703,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.9484,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.741974,
+'_integral': 0,
+'_derivative': -0.0009411621,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.01907,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.095367,
+'_integral': 0,
+'_derivative': -0.001414795,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.04263,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.213165,
+'_integral': 0,
+'_derivative': -0.008704834,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.93072,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.653625,
+'_integral': 0,
+'_derivative': -0.006103516,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.96603,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.83017,
+'_integral': 0,
+'_derivative': 0.001177978,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.77228,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.861389,
+'_integral': 0,
+'_derivative': 0.00234497,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.70206,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.510284,
+'_integral': 0,
+'_derivative': 0.004918213,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.70792,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.539581,
+'_integral': 0,
+'_derivative': -0.008397217,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.60861,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.04306,
+'_integral': 0,
+'_derivative': 0.003270264,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.69623,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.48114,
+'_integral': 0,
+'_derivative': 0.0009350586,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.59699,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.984924,
+'_integral': 0,
+'_derivative': -0.001398926,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.55618,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.780914,
+'_integral': 0,
+'_derivative': 0.0004650879,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.4631,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.315521,
+'_integral': 0,
+'_derivative': 0.003023682,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.43988,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.199402,
+'_integral': 0,
+'_derivative': 0.004187012,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.45728,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.286377,
+'_integral': 0,
+'_derivative': 0.005821533,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.16211,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.8105469,
+'_integral': 0,
+'_derivative': 0.009022218,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.34125,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.706238,
+'_integral': 0,
+'_derivative': -0.0002307129,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.30075,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.503754,
+'_integral': 0,
+'_derivative': -0.0009265137,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.30655,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.532745,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.23715,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.18576,
+'_integral': 0,
+'_derivative': -0.005306396,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.11603,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.5801392,
+'_integral': 0,
+'_derivative': -0.0002307129,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.00671,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.03356934,
+'_integral': 0,
+'_derivative': 0.004832764,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.15058,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.7528687,
+'_integral': 0,
+'_derivative': 0.002076416,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.16788,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.839386,
+'_integral': 0,
+'_derivative': -0.005527344,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 44.94358,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.282135,
+'_integral': 0.01410675,
+'_derivative': 0.005054932,
+'_last_output': 0.3012967
+
+
+}Current PID values:
+
+{'_last_input': 44.97229,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.1385498,
+'_integral': 0.06183624,
+'_derivative': -0.004813232,
+'_last_output': 0.1955728
+
+
+}Current PID values:
+
+{'_last_input': 45.0412,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.2059937,
+'_integral': 0.08090973,
+'_derivative': -0.005966797,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.01822,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.09109497,
+'_integral': 0.06411743,
+'_derivative': -0.002296143,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.0527,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.2635193,
+'_integral': 0.0860672,
+'_derivative': -0.002757568,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 44.92065,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.3967285,
+'_integral': 0.0979538,
+'_derivative': 0.005511475,
+'_last_output': 0.5001938
+
+
+}Current PID values:
+
+{'_last_input': 44.94358,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.282135,
+'_integral': 0.2200089,
+'_derivative': -0.002978516,
+'_last_output': 0.4991653
+
+
+}Current PID values:
+
+{'_last_input': 44.80621,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.9689331,
+'_integral': 0.2833862,
+'_derivative': 0.003660889,
+'_last_output': 1.25598
+
+
+}Current PID values:
+
+{'_last_input': 44.75482,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.225891,
+'_integral': 0.4427643,
+'_derivative': 0.005258789,
+'_last_output': 1.673914
+
+
+}Current PID values:
+
+{'_last_input': 44.76621,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.168976,
+'_integral': 0.6508026,
+'_derivative': -0.0002270508,
+'_last_output': 1.819551
+
+
+}Current PID values:
+
+{'_last_input': 44.73199,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.340027,
+'_integral': 0.8431168,
+'_derivative': 0.005942383,
+'_last_output': 2.189086
+
+
+}Current PID values:
+
+{'_last_input': 44.68637,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.568146,
+'_integral': 1.162331,
+'_derivative': 0.005478516,
+'_last_output': 2.735955
+
+
+}Current PID values:
+
+{'_last_input': 44.64652,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.767426,
+'_integral': 1.541397,
+'_derivative': -0.003184814,
+'_last_output': 3.305638
+
+
+}Current PID values:
+
+{'_last_input': 44.59534,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.023315,
+'_integral': 1.982994,
+'_derivative': -0.003862305,
+'_last_output': 4.002447
+
+
+}Current PID values:
+
+{'_last_input': 44.53851,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.307434,
+'_integral': 2.462914,
+'_derivative': -0.002269287,
+'_last_output': 4.768078
+
+
+}Current PID values:
+
+{'_last_input': 44.62943,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.852875,
+'_integral': 2.994919,
+'_derivative': -0.001363525,
+'_last_output': 4.84643
+
+
+}Current PID values:
+
+{'_last_input': 44.43646,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.817688,
+'_integral': 3.558304,
+'_derivative': 0.005899658,
+'_last_output': 6.381891
+
+
+}Current PID values:
+
+{'_last_input': 44.32904,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.354797,
+'_integral': 4.169907,
+'_derivative': 0.002260742,
+'_last_output': 7.526965
+
+
+}Current PID values:
+
+{'_last_input': 44.51013,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.449341,
+'_integral': 4.780052,
+'_derivative': -0.007469482,
+'_last_output': 7.221923
+
+
+}Current PID values:
+
+{'_last_input': 44.32904,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.354797,
+'_integral': 5.459427,
+'_derivative': -0.004511719,
+'_last_output': 8.809712
+
+
+}Current PID values:
+
+{'_last_input': 44.62943,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.852875,
+'_integral': 6.11927,
+'_derivative': -0.01020752,
+'_last_output': 7.961937
+
+
+}Current PID values:
+
+{'_last_input': 44.08133,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.593353,
+'_integral': 6.973389,
+'_derivative': -0.01808228,
+'_last_output': 11.54866
+
+
+}Current PID values:
+
+{'_last_input': 44.12064,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.39682,
+'_integral': 8.532463,
+'_derivative': -0.08733276,
+'_last_output': 12.84195
+
+
+}Current PID values:
+
+{'_last_input': 44.13751,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.312439,
+'_integral': 9.309006,
+'_derivative': 0.001573486,
+'_last_output': 13.62302
+
+
+}Current PID values:
+
+{'_last_input': 44.34598,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.270111,
+'_integral': 10.03355,
+'_derivative': -0.005413818,
+'_last_output': 13.29825
+
+
+}Current PID values:
+
+{'_last_input': 44.15998,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.200134,
+'_integral': 10.83275,
+'_derivative': -0.001348877,
+'_last_output': 15.03153
+
+
+}Current PID values:
+
+{'_last_input': 44.25006,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.749695,
+'_integral': 11.73306,
+'_derivative': -0.009665527,
+'_last_output': 15.47308
+
+
+}Current PID values:
+
+{'_last_input': 44.1825,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.087524,
+'_integral': 12.48994,
+'_derivative': -0.0009008789,
+'_last_output': 16.57656
+
+
+}Current PID values:
+
+{'_last_input': 43.97482,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 5.125885,
+'_integral': 13.5804,
+'_derivative': 0.01529785,
+'_last_output': 18.72158
+
+
+}Current PID values:
+
+{'_last_input': 43.98044,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 5.097809,
+'_integral': 14.45119,
+'_derivative': 0.004934082,
+'_last_output': 19.55393
+
+
+}Current PID values:
+
+{'_last_input': 43.99723,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 5.013885,
+'_integral': 15.36839,
+'_derivative': 0.006060791,
+'_last_output': 20.38834
+
+
+}Current PID values:
+
+{'_last_input': 44.23316,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.834229,
+'_integral': 16.11396,
+'_derivative': -0.004725342,
+'_last_output': 19.94347
+
+
+}Current PID values:
+
+{'_last_input': 44.04205,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.789734,
+'_integral': 17.03402,
+'_derivative': 0.001121826,
+'_last_output': 21.82487
+
+
+}Current PID values:
+
+{'_last_input': 44.15436,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.22821,
+'_integral': 17.83598,
+'_derivative': -0.002022705,
+'_last_output': 22.06217
+
+
+}Current PID values:
+
+{'_last_input': 44.22751,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.862457,
+'_integral': 18.69419,
+'_derivative': -0.001125488,
+'_last_output': 22.55552
+
+
+}Current PID values:
+
+{'_last_input': 44.22189,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.890533,
+'_integral': 19.78619,
+'_derivative': -0.007641602,
+'_last_output': 23.66908
+
+
+}Current PID values:
+
+{'_last_input': 44.02524,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.87381,
+'_integral': 20.6416,
+'_derivative': 0.006965332,
+'_last_output': 25.52238
+
+
+}Current PID values:
+
+{'_last_input': 44.30646,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.467712,
+'_integral': 21.58245,
+'_derivative': -0.01259277,
+'_last_output': 25.03757
+
+
+}Current PID values:
+
+{'_last_input': 43.93567,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 5.321655,
+'_integral': 22.43351,
+'_derivative': 0.01257568,
+'_last_output': 27.76774
+
+
+}Current PID values:
+
+{'_last_input': 44.37988,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.100586,
+'_integral': 23.17474,
+'_derivative': -0.001807861,
+'_last_output': 26.27352
+
+
+}Current PID values:
+
+{'_last_input': 44.12064,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.39682,
+'_integral': 24.10543,
+'_derivative': 0.004274902,
+'_last_output': 28.50653
+
+
+}Current PID values:
+
+{'_last_input': 44.4761,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.619476,
+'_integral': 24.85637,
+'_derivative': -0.02049927,
+'_last_output': 27.45535
+
+
+}Current PID values:
+
+{'_last_input': 44.25006,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.749695,
+'_integral': 25.86752,
+'_derivative': 0.008588867,
+'_last_output': 29.62581
+
+
+}Current PID values:
+
+{'_last_input': 44.28952,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.552399,
+'_integral': 26.809,
+'_derivative': -0.00135376,
+'_last_output': 30.36004
+
+
+}Current PID values:
+
+{'_last_input': 43.99723,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 5.013885,
+'_integral': 27.63479,
+'_derivative': 0.006060791,
+'_last_output': 32.65474
+
+
+}Current PID values:
+
+{'_last_input': 44.23316,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.834229,
+'_integral': 28.50394,
+'_derivative': 0.002028809,
+'_last_output': 32.3402
+
+
+}Current PID values:
+
+{'_last_input': 44.19937,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.003143,
+'_integral': 29.60919,
+'_derivative': -0.0004504395,
+'_last_output': 33.61189
+
+
+}Current PID values:
+
+{'_last_input': 44.49878,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.506104,
+'_integral': 30.30669,
+'_derivative': -0.003850098,
+'_last_output': 32.80894
+
+
+}Current PID values:
+
+{'_last_input': 44.25006,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.749695,
+'_integral': 31.02279,
+'_derivative': 0.00112793,
+'_last_output': 34.77361
+
+
+}Current PID values:
+
+{'_last_input': 44.51581,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.420959,
+'_integral': 31.76814,
+'_derivative': -0.008149414,
+'_last_output': 34.18095
+
+
+}Current PID values:
+
+{'_last_input': 44.13751,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.312439,
+'_integral': 32.45869,
+'_derivative': 0.006757813,
+'_last_output': 36.77788
+
+
+}Current PID values:
+
+{'_last_input': 44.21063,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.946838,
+'_integral': 33.35922,
+'_derivative': 0.01197998,
+'_last_output': 37.31804
+
+
+}Current PID values:
+
+{'_last_input': 44.42514,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.874298,
+'_integral': 34.00268,
+'_derivative': -0.01464966,
+'_last_output': 36.86233
+
+
+}Current PID values:
+
+{'_last_input': 44.24442,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.777924,
+'_integral': 34.68562,
+'_derivative': 0.0192749,
+'_last_output': 38.48282
+
+
+}Current PID values:
+
+{'_last_input': 44.30646,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.467712,
+'_integral': 35.34372,
+'_derivative': -0.004733887,
+'_last_output': 38.8067
+
+
+}Current PID values:
+
+{'_last_input': 44.3234,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.383026,
+'_integral': 36.00314,
+'_derivative': 0.008604736,
+'_last_output': 39.39477
+
+
+}Current PID values:
+
+{'_last_input': 44.34598,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.270111,
+'_integral': 36.58212,
+'_derivative': 0.003166504,
+'_last_output': 39.8554
+
+
+}Current PID values:
+
+{'_last_input': 44.48746,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.562714,
+'_integral': 37.23169,
+'_derivative': -0.0009069824,
+'_last_output': 39.7935
+
+
+}Current PID values:
+
+{'_last_input': 44.60102,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.994934,
+'_integral': 37.88345,
+'_derivative': -0.01426392,
+'_last_output': 39.86413
+
+
+}Current PID values:
+
+{'_last_input': 44.14875,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 4.256287,
+'_integral': 38.40402,
+'_derivative': 0.01513672,
+'_last_output': 42.67545
+
+
+}Current PID values:
+
+{'_last_input': 44.68637,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.568146,
+'_integral': 38.9022,
+'_derivative': -0.01225952,
+'_last_output': 40.45808
+
+
+}Current PID values:
+
+{'_last_input': 44.28952,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.552399,
+'_integral': 39.47823,
+'_derivative': 0.009051514,
+'_last_output': 43.03968
+
+
+}Current PID values:
+
+{'_last_input': 44.77194,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.140289,
+'_integral': 39.9974,
+'_derivative': -0.02065063,
+'_last_output': 41.11704
+
+
+}Current PID values:
+
+{'_last_input': 44.37424,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 3.128815,
+'_integral': 40.45854,
+'_derivative': 0.0143103,
+'_last_output': 43.60166
+
+
+}Current PID values:
+
+{'_last_input': 44.50449,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.47757,
+'_integral': 40.97019,
+'_derivative': -0.01715088,
+'_last_output': 43.43061
+
+
+}Current PID values:
+
+{'_last_input': 44.56689,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.165527,
+'_integral': 41.37336,
+'_derivative': 0.007287598,
+'_last_output': 43.54618
+
+
+}Current PID values:
+
+{'_last_input': 44.78336,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.083221,
+'_integral': 41.91017,
+'_derivative': -0.006611328,
+'_last_output': 42.98677
+
+
+}Current PID values:
+
+{'_last_input': 44.43082,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.845917,
+'_integral': 42.26483,
+'_derivative': 0.01067871,
+'_last_output': 45.12143
+
+
+}Current PID values:
+
+{'_last_input': 44.90921,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.453949,
+'_integral': 42.58104,
+'_derivative': -0.00822998,
+'_last_output': 43.02676
+
+
+}Current PID values:
+
+{'_last_input': 44.57828,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 2.108612,
+'_integral': 42.87019,
+'_derivative': 0.0002270508,
+'_last_output': 44.97903
+
+
+}Current PID values:
+
+{'_last_input': 44.978,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.1100159,
+'_integral': 43.17634,
+'_derivative': -0.01303223,
+'_last_output': 43.27332
+
+
+}Current PID values:
+
+{'_last_input': 43.99164,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 5.041809,
+'_integral': 43.58091,
+'_derivative': 0.03098267,
+'_last_output': 48.6537
+
+
+}Current PID values:
+
+{'_last_input': 45.03543,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.1771545,
+'_integral': 43.87269,
+'_derivative': -0.01419067,
+'_last_output': 43.68135
+
+
+}Current PID values:
+
+{'_last_input': 44.71488,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.425629,
+'_integral': 44.04354,
+'_derivative': 0.006627197,
+'_last_output': 45.4758
+
+
+}Current PID values:
+
+{'_last_input': 44.72629,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 1.368561,
+'_integral': 44.30818,
+'_derivative': 0.01420654,
+'_last_output': 45.69094
+
+
+}Current PID values:
+
+{'_last_input': 44.89774,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.511322,
+'_integral': 44.42471,
+'_derivative': -0.0006872559,
+'_last_output': 44.93534
+
+
+}Current PID values:
+
+{'_last_input': 44.90921,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.453949,
+'_integral': 44.64618,
+'_derivative': 0.007580566,
+'_last_output': 45.10771
+
+
+}Current PID values:
+
+{'_last_input': 44.89203,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.539856,
+'_integral': 44.62201,
+'_derivative': 0.0002282715,
+'_last_output': 45.1621
+
+
+}Current PID values:
+
+{'_last_input': 45.21982,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.099091,
+'_integral': 44.62921,
+'_derivative': -0.007834473,
+'_last_output': 43.52229
+
+
+}Current PID values:
+
+{'_last_input': 44.978,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.1100159,
+'_integral': 44.47846,
+'_derivative': 0.01360352,
+'_last_output': 44.60208
+
+
+}Current PID values:
+
+{'_last_input': 45.26025,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.30127,
+'_integral': 44.3794,
+'_derivative': -0.003695068,
+'_last_output': 43.07443
+
+
+}Current PID values:
+
+{'_last_input': 45.35285,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.764221,
+'_integral': 44.23531,
+'_derivative': -0.01820435,
+'_last_output': 42.45288
+
+
+}Current PID values:
+
+{'_last_input': 44.87485,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.6257629,
+'_integral': 44.10165,
+'_derivative': 0.01703613,
+'_last_output': 44.74445
+
+
+}Current PID values:
+
+{'_last_input': 45.26025,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.30127,
+'_integral': 43.99699,
+'_derivative': -0.009681396,
+'_last_output': 42.68604
+
+
+}Current PID values:
+
+{'_last_input': 44.84622,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': 0.7688904,
+'_integral': 43.83443,
+'_derivative': 0.01725464,
+'_last_output': 44.62058
+
+
+}Current PID values:
+
+{'_last_input': 45.52127,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.606354,
+'_integral': 43.54347,
+'_derivative': -0.01874267,
+'_last_output': 40.91837
+
+
+}Current PID values:
+
+{'_last_input': 45.26602,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.330109,
+'_integral': 43.32782,
+'_derivative': 0.004168702,
+'_last_output': 42.00188
+
+
+}Current PID values:
+
+{'_last_input': 45.23715,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.18576,
+'_integral': 43.01976,
+'_derivative': -0.0004626465,
+'_last_output': 41.83354
+
+
+}Current PID values:
+
+{'_last_input': 45.19095,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.9547424,
+'_integral': 42.84012,
+'_derivative': 0.007635498,
+'_last_output': 41.89301
+
+
+}Current PID values:
+
+{'_last_input': 45.45151,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.257538,
+'_integral': 42.5,
+'_derivative': -0.01595215,
+'_last_output': 40.22651
+
+
+}Current PID values:
+
+{'_last_input': 45.12753,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.6376648,
+'_integral': 42.25401,
+'_derivative': 0.0009216309,
+'_last_output': 41.61727
+
+
+}Current PID values:
+
+{'_last_input': 45.64948,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.247375,
+'_integral': 41.92813,
+'_derivative': -0.01533813,
+'_last_output': 38.66542
+
+
+}Current PID values:
+
+{'_last_input': 45.15634,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.7817078,
+'_integral': 41.56343,
+'_derivative': 0.007629395,
+'_last_output': 40.78935
+
+
+}Current PID values:
+
+{'_last_input': 45.4631,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.315521,
+'_integral': 41.24662,
+'_derivative': -0.0104248,
+'_last_output': 38.92067
+
+
+}Current PID values:
+
+{'_last_input': 45.17941,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -0.8970642,
+'_integral': 40.83988,
+'_derivative': 0.01437134,
+'_last_output': 39.95719
+
+
+}Current PID values:
+
+{'_last_input': 45.70206,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.510284,
+'_integral': 40.37055,
+'_derivative': -0.01813354,
+'_last_output': 36.84213
+
+
+}Current PID values:
+
+{'_last_input': 45.45151,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.257538,
+'_integral': 39.90585,
+'_derivative': 0.007685547,
+'_last_output': 37.65599
+
+
+}Current PID values:
+
+{'_last_input': 45.51544,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.577209,
+'_integral': 39.31191,
+'_derivative': 0.004895019,
+'_last_output': 36.7396
+
+
+}Current PID values:
+
+{'_last_input': 45.40503,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.025146,
+'_integral': 38.72344,
+'_derivative': 0.003951416,
+'_last_output': 36.70224
+
+
+}Current PID values:
+
+{'_last_input': 45.69623,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.48114,
+'_integral': 38.26146,
+'_derivative': -0.006998291,
+'_last_output': 34.77332
+
+
+}Current PID values:
+
+{'_last_input': 45.29495,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -1.474762,
+'_integral': 37.69161,
+'_derivative': 0.005563965,
+'_last_output': 36.22241
+
+
+}Current PID values:
+
+{'_last_input': 45.68454,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.422699,
+'_integral': 37.20649,
+'_derivative': -0.009090576,
+'_last_output': 33.7747
+
+
+}Current PID values:
+
+{'_last_input': 45.6203,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.101501,
+'_integral': 36.53067,
+'_derivative': 0.006313477,
+'_last_output': 33.43548
+
+
+}Current PID values:
+
+{'_last_input': 45.77814,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.890686,
+'_integral': 36.00622,
+'_derivative': -0.01515503,
+'_last_output': 32.10038
+
+
+}Current PID values:
+
+{'_last_input': 45.61447,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.072357,
+'_integral': 35.48249,
+'_derivative': -0.01370605,
+'_last_output': 32.39643
+
+
+}Current PID values:
+
+{'_last_input': 45.65534,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.276672,
+'_integral': 34.87364,
+'_derivative': 0.005615234,
+'_last_output': 31.60259
+
+
+}Current PID values:
+
+{'_last_input': 45.69037,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.451843,
+'_integral': 34.15974,
+'_derivative': -0.005367432,
+'_last_output': 30.70253
+
+
+}Current PID values:
+
+{'_last_input': 45.76642,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.832092,
+'_integral': 33.26624,
+'_derivative': -0.002574463,
+'_last_output': 29.43157
+
+
+}Current PID values:
+
+{'_last_input': 45.59699,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.984924,
+'_integral': 32.49074,
+'_derivative': 0.002800293,
+'_last_output': 29.50861
+
+
+}Current PID values:
+
+{'_last_input': 45.87198,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.359894,
+'_integral': 31.76809,
+'_derivative': -0.009366456,
+'_last_output': 27.39883
+
+
+}Current PID values:
+
+{'_last_input': 45.70792,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.539581,
+'_integral': 30.99281,
+'_derivative': 0.003980713,
+'_last_output': 27.45721
+
+
+}Current PID values:
+
+{'_last_input': 45.90723,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.536133,
+'_integral': 30.28023,
+'_derivative': -0.007738037,
+'_last_output': 25.73637
+
+
+}Current PID values:
+
+{'_last_input': 46.11347,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.567322,
+'_integral': 29.13123,
+'_derivative': -0.01528564,
+'_last_output': 23.54863
+
+
+}Current PID values:
+
+{'_last_input': 45.83676,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.183807,
+'_integral': 28.14555,
+'_derivative': 0.006348877,
+'_last_output': 23.96809
+
+
+}Current PID values:
+
+{'_last_input': 45.74301,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.715057,
+'_integral': 27.27639,
+'_derivative': 0.004923096,
+'_last_output': 23.56626
+
+
+}Current PID values:
+
+{'_last_input': 45.84851,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.242554,
+'_integral': 26.39842,
+'_derivative': 0.005643311,
+'_last_output': 22.16151
+
+
+}Current PID values:
+
+{'_last_input': 46.01315,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.065765,
+'_integral': 25.35849,
+'_derivative': -0.005646973,
+'_last_output': 20.28708
+
+
+}Current PID values:
+
+{'_last_input': 46.00727,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.036316,
+'_integral': 24.30834,
+'_derivative': 0.006140137,
+'_last_output': 19.27816
+
+
+}Current PID values:
+
+{'_last_input': 46.04856,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.242767,
+'_integral': 23.25639,
+'_derivative': -0.01058228,
+'_last_output': 18.00304
+
+
+}Current PID values:
+
+{'_last_input': 46.32083,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.604156,
+'_integral': 22.12502,
+'_derivative': -0.01112793,
+'_last_output': 15.50974
+
+
+}Current PID values:
+
+{'_last_input': 46.21997,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.099854,
+'_integral': 20.65465,
+'_derivative': -0.0002368164,
+'_last_output': 14.55456
+
+
+}Current PID values:
+
+{'_last_input': 46.23184,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.15921,
+'_integral': 19.4879,
+'_derivative': 0.0,
+'_last_output': 13.32869
+
+
+}Current PID values:
+
+{'_last_input': 46.25553,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.277618,
+'_integral': 18.35661,
+'_derivative': -0.009458009,
+'_last_output': 12.06953
+
+
+}Current PID values:
+
+{'_last_input': 46.3327,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.663513,
+'_integral': 17.06839,
+'_derivative': -0.0007128906,
+'_last_output': 10.40416
+
+
+}Current PID values:
+
+{'_last_input': 46.3446,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.723022,
+'_integral': 15.75783,
+'_derivative': -0.007825928,
+'_last_output': 9.026979
+
+
+}Current PID values:
+
+{'_last_input': 46.29114,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.455688,
+'_integral': 14.39835,
+'_derivative': 0.003327637,
+'_last_output': 7.945985
+
+
+}Current PID values:
+
+{'_last_input': 46.43982,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.199097,
+'_integral': 13.07438,
+'_derivative': -0.01210815,
+'_last_output': 5.863174
+
+
+}Current PID values:
+
+{'_last_input': 46.43387,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.169342,
+'_integral': 11.44528,
+'_derivative': 0.0009533691,
+'_last_output': 4.276893
+
+
+}Current PID values:
+
+{'_last_input': 46.30893,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.544647,
+'_integral': 10.07087,
+'_derivative': 0.008337403,
+'_last_output': 3.53456
+
+
+}Current PID values:
+
+{'_last_input': 46.04263,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.213165,
+'_integral': 8.770523,
+'_derivative': 0.01612549,
+'_last_output': 3.573483
+
+
+}Current PID values:
+
+{'_last_input': 46.47559,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.37793,
+'_integral': 7.403549,
+'_derivative': -0.009039308,
+'_last_output': 0.0165802
+
+
+}Current PID values:
+
+{'_last_input': 46.40409,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.020416,
+'_integral': 5.986015,
+'_derivative': -0.003093262,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.43982,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.199097,
+'_integral': 4.564049,
+'_derivative': -0.0009521484,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.43982,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.199097,
+'_integral': 3.107834,
+'_derivative': 0.0009533691,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.41602,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.080078,
+'_integral': 1.644157,
+'_derivative': 0.00262085,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.48154,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.407684,
+'_integral': 0,
+'_derivative': -0.0009533691,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.50543,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.527161,
+'_integral': 0,
+'_derivative': -0.004530029,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.51142,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.557068,
+'_integral': 0,
+'_derivative': -0.002148438,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.51142,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.557068,
+'_integral': 0,
+'_derivative': -0.0004785156,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.48154,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.407684,
+'_integral': 0,
+'_derivative': 0.003105469,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.53528,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.676392,
+'_integral': 0,
+'_derivative': -0.002625732,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.57712,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.88559,
+'_integral': 0,
+'_derivative': -0.002390137,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.38028,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.901398,
+'_integral': 0,
+'_derivative': 0.00739502,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.59506,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.975311,
+'_integral': 0,
+'_derivative': 0.00119751,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.51737,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.586823,
+'_integral': 0,
+'_derivative': 0.004064941,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.42792,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.139587,
+'_integral': 0,
+'_derivative': 0.006925049,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.54724,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.736206,
+'_integral': 0,
+'_derivative': 0.006947021,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.39813,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.990662,
+'_integral': 0,
+'_derivative': 0.01147095,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.53528,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.676392,
+'_integral': 0,
+'_derivative': 0.006945801,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.57712,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.88559,
+'_integral': 0,
+'_derivative': -0.007159424,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.49945,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.497253,
+'_integral': 0,
+'_derivative': 0.0002392578,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.54724,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.736206,
+'_integral': 0,
+'_derivative': -0.004296875,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.46366,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.318268,
+'_integral': 0,
+'_derivative': -0.003334961,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.51737,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.586823,
+'_integral': 0,
+'_derivative': -0.0004772949,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.63696,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -8.184814,
+'_integral': 0,
+'_derivative': -0.00526123,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.46366,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.318268,
+'_integral': 0,
+'_derivative': 0.001671143,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.36838,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.841888,
+'_integral': 0,
+'_derivative': 0.007871094,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.45175,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.258759,
+'_integral': 0,
+'_derivative': -0.001668701,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.46366,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.318268,
+'_integral': 0,
+'_derivative': -0.0009533691,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.43982,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.199097,
+'_integral': 0,
+'_derivative': 0.0143689,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.27332,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.366577,
+'_integral': 0,
+'_derivative': 0.002613525,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.27927,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.396332,
+'_integral': 0,
+'_derivative': 0.004278564,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.31488,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.574402,
+'_integral': 0,
+'_derivative': -0.000949707,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.39813,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.990662,
+'_integral': 0,
+'_derivative': -0.007836914,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.30304,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.515198,
+'_integral': 0,
+'_derivative': -0.0002380371,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.26148,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.307373,
+'_integral': 0,
+'_derivative': -0.002370605,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.3327,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.663513,
+'_integral': 0,
+'_derivative': -0.007349854,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.15485,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.774231,
+'_integral': 0,
+'_derivative': 0.004263916,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.45175,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -7.258759,
+'_integral': 0,
+'_derivative': -0.005949707,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.14304,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.715179,
+'_integral': 0,
+'_derivative': -0.0004736328,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.20813,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.040649,
+'_integral': 0,
+'_derivative': -0.0007116699,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.07212,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.360565,
+'_integral': 0,
+'_derivative': 0.003309326,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.20221,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -6.011047,
+'_integral': 0,
+'_derivative': 0.001185303,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.19629,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.981445,
+'_integral': 0,
+'_derivative': 0.004743652,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.94251,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.712524,
+'_integral': 0,
+'_derivative': 0.005657959,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.97782,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.889069,
+'_integral': 0,
+'_derivative': 0.01063477,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.14304,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.715179,
+'_integral': 0,
+'_derivative': -0.003544922,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.14896,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.744781,
+'_integral': 0,
+'_derivative': 0.0,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.07212,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.360565,
+'_integral': 0,
+'_derivative': 0.002364502,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.05442,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.272064,
+'_integral': 0,
+'_derivative': 0.004727783,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 46.07212,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -5.360565,
+'_integral': 0,
+'_derivative': -0.00282959,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.92487,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.624329,
+'_integral': 0,
+'_derivative': -0.0009411621,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.95428,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.771423,
+'_integral': 0,
+'_derivative': 0.01299927,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.96014,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.80072,
+'_integral': 0,
+'_derivative': -0.001176758,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.96603,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.83017,
+'_integral': 0,
+'_derivative': -0.002352295,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.91897,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.594879,
+'_integral': 0,
+'_derivative': 0.004003906,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.80161,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.008026,
+'_integral': 0,
+'_derivative': 0.00234497,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.92487,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.624329,
+'_integral': 0,
+'_derivative': -0.004227295,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.96014,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.80072,
+'_integral': 0,
+'_derivative': -0.017323,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.72546,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.627319,
+'_integral': 0,
+'_derivative': 0.003044434,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.83676,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -4.183807,
+'_integral': 0,
+'_derivative': 0.001877441,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.75473,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.773651,
+'_integral': 0,
+'_derivative': 0.003985596,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.73715,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.68576,
+'_integral': 0,
+'_derivative': 0.001405029,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.76642,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.832092,
+'_integral': 0,
+'_derivative': -0.001638184,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.65534,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.276672,
+'_integral': 0,
+'_derivative': 0.002337646,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.5387,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.693481,
+'_integral': 0,
+'_derivative': 0.002796631,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.61447,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -3.072357,
+'_integral': 0,
+'_derivative': 0.0004663086,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.56201,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.810059,
+'_integral': 0,
+'_derivative': -0.0009326172,
+'_last_output': 0
+
+
+}Current PID values:
+
+{'_last_input': 45.49798,
+'Kp': 5,
+'Ki': 0.005,
+'Kd': 2,
+'setpoint': 45,
+'_proportional': -2.489929,
+'_integral': 0,
+'_derivative': 0.003725586,
+'_last_output': 0
+
+
+C
