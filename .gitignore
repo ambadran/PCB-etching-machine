@@ -4,3 +4,5 @@
 .DS_store/
 *.lck
 
+/Programming/pic_uC/controller.X/dist/
+/Programming/pic_uC/controller.X/build/
