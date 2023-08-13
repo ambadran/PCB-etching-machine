@@ -3,7 +3,12 @@ Refer to iPad notes Project 'PCB-etching machine' for detailed math and explanat
 '''
 from machine import Pin, PWM, ADC, Timer
 from math import log
-from time import ticks_ms, ticks_ms, sleep
+from time import ticks_ms, ticks_ms, sleep_ms, sleep
+import _thread
+
+
+def do_nothing():
+    pass
 
 
 class Heater:
@@ -21,6 +26,9 @@ class Heater:
 
         # heater init
         self.set_heat(0)
+
+        # constant attributes
+        self.state_funcs = {False: self.off, True: self.on}
 
     def set_heat_u16(self, value_u_16):
         '''
@@ -57,6 +65,33 @@ class Heater:
         return current raw pwm value
         '''
         return self.pwm.duty_u16() 
+
+    def step_signal(self, delay):
+        '''
+        used to test open-loop step response
+
+        :param delay: in ms
+        '''
+        self.set_heat(100)
+        temp_timer = Timer(period=delay, mode=Timer.ONE_SHOT, callback=lambda t:self.set_heat(0))
+
+    def on(self):
+        '''
+        turns heater 100%
+        '''
+        self.set_heat(100)
+
+    def off(self):
+        '''
+        turns heater 0%
+        '''
+        self.set_heat(0)
+    
+    def state(self, state):
+        '''
+        turns heater 100%
+        '''
+        self.state_funcs[state]()
 
     def __repr__(self):
         '''
@@ -130,6 +165,29 @@ class Thermistor:
         T_inverse = self.room_temp_inv + self.B_factor_inv*log(self.read_R_averaged()/self.R_nominal)
         T_celcuis = 1/T_inverse - 273.15
         return T_celcuis
+
+    def monitor(self, time_delay=100, exit_on_interrupt=False):
+        '''
+        continiously print temperature until KeyboardInterrupt
+
+        :param time_delay: how much time to delay between each print in ms
+
+        could be used with terminal command tee to pull data off the micorpython device
+        '''
+        try:
+            while True:
+                # print(f"Temperature: {self.read_T()}\r", end='')
+                print(f"Temperature: {self.read_T()}")  # for use in logging
+                sleep_ms(time_delay)
+
+        except KeyboardInterrupt:
+            # if exit_on_interrupt:
+            #     _thread.exit()  # doesn't work for some reason ?!?
+            # else:
+            return
+
+        finally:
+            do_nothing()
 
 
 class PID:
@@ -336,8 +394,10 @@ class PID:
         self._pid_timer.deinit()
         self.output_func(min_output)
 
-    def monitor(self):
+    def monitor(self, delay=200, exit_on_interrupt=False):
         '''
+        :param delay: delay in ms between each print
+
         continiously print __repr__ for monitoring
 
         could be used with terminal command tee to pull data off the micorpython device
@@ -345,10 +405,13 @@ class PID:
         try:
             while True:
                 print(repr(self))
-                sleep(0.2)
+                sleep_ms(delay)
 
         except KeyboardInterrupt:
-            return
+            if exit_on_interrupt:
+                _thread.exit()
+            else:
+                return
 
     def __repr__(self):
         '''
@@ -357,7 +420,7 @@ class PID:
         return f"""
            Current PID values:
 
-            {'_last_input': {self._last_input},
+            {{'_last_input': {self._last_input},
             'Kp': {self.Kp},
             'Ki': {self.Ki},
             'Kd': {self.Kd},
@@ -365,9 +428,39 @@ class PID:
             '_proportional': {self._proportional},
             '_integral': {self._integral},
             '_derivative': {self._derivative},
-            '_last_output': {self._last_output}}
+            '_last_output': {self._last_output}}}
             """
 
+def open_loop_step_response_test():
+    '''
+    This function will send step_signal of random lengths and in the same time 
+    print the temperature sensor readings to terminal so that it can be logged 
+    out with 'tee' command in terminal.
+
+    This data will then be used for System Identification in Matlab :D
+
+    The two cores of the microcontroller will be used:
+        - one core will continiously print the current temperature to terminal
+        - the second will execute the random step signals
+    '''
+    ### Core 1 constant just reading sensor and printing to terminal
+    _thread.start_new_thread(thermistor.monitor, ())  
+
+    ### Core 0 sending random step_signals
+    time_changes = [2, 40, 40, 20, 10]
+    # time_changes = [2, 2, 2, 2, 2]
+    state = False
+    for ind, time in enumerate(time_changes):
+        print(f"\n\nHeater state: {state}\t")
+        print(f"Time passed: {sum(time_changes[:ind])}\t\n")
+        heater.state(state)
+        sleep(time)
+        state = not state
+
+    # Test finished
+    print('\n\nTest Finished!')
+    _thread.exit()
+    
 
 ### Main Routine ###
 # Creating Input Object -> Thermistor
@@ -400,6 +493,7 @@ pid = PID(Kp, Ki, Kd, setpoint, min_output, max_output, input_func=thermistor.re
 if __name__ == '__main__':
     ### Activating System :)
     # for ampyrun
-    pid.activate(monitor=True)
+    # pid.activate(monitor=True)
+    open_loop_step_response_test()
 
 
