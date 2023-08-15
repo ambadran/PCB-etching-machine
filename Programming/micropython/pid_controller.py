@@ -480,9 +480,9 @@ thermistor = Thermistor(Vcc, R_10k, num_samples, B_factor, R_nominal, room_temp)
 heater = Heater()
 
 ### Initialize PID Control Object
-Kp = 5
+Kp = 22.4303
 Ki = 0.005
-Kd = 2 
+Kd = 21.336
 setpoint = 45  # degrees celcuis
 min_output = 0  # output power unit in percentage
 max_output = 100
@@ -494,6 +494,8 @@ if __name__ == '__main__':
     ### Activating System :)
     # for ampyrun
     # pid.activate(monitor=True)
-    open_loop_step_response_test()
+    # open_loop_step_response_test()
+    heater.set_heat(100)
+    thermistor.monitor()
 
 

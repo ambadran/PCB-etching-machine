@@ -1,3 +1,6 @@
 
-a = [2, 2, 2, 2]
-print(sum(a[:1]))
+a = -1
+
+a = False
+print(int(a))
+

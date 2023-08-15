@@ -1,7 +1,6 @@
 
 
 Heater state: False	
-Temperature: 21.21442
 Time passed: 0	
 
 Temperature: 21.38446
