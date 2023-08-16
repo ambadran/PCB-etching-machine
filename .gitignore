@@ -8,3 +8,6 @@
 /Programming/pic_uC/controller.X/build/
 
 *.properties
+nbproject/
+
+*.xml
