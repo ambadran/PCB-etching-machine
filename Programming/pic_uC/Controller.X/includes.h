@@ -6,7 +6,6 @@
 #include <xc.h>
 
 // user files includes
-#include "configuration_bits.h"
-#include "config.h"
+
 
 #endif
