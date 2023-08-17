@@ -3,11 +3,8 @@
 .DS_Store/
 .DS_store/
 *.lck
-
 /Programming/pic_uC/controller.X/dist/
 /Programming/pic_uC/controller.X/build/
-
+/Programming/pic_uC/controller.X/nbproject/
 *.properties
-nbproject/
-
 *.xml
