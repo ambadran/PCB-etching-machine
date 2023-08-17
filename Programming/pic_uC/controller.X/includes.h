@@ -6,6 +6,15 @@
 #include <xc.h>
 
 // user files includes
-
+#include "fuses.h"
+#include "config.h"
+#include "cpu_map.h"
+#include "adc.h"
+#include "comparators.h"
+#include "timers.h"
+#include "uart.h"
+#include "thermistor.h"
+#include "pid.h"
+#include "heater.h"
 
 #endif

@@ -20,11 +20,12 @@ void main(void) {
   
 
   // Main Routine
+  // lskjdflkj
   while(1) {
       RB1 = 1;
-      __delay_ms(50);
+      __delay_ms(10);
       RB1 = 0;
-      __delay_ms(50);
+      __delay_ms(10);
   }
 
   return;
