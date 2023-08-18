@@ -11,21 +11,16 @@
 void main(void) {
 
   // INITs/DEINITS
-  TRISB = 0x00;
-  
-  
-  // Initial setups
-  RB0 = 1;
-  RB2 = 0;
-  
+  uart_init(115200);
+  TRISB0 = 0;
 
   // Main Routine
-  // lskjdflkj
+  buffer = "testing!\n";
   while(1) {
-      RB1 = 1;
-      __delay_ms(10);
-      RB1 = 0;
-      __delay_ms(10);
+    /* print("testing!\n"); */
+    print(buffer);
+
+
   }
 
   return;

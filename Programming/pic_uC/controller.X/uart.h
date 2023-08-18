@@ -2,6 +2,10 @@
 #ifndef UART_H
 #define UART_H
 
-void uart_init(int baudrate);
+char* buffer;
+
+void uart_init(long int baudrate);
+void uart_ISR();
+void print(char *message);
 
 #endif

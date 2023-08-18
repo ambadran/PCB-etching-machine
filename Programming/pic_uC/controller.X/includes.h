@@ -4,6 +4,7 @@
 
 // compiler includes
 #include <xc.h>
+#include <stdint.h>
 
 // user files includes
 #include "fuses.h"
