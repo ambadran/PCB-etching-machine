@@ -12,14 +12,22 @@ void main(void) {
 
   // INITs/DEINITS
   uart_init(115200);
+  adc_init();
   TRISB0 = 0;
 
   // Main Routine
-  buffer = "testing!\n";
   while(1) {
-    /* print("testing!\n"); */
-    print(buffer);
 
+    /* print(buffer); */
+    print("Number: ");
+    print_int(234);
+    print("\n");
+    __delay_ms(50);
+
+    RB0 = 1;
+    __delay_ms(10);
+    RB0 = 0;
+    __delay_ms(10);
 
   }
 

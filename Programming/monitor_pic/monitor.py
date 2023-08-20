@@ -1,4 +1,4 @@
-from machine import Pin
+from machine import Pin, UART
 import machine
 from time import ticks_us, ticks_diff, ticks_add
 machine.freq(250000000)
@@ -60,8 +60,9 @@ class PinMonitor:
                 print(f"Frequency: {self.frequency} Hz\r", end='')
 
 
-p0 = PinMonitor(0)
-p1 = PinMonitor(1)
+uart = UART(0, baudrate=115200, tx=Pin(0), rx=Pin(1))
+p2 = PinMonitor(2)
+p3 = PinMonitor(3)
 
 if __name__ == '__main__':
     p1.persist(1)
