@@ -1,6 +1,6 @@
 from machine import Pin, UART
 import machine
-from time import ticks_us, ticks_diff, ticks_add
+from time import ticks_us, ticks_diff, ticks_add, sleep
 machine.freq(250000000)
 
 class PinMonitor:
@@ -59,10 +59,22 @@ class PinMonitor:
             while True:
                 print(f"Frequency: {self.frequency} Hz\r", end='')
 
-
-uart = UART(0, baudrate=115200, tx=Pin(0), rx=Pin(1))
 p2 = PinMonitor(2)
 p3 = PinMonitor(3)
+
+
+uart = UART(0, baudrate=115200, tx=Pin(0), rx=Pin(1))
+def monitor():
+    while True:
+        uart.flush()
+        while uart.read(1) != b'\n':
+            pass
+        value = uart.read(15)
+        if value is None or 'ADC_value: ' not in value:
+            continue
+        print(value.decode().replace('\n', ''), end='\r')
+        sleep(0.01)
+
 
 if __name__ == '__main__':
     p1.persist(1)

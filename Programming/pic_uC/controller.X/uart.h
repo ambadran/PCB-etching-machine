@@ -10,6 +10,7 @@ void print_str(char *message);
 int intToASCII(int number);
 unsigned divu10(unsigned n);
 void print_int(int value);
+void print_double(double value);
 void print();
 
 #endif

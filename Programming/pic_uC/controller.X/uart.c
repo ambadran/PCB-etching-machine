@@ -64,8 +64,8 @@ void print_int(int value) {
 
   /* uint8_t digit5 = intToASCII(value%10); */
   /* value = divu10(value); */
-  /* uint8_t digit4 = intToASCII(value%10); */
-  /* value = divu10(value); */
+  uint8_t digit4 = intToASCII(value%10);
+  value = divu10(value);
   uint8_t digit3 = intToASCII(value%10);
   value = divu10(value);
   uint8_t digit2 = intToASCII(value%10);
@@ -78,13 +78,18 @@ void print_int(int value) {
   TXREG = digit2;
   while(!TRMT);
   TXREG = digit3;
-  /* while(!TRMT); */
-  /* TXREG = digit4; */
+  while(!TRMT);
+  TXREG = digit4;
   /* while(!TRMT); */
   /* TXREG = digit5; */
  
 }
 
+void print_double(double value) {
+
+
+
+}
 
 void print() {
 
