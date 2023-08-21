@@ -2,7 +2,7 @@
 #ifndef THERMISTOR_H
 #define THERMISTOR_H
 
-#define VCC 3.28  // Vcc value in thermistor voltage divider
+#define VCC 4.93  // Vcc value in thermistor voltage divider
 #define R_10K 9880  // The exact value of the 10kohm resistor
 #define NUM_SAMPLES 5  // how many samples to take before taking average 
 #define B_FACTOR 4300  // Thermistor B factor from its datasheet
@@ -12,15 +12,15 @@
 #define B_FACTOR_INV 1/B_FACTOR
 
 // convert ADC value to Voltage
-double read_V();
+double read_V(void);
 
 // reads NUM_SAMPLES voltages and takes average for more accuracy
-double read_V_averaged();
+double read_V_averaged(void);
 
 // Converts averaged Voltage to resistance
-double read_R();
+int read_R_averaged(void);
 
 // uses Steinhart-Hart equations to convert resistance to temperature
-double read_T();
+double read_T(void);
 
 #endif

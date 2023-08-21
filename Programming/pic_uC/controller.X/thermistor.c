@@ -8,19 +8,22 @@
 
 #include "includes.h"
 
-double read_V() {
+double read_V(void) {
   return ((read_adc()*VCC)/1024);
 }
 
-double read_V_averaged() {
-
+double read_V_averaged(void) {
+  double sum = 0;
+  uint8_t i;
+  for(i=0; i<NUM_SAMPLES; i++) {
+    sum += read_V();
+  }
+  return (sum/NUM_SAMPLES);
 }
 
-double read_R() {
-
-}
-
-double read_R_averaged() {
+int read_R_averaged(void) {
+  double Vi = read_V_averaged();
+  return (int)((R_10K*Vi) / VCC);
 
 }
 

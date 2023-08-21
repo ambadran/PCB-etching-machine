@@ -3,6 +3,6 @@
 #define ADC_H
 
 void adc_init(void);
-int read_adc();
+int read_adc(void);
 
 #endif

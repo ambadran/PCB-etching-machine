@@ -69,8 +69,8 @@ def monitor():
         uart.flush()
         while uart.read(1) != b'\n':
             pass
-        value = uart.read(15)
-        if value is None or 'ADC_value: ' not in value:
+        value = uart.read(16)
+        if value is None or not value.startswith('ADC_value: '):
             continue
         print(value.decode().replace('\n', ''), end='\r')
         sleep(0.01)

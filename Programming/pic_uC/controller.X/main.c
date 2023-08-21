@@ -22,7 +22,7 @@ void main(void) {
 
     /* print(buffer); */
     print_str("ADC_value: ");
-    print_int(read_V());
+    print_int(read_R_averaged());
     print_str("\n");
 
   }

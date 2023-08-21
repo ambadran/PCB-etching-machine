@@ -26,7 +26,7 @@ void adc_init(void) {
 }
 
 // Reading ADC value
-int read_adc() {
+int read_adc(void) {
     __delay_us(22); // delaying the acquisition time
     GO_DONE = 1;
     while(GO_DONE) {

@@ -156,7 +156,7 @@ class Thermistor:
         reads 'num_samples' voltage samples then return  Resistance value from the average V
         '''
         Vi = self.read_V_averaged()
-        return ((self.R_10k*Vi)/(self.Vcc-Vi))
+        return ((self.R_10k*Vi)/self.Vcc)
 
     def read_T(self):
         '''

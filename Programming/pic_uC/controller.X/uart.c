@@ -45,7 +45,7 @@ void print_str(char* message) {
 
 }
 
-int intToASCII(int number) {
+uint8_t uint8ToASCII(uint8_t number) {
   return '0' + number;
 }
 
@@ -62,32 +62,55 @@ unsigned divu10(unsigned n) {
 
 void print_int(int value) {
 
-  /* uint8_t digit5 = intToASCII(value%10); */
-  /* value = divu10(value); */
-  uint8_t digit4 = intToASCII(value%10);
-  value = divu10(value);
-  uint8_t digit3 = intToASCII(value%10);
-  value = divu10(value);
-  uint8_t digit2 = intToASCII(value%10);
-  value = divu10(value);
-  uint8_t digit1 = intToASCII(value%10);
+  uint8_t* digits[INT_DIGITS];
+  int8_t i;
 
-  while(!TRMT);
-  TXREG = digit1;
-  while(!TRMT);
-  TXREG = digit2;
-  while(!TRMT);
-  TXREG = digit3;
-  while(!TRMT);
-  TXREG = digit4;
-  /* while(!TRMT); */
-  /* TXREG = digit5; */
- 
+  digits[INT_DIGITS-1] = uint8ToASCII(value%10);
+
+  for(i=INT_DIGITS-2 ; i>=0 ; i--) {
+    value = divu10(value);
+    digits[i] = uint8ToASCII(value%10);
+  }
+
+  for(i=0; i<INT_DIGITS; i++) {
+    while(!TRMT);
+    TXREG = digits[i];
+  }
+
 }
 
 void print_double(double value) {
 
+  // getting the whole number stuff
+  int tmp = (int)value;
+  uint8_t* digits[FLOAT_WHOLE_DIGITS];
+  int8_t i;
 
+  digits[FLOAT_WHOLE_DIGITS-1] = uint8ToASCII(tmp%10);
+
+  for(i=FLOAT_WHOLE_DIGITS-2 ; i>=0 ; i--) {
+    tmp = divu10(tmp);
+    digits[i] = uint8ToASCII(tmp%10);
+  }
+
+  // sending whole number
+  for(i=0; i<FLOAT_WHOLE_DIGITS; i++) {
+    while(!TRMT);
+    TXREG = digits[i];
+  }
+
+  // sending decimal point '.'
+  while(!TRMT);
+  TXREG = '.';
+
+  // getting and sending the decimal number stuff
+  // since no need to inverse digit order :)
+  for (i=0; i<FLOAT_WHOLE_DECIMALS; i++) {
+    /* value = mulu10(value); */
+    value *= 10;
+    while(!TRMT);
+    TXREG = uint8ToASCII((int)value%10);
+  }
 
 }
 
