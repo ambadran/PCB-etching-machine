@@ -22,12 +22,16 @@ double read_V_averaged(void) {
 }
 
 int read_R_averaged(void) {
+
   double Vi = read_V_averaged();
   return (int)((R_10K*Vi) / VCC);
 
 }
 
 double read_T() {
+
+  double T_inverse = ROOM_TEMPERATURE_INV + B_FACTOR_INV*log(read_R_averaged()/R_NOMINAL);
+  return (1/T_inverse) + 273.15;
 
 }
 

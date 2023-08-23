@@ -6,6 +6,7 @@
 #include <xc.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <math.h>
 
 // user files includes
 #include "fuses.h"
