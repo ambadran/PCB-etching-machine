@@ -7,3 +7,16 @@
 
 
 #include "includes.h"
+
+void timer2_init() {
+
+  // Pre-scalar Value
+  T2_PRESCALAR = T2_PRE_1;
+  
+  // Post-scalar Value
+  T2_POSTSCALAR = T2_POST_1;
+
+  // Timer2 ON
+  TMR2ON = 1;
+
+}

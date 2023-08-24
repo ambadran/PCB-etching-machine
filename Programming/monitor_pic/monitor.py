@@ -64,16 +64,15 @@ p3 = PinMonitor(3)
 
 
 uart = UART(0, baudrate=115200, tx=Pin(0), rx=Pin(1))
-def monitor():
+def monitor(num):
     while True:
-        uart.flush()
         while uart.read(1) != b'\n':
             pass
-        value = uart.read(16)
-        if value is None or not value.startswith('ADC_value: '):
+        value = uart.read(num)
+        if value is None:
             continue
         print(value.decode().replace('\n', ''), end='\r')
-        sleep(0.01)
+        sleep(0.05)
 
 
 if __name__ == '__main__':

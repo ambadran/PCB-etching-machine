@@ -156,7 +156,7 @@ class Thermistor:
         reads 'num_samples' voltage samples then return  Resistance value from the average V
         '''
         Vi = self.read_V_averaged()
-        return ((self.R_10k*Vi)/self.Vcc)
+        return ((self.R_10k*Vi)/(self.Vcc-Vi))
 
     def read_T(self):
         '''
@@ -177,7 +177,7 @@ class Thermistor:
         try:
             while True:
                 # print(f"Temperature: {self.read_T()}\r", end='')
-                print(f"Temperature: {self.read_T()}")  # for use in logging
+                print(f"Temperature: {self.read_T()}", end='\r')  # for use in logging
                 sleep_ms(time_delay)
 
         except KeyboardInterrupt:

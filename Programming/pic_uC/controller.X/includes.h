@@ -13,11 +13,12 @@
 #include "config.h"
 #include "cpu_map.h"
 #include "adc.h"
-#include "comparators.h"
 #include "timers.h"
+#include "cpp_module.h"
 #include "uart.h"
+#include "comparators.h"
 #include "thermistor.h"
-#include "pid.h"
 #include "heater.h"
+#include "pid.h"
 
 #endif
