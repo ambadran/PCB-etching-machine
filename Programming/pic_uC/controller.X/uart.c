@@ -7,6 +7,14 @@
 
 #include "includes.h"
 
+// uart receiver data buffer
+uint8_t uart_rx_buffer[RX_BUFFER_SIZE];
+
+// head index, points to new data
+uint8_t uart_rx_buffer_head = 0;
+
+// tail index, points to read data
+uint8_t uart_rx_buffer_tail = 0;  //TODO: understand why it's volatile in grbl
 
 void uart_init(long int baudrate) {
 
@@ -30,7 +38,43 @@ void uart_init(long int baudrate) {
 
 }
 
-void uart_ISR() {
+// Writing character to buffer
+void uart_rx_ISR() {
+
+  // reading data
+  uint8_t data = RCREG;
+
+  // creating new head index to assign to uart_rx_buffer_head after using it
+  uint8_t next_head = uart_rx_buffer_head + 1;
+  if (next_head == RX_BUFFER_SIZE) { next_head = 0; }
+
+  // writing data to buffer unless it is full
+  if (next_head != uart_rx_buffer_tail) {
+    uart_rx_buffer[uart_rx_buffer_head] = data;
+    uart_rx_buffer_head = next_head;
+  } //TODO: else alarm an overflow somehow
+
+}
+
+uint8_t uart_read() {
+
+  // if head pointer == tail pointer, no new data not read :)
+  if (uart_rx_buffer_head == uart_rx_buffer_tail) {
+
+    return SERIAL_NO_DATA;
+
+  } else {
+
+    // reading unread data in buffer
+    uint8_t data = uart_rx_buffer[uart_rx_buffer_tail];
+
+    // updating tail pointer value
+    uart_rx_buffer_tail++;
+    if (uart_rx_buffer_tail == RX_BUFFER_SIZE) { uart_rx_buffer_tail = 0; }
+
+    return data;
+
+  }
 
 }
 

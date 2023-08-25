@@ -23,14 +23,10 @@ void main(void) {
   cpp1_duty_cycle(60);
 
   // Main Routine
+  static char line[RX_BUFFER_SIZE];
   while(1) {
 
-    /* print(buffer); */
-    print_str("PR2: ");
-    print_int(PR2);
-    print_str("duty_cycle_constant: ");
-    print_int(duty_cycle_constant);
-    print_str("\n");
+      
 
   }
 
@@ -39,7 +35,12 @@ void main(void) {
 
 void __interrupt() ISR(void) {
 
+  if (RCIF) {
 
+    uart_rx_ISR();
+    RCIF = 0;
+
+  }
 
   return;
 }
