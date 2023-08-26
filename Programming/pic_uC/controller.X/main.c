@@ -11,6 +11,7 @@
 void main(void) {
 
   // INITs/DEINITS
+  interrupt_init();
   uart_init(115200);
   adc_init();
   timer2_init();
@@ -23,12 +24,7 @@ void main(void) {
   cpp1_duty_cycle(60);
 
   // Main Routine
-  static char line[RX_BUFFER_SIZE];
-  while(1) {
-
-      
-
-  }
+  protocol_main_loop();
 
   return;
 }

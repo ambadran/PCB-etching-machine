@@ -63,7 +63,7 @@ p2 = PinMonitor(2)
 p3 = PinMonitor(3)
 
 
-uart = UART(0, baudrate=115200, tx=Pin(0), rx=Pin(1))
+uart = UART(0, baudrate=115200, tx=Pin(12), rx=Pin(1))
 def monitor(num):
     while True:
         while uart.read(1) != b'\n':
