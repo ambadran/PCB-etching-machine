@@ -23,6 +23,13 @@ def print_read():
         print(value.decode())
         sleep(0.05)
 
+def test():
+    uart.send('A\n')
+    while True:
+        value = uart.read()
+        if value is not None:
+            print(value)
+
 def start():
     _thread.start_new_thread(print_read, ())
 

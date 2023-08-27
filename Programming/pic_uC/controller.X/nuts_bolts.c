@@ -7,7 +7,9 @@
 
 #include "includes.h"
 
-uint8_t read_float(char *line, uint8_t *char_counter, float *float_ptr) {
+uint8_t read_float(char *line, uint8_t *char_count_ptr, float *float_ptr) {
+
+  char *ptr = line + *char_count_ptr;
 
   return 1;
 }

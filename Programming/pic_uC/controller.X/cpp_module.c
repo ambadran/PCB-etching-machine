@@ -5,13 +5,6 @@
  * Created on August 24, 2023, 12:35 PM
  */
 
-/*
- * File:   cpp.c
- * Author: ambadran717
- *
- * Created on August 12, 2023, 11:17 AM
- */
-
 #include "includes.h"
 
 void cpp1_init() {

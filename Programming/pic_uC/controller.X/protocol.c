@@ -39,6 +39,10 @@ void protocol_main_loop() {
         // executing line!
         protocol_execute_line(line);
 
+      // throw away whitespaces and control characters
+      } else if (c <= ' '){
+        // do nothing
+
       // buffer overflow
       } else if (char_count >= (LINE_BUFFER_SIZE-1)) {
 

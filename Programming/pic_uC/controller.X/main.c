@@ -20,13 +20,15 @@ void main(void) {
   // Testing
   TRISB0 = 0;
 
+  __delay_ms(2);
   cpp1_freq(1500);
   cpp1_duty_cycle(60);
+  print_str("System Started..");
 
   // Main Routine
   protocol_main_loop();
-
   return;
+
 }
 
 void __interrupt() ISR(void) {

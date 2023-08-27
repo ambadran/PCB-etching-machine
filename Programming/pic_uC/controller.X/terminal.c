@@ -54,10 +54,12 @@ void terminal_execute_line(char* line) {
         // reading argument
         char_count++;
         if (!read_float(line, &char_count, &value)) { print_str("Bad Number Format\n"); }
+        break;
 
 
       default:
         print_str("Command Letter Not Implemented\n");
+        break;
 
     }
 
