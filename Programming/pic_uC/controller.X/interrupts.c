@@ -20,4 +20,9 @@ void interrupt_init() {
   // UART Recieve interrupt Enable
   RCIE = 1;
 
+  // Timers
+  TMR0IE = 0;
+  TMR1IE = 0;
+  TMR2IE = 0;
+
 }

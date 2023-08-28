@@ -16,8 +16,15 @@ void terminal_execute_line(char* line) {
 
     // Reading letter argument, aka which function to execute
     letter = line[char_count];
-    if ((letter < 'A') || (letter > 'Z')) { print_str("Expected a capital command letter!\n"); }
 
+    // only capital letters expected
+    if ((letter < 'A') || (letter > 'Z')) { 
+      print_str("Expected a capital command letter!\n"); 
+      continue;
+    }
+
+    // incrementing char_count for next iteration
+    char_count++;
 
     /* Identifying function and printing the resultant execution */
     switch(letter) {
@@ -51,9 +58,35 @@ void terminal_execute_line(char* line) {
         break;
 
       case 'E':
-        // reading argument
-        char_count++;
-        if (!read_float(line, &char_count, &value)) { print_str("Bad Number Format\n"); }
+        // reading float argument
+        if (!read_float(line, &char_count, &value)) {
+          print_str("Bad Number Format\n");
+          break;
+        }
+
+        // controlling cpp frequency
+        cpp1_freq((long int)value);
+
+        // Reporting
+        print_str("cpp1_freq(");
+        print_int((int)value);
+        print_str(")\n");
+        break;
+
+      case 'F':
+        // reading float argument
+        if (!read_float(line, &char_count, &value)) {
+          print_str("Bad Number Format\n");
+          break;
+        }
+
+        // controlling cpp frequency
+        cpp1_duty_cycle((uint8_t)value);
+
+        // Reporting
+        print_str("cpp1_duty_cycle(");
+        print_int((uint8_t)value);
+        print_str(")\n");
         break;
 
 

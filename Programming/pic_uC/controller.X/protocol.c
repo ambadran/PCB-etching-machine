@@ -13,7 +13,7 @@ static void protocol_execute_line(char* line) {
 
   if(line[0] == 0) {
 
-    print_str("Enter Received..");
+    print_str("Enter Received..\n");
     
   } else {
 
@@ -23,7 +23,7 @@ static void protocol_execute_line(char* line) {
 
 }
 
-void protocol_main_loop() {
+void protocol_main_loop(void) {
 
   uint8_t char_count = 0;
   uint8_t c;

@@ -2,10 +2,11 @@
 #include <stdint.h>
 #include <stdbool.h>
 
+#define MAX_INT_DIGITS 8
 
-uint8_t read_float(char *line, uint8_t *char_count_ptr, float *float_ptr) {
+uint8_t read_float(char *line, uint8_t *char_count, float *float_ptr) {
 
-  char *ptr = line + *char_count_ptr; // the variable that will extract the next digit from
+  char *ptr = line + *char_count; // the variable that will extract the next digit from
   unsigned char c; // the variable that will hold each digit
 
   c = *ptr++;  // extracting the next digit!
@@ -34,12 +35,63 @@ uint8_t read_float(char *line, uint8_t *char_count_ptr, float *float_ptr) {
   bool isdecimal =  false;  // to be set if '.' is encountered
   while (1) {
 
-    // Converting 
-    c -= '0';  // 
+    c -= '0';  // converting ascii number of digit to the digit itself >:)
+    if (c <= 9) {
+      ndigit++;
+      if (ndigit <= MAX_INT_DIGITS) {
+        if (isdecimal) {
+          exp--; 
+        }
+        intval = (((intval << 2) + intval) << 1) + c; // intval*10 + c
+                                                      //
+      } else {
+        if (!(isdecimal)) { 
+          exp++;  // Drop overflow digits
+        }
+      }
+    } else if (c == (('.'-'0') & 0xff)  &&  !(isdecimal)) {
+      isdecimal = true;
+
+    } else {
+      break;
+
+    }
+    c = *ptr++;
+  }
+   
+  // Return if no digits have been read.
+  if (!ndigit) { return(false); };
+  
+  // Convert integer into floating point.
+  float fval;
+  fval = (float)intval;
+  
+  // Apply decimal. Should perform no more than two floating point multiplications for the
+  // expected range of E0 to E-4.
+  if (fval != 0) {
+    while (exp <= -2) {
+      fval *= 0.01; 
+      exp += 2;
+    }
+    if (exp < 0) { 
+      fval *= 0.1; 
+    } else if (exp > 0) {
+      do {
+        fval *= 10.0;
+      } while (--exp > 0);
+    } 
   }
 
-  return (true);
+  // Assign floating point value with correct sign.    
+  if (isnegative) {
+    *float_ptr = -fval;
+  } else {
+    *float_ptr = fval;
+  }
 
+  *char_count = ptr - line - 1; // Set char_counter to next statement
+ 
+  return (true);
 }
 
 int main() {
@@ -49,6 +101,7 @@ int main() {
   float value;
 
   printf("Function Success: %d\n", read_float(line, &char_count, &value));
+  printf("Float: %3f\n", value);
 
   return 0;
 }

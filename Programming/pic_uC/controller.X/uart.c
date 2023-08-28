@@ -39,7 +39,7 @@ void uart_init(long int baudrate) {
 }
 
 // Writing character to buffer
-void uart_rx_ISR() {
+void uart_rx_ISR(void) {
 
   // reading data
   unsigned char data = RCREG;
@@ -56,7 +56,7 @@ void uart_rx_ISR() {
 
 }
 
-unsigned char uart_read() {
+unsigned char uart_read(void) {
 
   // if head pointer == tail pointer, no new data not read :)
   if (uart_rx_buffer_head == uart_rx_buffer_tail) {

@@ -8,7 +8,7 @@
 
 #include "includes.h"
 
-void timer2_init() {
+void timer2_init(void) {
 
   // Pre-scalar Value
   T2_PRESCALAR = T2_PRE_1;

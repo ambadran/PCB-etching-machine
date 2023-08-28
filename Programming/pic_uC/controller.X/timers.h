@@ -9,6 +9,6 @@ const uint8_t T2_PRE_ACTUAL[3] = {1, 4, 16};
 #define T2_POSTSCALAR T2CONbits.TOUTPS
 enum T2_POSTSCALAR_VALUE {T2_POST_1, T2_POST_2,  T2_POST_3,  T2_POST_4,  T2_POST_5,  T2_POST_6,  T2_POST_7,  T2_POST_8,  T2_POST_9,  T2_POST_10, T2_POST_11,  T2_POST_12, T2_POST_13};
 
-void timer2_init();
+void timer2_init(void);
 
 #endif

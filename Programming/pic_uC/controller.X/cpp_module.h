@@ -5,7 +5,7 @@
 long int duty_cycle_constant;
 
 // setting CCP module to PWM mode and setting TRIS registers
-void cpp1_init();
+void cpp1_init(void);
 
 // setting the prescalar and getting the frequency value
 void cpp1_freq(long int frequency);

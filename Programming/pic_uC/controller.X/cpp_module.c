@@ -7,7 +7,7 @@
 
 #include "includes.h"
 
-void cpp1_init() {
+void cpp1_init(void) {
 
   // setting CCP module to PWM mode
   CCP1CONbits.CCP1M= 0b1100;
