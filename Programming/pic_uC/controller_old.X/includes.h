@@ -14,6 +14,7 @@
 #include "config.h"
 #include "interrupts.h"
 #include "cpu_map.h"
+#include "nuts_bolts.h"
 #include "protocol.h"
 #include "terminal.h"
 #include "adc.h"

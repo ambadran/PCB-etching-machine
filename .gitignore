@@ -8,3 +8,5 @@
 /Programming/pic_uC/controller.X/nbproject/
 *.properties
 *.xml
+/Programming/pic_uC/controller_old.X/build/
+/Programming/pic_uC/controller_old.X/dist/

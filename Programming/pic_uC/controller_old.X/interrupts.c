@@ -9,7 +9,7 @@
 
 #include "includes.h"
 
-void interrupt_init(void) {
+void interrupt_init() {
 
   // Global Interrupt Enable
   GIE = 1;
@@ -24,6 +24,5 @@ void interrupt_init(void) {
   TMR0IE = 0;
   TMR1IE = 0;
   TMR2IE = 0;
-  TMR3IE = 0;
 
 }
