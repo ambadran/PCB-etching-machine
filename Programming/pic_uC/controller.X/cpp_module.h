@@ -2,6 +2,7 @@
 #ifndef CPP_MODULE_H
 #define CPP_MODULE_H
 
+#define DIVISION_CONSTANT _XTAL_FREQ/100
 long int duty_cycle_constant;
 
 // setting CCP module to PWM mode and setting TRIS registers

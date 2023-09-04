@@ -14,8 +14,6 @@
 #include "config.h"
 #include "interrupts.h"
 #include "cpu_map.h"
-#include "protocol.h"
-#include "terminal.h"
 #include "adc.h"
 #include "timers.h"
 #include "cpp_module.h"
@@ -24,5 +22,7 @@
 #include "thermistor.h"
 #include "heater.h"
 #include "pid.h"
+#include "protocol.h"
+#include "terminal.h"
 
 #endif

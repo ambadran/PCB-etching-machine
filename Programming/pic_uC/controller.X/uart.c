@@ -45,6 +45,210 @@ void uart_init(long int baudrate) {
 
 }
 
+// Writing character to buffer
+void uart_rx_ISR(void) {
+
+  // reading data
+  unsigned char data = RCREG;
+
+  // creating new head index to assign to uart_rx_buffer_head after using it
+  uint8_t next_head = uart_rx_buffer_head + 1;
+  if (next_head == RX_BUFFER_SIZE) { next_head = 0; }
+
+  // writing data to buffer unless it is full
+  if (next_head != uart_rx_buffer_tail) {
+    uart_rx_buffer[uart_rx_buffer_head] = data;
+    uart_rx_buffer_head = next_head;
+  } //TODO: else alarm an overflow somehow
+
+}
+
+// reads int only not floats
+uint8_t read_int(char *line, uint8_t *char_count, value_t *value_ptr) {
+
+  char *ptr = line + *char_count; // the variable that will extract the next digit from
+  unsigned char c; // the variable that will hold each digit
+
+  c = *ptr++;  // extracting the next digit!
+
+  // catching negative values :)
+  bool isnegative = false;
+  if (c == '-') {
+    isnegative = true;
+    c = *ptr++;
+
+  // incrementing pointer anyway if +ve sign is there
+  } else if (c == '+') {
+    c = *ptr++;
+  }
+
+  // Algorithm to convert char digits to int
+  uint32_t intval = 0;
+  uint8_t ndigit = 0;  // current digit read index
+  int8_t exp = 0;  // NOT uint8_t as this must hold +ve and -ve numbers
+  while (1) {
+
+    c -= '0';
+    if (c <= 9) {
+      ndigit++;
+      if (ndigit <= MAX_INT_DIGITS) {
+
+        intval = (((intval << 2) + intval) << 1) + c; // intval*10 + c
+                                                      //
+      } else {
+
+        exp++;  // Drop overflow digits
+      }
+
+    } else {
+      // encountered a non integer character
+      break;
+    }
+    c = *ptr++;
+  }
+
+  // Return if no digits have been read.
+  if (!ndigit) { return(false); };
+
+  long int lival;
+  lival = (long int)intval;
+  
+  if (exp > 0) {
+    do {
+      lival *= 10.0;
+    } while (--exp > 0);
+  } 
+
+  // Assign floating point value with correct sign.    
+  if (isnegative) {
+    *value_ptr->long_int = -lival;
+  } else {
+    *value_ptr->long_int = lival;
+  }
+
+  *char_count = ptr - line - 1; // Set char_counter to next statement
+ 
+  return (true);
+}
+
+// arguments are the line of terminal code itself
+// char_count_ptr to increment it as we read and be able to use it later in the terminal_execute_line after this func is done
+// float_ptr to assign the output of this function to it
+// THIS FUNCTION RETURN WHETHER IT SUCCESSFULYY READ THE FLOAT OR NOT, AKA (0 OR 1) 
+uint8_t read_float(char *line, uint8_t *char_count, value_t *value_ptr) {
+
+  char *ptr = line + *char_count; // the variable that will extract the next digit from
+  unsigned char c; // the variable that will hold each digit
+
+  c = *ptr++;  // extracting the next digit!
+
+  // catching negative values :)
+  bool isnegative = false;
+  if (c == '-') {
+    isnegative = true;
+    c = *ptr++;
+
+  // incrementing pointer anyway if +ve sign is there
+  } else if (c == '+') {
+    c = *ptr++;
+  }
+
+  // extracting ALL digits from line until a non-digit character is encountered to variable intval
+  // variable exp will hold value x (in *10^x) which will be applied to intval after it's extracted
+  // if x is negative, then the value is a float and that decimals will appear in the number 
+  // if x is positive, then the value is has digits more than MAX_INT_DIGITS and this will mean
+  // that after multiplication all digits after MAX_INT_DIGITS are just zeros
+  // exp will be decremented with every digit registerd if '.' is encountered
+  // exp will be incremented if ndigit > MAX_INT_DIGITS and still no '.' encountered
+  uint32_t intval = 0;
+  int8_t exp = 0;  // NOT uint8_t as this must hold +ve and -ve numbers
+  uint8_t ndigit = 0;  // current digit read index
+  bool isdecimal =  false;  // to be set if '.' is encountered
+  while (1) {
+
+    c -= '0';  // converting ascii number of digit to the digit itself >:)
+    if (c <= 9) {
+      ndigit++;
+      if (ndigit <= MAX_INT_DIGITS) {
+        if (isdecimal) {
+          exp--; 
+        }
+        intval = (((intval << 2) + intval) << 1) + c; // intval*10 + c
+                                                      //
+      } else {
+        if (!(isdecimal)) { 
+          exp++;  // Drop overflow digits
+        }
+      }
+    } else if (c == (('.'-'0') & 0xff)  &&  !(isdecimal)) {
+      isdecimal = true;
+
+    } else {
+      break;
+
+    }
+    c = *ptr++;
+  }
+   
+  // Return if no digits have been read.
+  if (!ndigit) { return(false); };
+  
+  // Convert integer into floating point.
+  float fval;
+  fval = (float)intval;
+  
+  // Apply decimal. Should perform no more than two floating point multiplications for the
+  // expected range of E0 to E-4.
+  if (fval != 0) {
+    while (exp <= -2) {
+      fval *= 0.01; 
+      exp += 2;
+    }
+    if (exp < 0) { 
+      fval *= 0.1; 
+    } else if (exp > 0) {
+      do {
+        fval *= 10.0;
+      } while (--exp > 0);
+    } 
+  }
+
+  // Assign floating point value with correct sign.    
+  if (isnegative) {
+    *value_ptr->float_ = -fval;
+  } else {
+    *value_ptr->float_ = fval;
+  }
+
+  *char_count = ptr - line - 1; // Set char_counter to next statement
+ 
+  return (true);
+}
+
+unsigned char uart_read(void) {
+
+  // if head pointer == tail pointer, no new data not read :)
+  if (uart_rx_buffer_head == uart_rx_buffer_tail) {
+
+    return SERIAL_NO_DATA;
+
+  } else {
+
+    // reading unread data in buffer
+    unsigned char data = uart_rx_buffer[uart_rx_buffer_tail];
+
+    // updating tail pointer value
+    uart_rx_buffer_tail++;
+    if (uart_rx_buffer_tail == RX_BUFFER_SIZE) { uart_rx_buffer_tail = 0; }
+
+    return data;
+
+  }
+
+}
+
+
+
 //TODO: test if we really need this in PIC18F2550 or is the hardware multiplier enough
 unsigned divu10(unsigned n) {
     unsigned q, r;
@@ -75,7 +279,6 @@ void print_str(char* message) {
   }
 
 }
-
 
 void print_int(int value) {
 
@@ -134,3 +337,4 @@ void print_double(double value) {
 void print() {
 
 }
+

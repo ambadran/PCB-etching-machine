@@ -19,6 +19,7 @@ void interrupt_init(void) {
 
   // UART Recieve interrupt Enable
   RCIE = 1;
+  TXIE = 0;
 
   // Timers
   TMR0IE = 0;
@@ -26,4 +27,35 @@ void interrupt_init(void) {
   TMR2IE = 0;
   TMR3IE = 0;
 
+  // USB Module
+  USBIE = 0;
+
+  // IRQ pins
+  INT0IE = 0;
+  INT1IE = 0;
+  INT2IE = 0;
+
+  // CCP
+  CCP1IE = 0;
+  CCP2IE = 0;
+
+  // AD converter
+  ADIE = 0;
+
+  // Parallel streaming
+  SSPIE = 0;
+
+  // RB port 
+  RBIE = 0;   
+
+  // comparator module
+  CMIE = 0;
+
+  // EEPROM
+  EEIE = 0;
+
 }
+
+
+
+
