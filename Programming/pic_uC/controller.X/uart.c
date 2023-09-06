@@ -121,9 +121,9 @@ uint8_t read_int(char *line, uint8_t *char_count, value_t *value_ptr) {
 
   // Assign floating point value with correct sign.    
   if (isnegative) {
-    *value_ptr->long_int = -lival;
+    value_ptr->long_int = -lival;
   } else {
-    *value_ptr->long_int = lival;
+    value_ptr->long_int = lival;
   }
 
   *char_count = ptr - line - 1; // Set char_counter to next statement
@@ -215,9 +215,9 @@ uint8_t read_float(char *line, uint8_t *char_count, value_t *value_ptr) {
 
   // Assign floating point value with correct sign.    
   if (isnegative) {
-    *value_ptr->float_ = -fval;
+    value_ptr->float_ = -fval;
   } else {
-    *value_ptr->float_ = fval;
+    value_ptr->float_ = fval;
   }
 
   *char_count = ptr - line - 1; // Set char_counter to next statement

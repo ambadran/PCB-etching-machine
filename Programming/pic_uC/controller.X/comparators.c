@@ -8,7 +8,7 @@
 
 #include "includes.h"
 
-void comparator_init(void) {
+void comparator_deinit(void) {
 
   CMCONbits.CM = 0b111;
 

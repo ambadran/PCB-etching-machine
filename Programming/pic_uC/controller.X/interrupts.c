@@ -23,7 +23,7 @@ void interrupt_init(void) {
 
   // Timers
   TMR0IE = 0;
-  TMR1IE = 0;
+  TMR1IE = 1;
   TMR2IE = 0;
   TMR3IE = 0;
 

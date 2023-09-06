@@ -17,14 +17,15 @@ void terminal_execute_line(char* line) {
     // Reading letter argument, aka which function to execute
     letter = line[char_count];
 
+    // incrementing char_count for next iteration
+    char_count++;
+
     // only capital letters expected
     if ((letter < 'A') || (letter > 'Z')) { 
       print_str("Expected a capital command letter!\n"); 
       continue;
     }
 
-    // incrementing char_count for next iteration
-    char_count++;
 
     /* Identifying function and printing the resultant execution */
     switch(letter) {
@@ -65,7 +66,7 @@ void terminal_execute_line(char* line) {
         }
 
         print_str("Read INT value: ");
-        print_int(value.long_int);
+        print_int((int)value.long_int);
         print_char('\n');
         break;
 
@@ -85,9 +86,9 @@ void terminal_execute_line(char* line) {
 
       case 'G':
 
-        // reading float argument
-        if (!read_float(line, &char_count, &value)) {
-          print_str("Bad float Number Format\n");
+        // reading int argument
+        if (!read_int(line, &char_count, &value)) {
+          print_str("Bad int Number Format\n");
           break;
         }
 
@@ -97,26 +98,80 @@ void terminal_execute_line(char* line) {
         // Reporting
         print_str("cpp1_freq(");
         print_int((int)value.long_int);
-        print_char('\n');
+        print_str(")\n");
         break;
 
       case 'H':
+        // reading int argument
+        if (!read_int(line, &char_count, &value)) {
+          print_str("Bad int Number Format\n");
+          break;
+        }
+
+        // controlling cpp frequency
+        cpp1_duty_cycle((float)value.long_int);
+
+        // Reporting
+        print_str("cpp1_duty_cycle(");
+        print_int((int)value.long_int);
         print_str(")\n");
+        break;
+
+      case 'I':
+        // reading int argument
+        if (!read_int(line, &char_count, &value)) {
+          print_str("Bad int Number Format\n");
+          break;
+        }
+
+        heater_set((uint8_t)value.long_int);
+
+        // Reporting
+        print_str("heater_set(");
+        print_int((int)value.long_int);
+        print_str(")\n");
+        break;
+
+      case 'J':
+
+        // printing current heatering value
+        print_str("Current Heating Value: ");
+        print_int((uint8_t)current_heating_value);
+        print_char('\n');
+        break;
+
+      case 'K':
+
         // reading float argument
         if (!read_float(line, &char_count, &value)) {
           print_str("Bad float Number Format\n");
           break;
         }
 
-        // controlling cpp frequency
-        cpp1_duty_cycle((uint8_t)value.long_int);
+        // setting PID setpoint
+        pid_setpoint(value.float_);
 
         // Reporting
-        print_str("cpp1_duty_cycle(");
-        print_int((uint8_t)value.long_int);
+        print_str("pid_setpoint(");
+        print_double(value.float_);
         print_str(")\n");
         break;
 
+      case 'L':
+
+        // Activating PID controller !
+        pid_activate();
+
+        // Reporting
+        print_str("Activating PID Controller!\n");
+
+      case 'M':
+
+        // Activating PID controller !
+        pid_deactivate();
+
+        // Reporting
+        print_str("Deactivating PID Controller!\n");
 
       default:
         print_str("Command Letter Not Implemented\n");

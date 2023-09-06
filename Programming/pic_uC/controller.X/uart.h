@@ -2,10 +2,6 @@
 #ifndef UART_H
 #define UART_H
 
-#define INT_DIGITS 5
-#define FLOAT_WHOLE_DIGITS 3
-#define FLOAT_WHOLE_DECIMALS 3
-
 #define RX_BUFFER_SIZE 64
 #define SERIAL_NO_DATA 0xFF
 
