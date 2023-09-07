@@ -11,10 +11,10 @@
 void timer1_init(void) {
 
   // Read 16-bit values in one operation
-  RD16 = 1;   
+  T1RD16 = 1;   
 
   // TMR1 Prescalar
-  T1_PRESCALAR = T1_PRE_ACTUAL[T1_PRE_1];
+  T1_PRESCALAR = T1_PRE_1;
 
   // TMR1 Clock Source -> Fosc/4
   TMR1CS = 0;
@@ -27,6 +27,16 @@ void timer1_init(void) {
 void timer1_ISR(void) {
 
 
+  if ((++timer1_overflow_counter) == TARGET_TIMER1_OVERFLOW) {
+
+    RB0 = !RB0;
+    pid_execute();
+    timer1_overflow_counter = 0;
+    pid_report_shown = 0;
+
+  }
+
+  TMR1 = 5550;  // preloading value to 5ms
 
 }
 

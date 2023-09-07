@@ -165,6 +165,8 @@ void terminal_execute_line(char* line) {
         // Reporting
         print_str("Activating PID Controller!\n");
 
+        break;
+
       case 'M':
 
         // Activating PID controller !
@@ -172,6 +174,20 @@ void terminal_execute_line(char* line) {
 
         // Reporting
         print_str("Deactivating PID Controller!\n");
+
+        break;
+
+      case 'N':
+
+        // toggling PID report status
+        pid_report_show = !pid_report_show;
+
+        // Reporting
+        print_str("PID report showing status: ");
+        print_int(pid_report_show);
+        print_char('\n');
+
+        break;
 
       default:
         print_str("Command Letter Not Implemented\n");

@@ -56,5 +56,12 @@ void protocol_main_loop(void) {
 
       }
     }
+
+    if (pid_report_show && !pid_report_shown) {
+      pid_report();
+      pid_report_shown = 1;
+    }
+    
   }
+
 }

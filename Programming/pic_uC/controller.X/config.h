@@ -14,15 +14,12 @@
 
 
 // PID configs
-#define Kp
-#define Ki
-#define Kd
+#define Kp 22.4303
+#define Ki 0.005
+#define Kd 21.336
 
-#define PID_OUTPUT_START_VALUE
-#define PID_MAX_OUTPUT 100.0
-#define PID_MIN_OUTPUT 0.0
-
-#define CALC_FUNC_DELAY
+#define PID_MAX_OUTPUT 100
+#define PID_MIN_OUTPUT 0
 
 #define PID_INPUT_FUNC read_T
 #define PID_OUTPUT_FUNC(v) heater_set(v)

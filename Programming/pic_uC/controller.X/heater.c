@@ -11,6 +11,7 @@
 void heater_init(void) {
 
   cpp1_freq(5000);
+  heater_set(0);
 
 }
 

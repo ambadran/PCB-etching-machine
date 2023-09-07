@@ -23,6 +23,7 @@ void main(void) {
   heater_init();
 
   // Testing
+  TRISB0 = 0;
 
   // Informing User System started
   print_str("System Started..");
@@ -58,12 +59,9 @@ void __interrupt() ISR(void) {
   if (TMR1IF) {
     timer1_ISR();
     TMR1IF = 0;
-    // DANGEROUS!!
-    // return should only be in the last flag check!
-    // so that the F doesn't get printed and makes the F do its job as an indicator to a unknown interrupt source!
-    return;
   }
 
-  print_char('F');
+  // to identify a rogue interrupt source!
+  /* print_char('F'); */
   return;
 }
