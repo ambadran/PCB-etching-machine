@@ -29,10 +29,9 @@ void timer1_ISR(void) {
 
   if ((++timer1_overflow_counter) == TARGET_TIMER1_OVERFLOW) {
 
-    RB0 = !RB0;
-    pid_execute();
-    timer1_overflow_counter = 0;
+    pid_execute_flag = 1;
     pid_report_shown = 0;
+    timer1_overflow_counter = 0;
 
   }
 

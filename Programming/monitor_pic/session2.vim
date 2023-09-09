@@ -60,8 +60,8 @@ xnoremap <silent> s* "sy:let @/=@scgn
 nnoremap <silent> s* :let @/='\<'.expand('<cword>').'\>'cgn
 noremap x "_x
 vmap y ygv
-nnoremap <SNR>44_: :=v:count ? v:count : ''
 nnoremap <SNR>46_: :=v:count ? v:count : ''
+nnoremap <SNR>44_: :=v:count ? v:count : ''
 xnoremap <silent> <Plug>NetrwBrowseXVis :call netrw#BrowseXVis()
 nnoremap <silent> <Plug>NetrwBrowseX :call netrw#BrowseX(netrw#GX(),netrw#CheckIfRemote(netrw#GX()))
 nmap <silent> <Plug>CommentaryUndo :echoerr "Change your <Plug>CommentaryUndo map to <Plug>Commentary<Plug>Commentary"
@@ -157,7 +157,6 @@ set visualbell
 set whichwrap=b,s,<,>
 set wildignore=*.pyc
 set wildmenu
-set window=33
 let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
 let v:this_session=expand("<sfile>:p")
 silent only
@@ -253,7 +252,7 @@ setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
 set cursorline
-setlocal cursorline
+setlocal nocursorline
 setlocal cursorlineopt=both
 setlocal define=^\\s*\\(def\\|class\\)
 setlocal dictionary=
@@ -572,6 +571,7 @@ inoremap <buffer> <silent> § =AutoPairsMoveCharacter('''')
 inoremap <buffer> <silent> ¢ =AutoPairsMoveCharacter('"')
 inoremap <buffer> <silent> © =AutoPairsMoveCharacter(')')
 inoremap <buffer> <silent> ¨ =AutoPairsMoveCharacter('(')
+inoremap <buffer> <silent> Û =AutoPairsMoveCharacter('[')
 inoremap <buffer> <silent> î :call AutoPairsJump()a
 inoremap <buffer> <silent> <expr> ð AutoPairsToggle()
 inoremap <buffer> <silent> â =AutoPairsBackInsert()
@@ -813,7 +813,7 @@ setlocal cryptmethod=
 setlocal nocursorbind
 setlocal nocursorcolumn
 set cursorline
-setlocal nocursorline
+setlocal cursorline
 setlocal cursorlineopt=both
 setlocal define=^\\s*\\(def\\|class\\)
 setlocal dictionary=
@@ -920,23 +920,19 @@ normal! zo
 normal! zo
 193
 normal! zo
-397
-normal! zo
-434
-normal! zo
-let s:l = 462 - ((46 * winheight(0) + 15) / 31)
+let s:l = 434 - ((222 * winheight(0) + 15) / 31)
 if s:l < 1 | let s:l = 1 | endif
 keepjumps exe s:l
 normal! zt
-keepjumps 462
-normal! 05|
-tabnext 1
+keepjumps 434
+normal! 01|
+tabnext 4
 set stal=1
 badd +0 monitor.py
 badd +1 serial_monitor.py
+badd +1 test1.py
 badd +1 ../micropython/pid_controller.py
-badd +0 test.py
-badd +0 test1.py
+badd +1 test.py
 if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
   silent exe 'bwipe ' . s:wipebuf
 endif

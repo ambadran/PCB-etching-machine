@@ -33,14 +33,14 @@ void terminal_execute_line(char* line) {
       case 'A':
 
         print_str("read_V(): ");
-        print_double(read_V());
+        print_float(read_V());
         print_str("\n");
         break;
 
       case 'B':
 
         print_str("read_V_averaged(): ");
-        print_double(read_V_averaged());
+        print_float(read_V_averaged());
         print_str("\n");
         break;
 
@@ -54,7 +54,7 @@ void terminal_execute_line(char* line) {
       case 'D':
 
         print_str("read_T(): ");
-        print_double(read_T());
+        print_float(read_T());
         print_str("\n");
         break;
 
@@ -79,7 +79,7 @@ void terminal_execute_line(char* line) {
         }
 
         print_str("Read Float value: ");
-        print_double(value.float_);
+        print_float(value.float_);
         print_char('\n');
         break;
 
@@ -153,7 +153,7 @@ void terminal_execute_line(char* line) {
 
         // Reporting
         print_str("pid_setpoint(");
-        print_double(value.float_);
+        print_float(value.float_);
         print_str(")\n");
         break;
 
@@ -184,7 +184,7 @@ void terminal_execute_line(char* line) {
 
         // Reporting
         print_str("PID report showing status: ");
-        print_int(pid_report_show);
+        print_bit(pid_report_show);
         print_char('\n');
 
         break;

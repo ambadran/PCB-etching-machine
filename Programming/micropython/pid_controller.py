@@ -301,11 +301,11 @@ class PID:
         self._proportional = self.Kp * error
 
         # Calculating the Integral term
-        self._integral += self.Ki * error * self.timer_mode_dt
+        self._integral += self.Ki * error * dt
         self._integral = self.clamp(self._integral)  # Avoiding integral windup
 
         # Calculating the Derivative term
-        self._derivative = self.Kd * d_error / self.timer_mode_dt
+        self._derivative = self.Kd * d_error / dt
 
         # Calculating PID output
         output = self.clamp(self._proportional + self._integral + self._derivative)

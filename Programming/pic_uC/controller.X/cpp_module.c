@@ -7,7 +7,7 @@
 
 #include "includes.h"
 
-double duty_cycle_constant;
+float duty_cycle_constant;
 
 void cpp1_init(void) {
 
@@ -41,7 +41,7 @@ void cpp1_freq(long int frequency) {
       PR2 = (unsigned char)frequency_value;
 
       // computing new duty_cycle_constant for next duty_cycle change
-      duty_cycle_constant = ((double)_XTAL_FREQ/100.0/(double)frequency/(double)T2_PRE_ACTUAL[t2_prescalar_value]); 
+      duty_cycle_constant = (_XTAL_FREQ/100.0/(float)frequency/(float)T2_PRE_ACTUAL[t2_prescalar_value]); 
 
       return;
     

@@ -261,6 +261,12 @@ unsigned divu10(unsigned n) {
     return q + (r > 9);
 }
 
+void print_bit(uint8_t bit_) {
+
+  while(!TRMT);
+  TXREG = bit_ + '0';
+
+}
 
 void print_char(unsigned char character) {
 
@@ -299,7 +305,7 @@ void print_int(int value) {
 
 }
 
-void print_double(double value) {
+void print_float(float value) {
 
   // getting the whole number stuff
   int tmp = (int)value;
@@ -325,6 +331,7 @@ void print_double(double value) {
 
   // getting and sending the decimal number stuff
   // since no need to inverse digit order :)
+  value = value - truncf(value);
   for (i=0; i<FLOAT_WHOLE_DECIMALS; i++) {
     /* value = mulu10(value); */
     value *= 10;

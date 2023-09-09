@@ -3,7 +3,7 @@
 #define CONFIG_H
 
 // uC specific configs
-#define _XTAL_FREQ 48000000
+#define _XTAL_FREQ (float)48000000.0
 
 /* User specific configs */
 
