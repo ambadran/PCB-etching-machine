@@ -15,7 +15,7 @@ void main(void) {
   // INITs/DEINITS
   interrupt_init();
   comparator_deinit();
-  uart_init(115200);
+  uart_init(UART_BAUDRATE);
   adc_init();
   timer1_init();
   timer2_init();
@@ -24,6 +24,7 @@ void main(void) {
 
   // Testing
   TRISB0 = 0;
+  TRISB1 = 0;
 
   // Informing User System started
   print_str("System Started..");

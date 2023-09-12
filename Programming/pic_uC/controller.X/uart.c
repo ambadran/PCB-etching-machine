@@ -18,7 +18,7 @@ uint8_t uart_rx_buffer_head = 0;
 uint8_t uart_rx_buffer_tail = 0;  //TODO: understand why it's volatile in grbl
 
 
-void uart_init(long int baudrate) {
+void uart_init(int32_t baudrate) {
 
   // Module SFR setup
   TX9 = 0; // 8-bit transmission
@@ -37,7 +37,8 @@ void uart_init(long int baudrate) {
   RXDTP = 0;
   BRG16 = 1;
   BRGH = 0; //TODO: try  making it 4 and make the equation /4 instead of /16
-  SPBRG = (uint8_t)(((_XTAL_FREQ/baudrate)/16)); 
+  SPBRG = (uint8_t)(((_XTAL_FREQ/baudrate)/16) - 1); 
+  /* SPBRG = 11; // baudrate 250000 */
 
   // Tris register setup
   TX_TRIS = 1;
@@ -291,6 +292,17 @@ void print_int(int value) {
   uint8_t* digits[INT_DIGITS];
   int8_t i;
 
+  // dealing with negative numbers
+  if (value < 0) {
+
+    // sending negative sign
+    while(!TRMT);
+    TXREG = '-';
+
+    // inverting the value to deal with it
+    value = -value;
+  }
+
   digits[INT_DIGITS-1] = ((value%10) + '0');
 
   for(i=INT_DIGITS-2 ; i>=0 ; i--) {
@@ -308,9 +320,22 @@ void print_int(int value) {
 void print_float(float value) {
 
   // getting the whole number stuff
-  int tmp = (int)value;
-  uint8_t* digits[FLOAT_WHOLE_DIGITS];
-  int8_t i;
+  /* int tmp = (int)value; */ //TODO: test if this method is better or the library function is better
+  float tmp2;
+  value = modff(value, &tmp2);  // assigning whole number to tmp and decimal to value 
+  int tmp = (int)tmp2;
+  uint8_t* digits[FLOAT_WHOLE_DIGITS];  // because we need to invert the order when printing
+  int8_t i;  // for loops
+
+  // dealing with negative numbers first
+  if (signbit(value)) {
+    while(!TRMT);
+    TXREG = '-';
+
+    // inverting value to deal with it
+    tmp = -tmp;
+    value = -value;
+  }
 
   digits[FLOAT_WHOLE_DIGITS-1] = ((tmp%10) + '0');
 
@@ -331,7 +356,7 @@ void print_float(float value) {
 
   // getting and sending the decimal number stuff
   // since no need to inverse digit order :)
-  value = value - truncf(value);
+  /* value = value - truncf(value); */  //TODO: read above todo
   for (i=0; i<FLOAT_WHOLE_DECIMALS; i++) {
     /* value = mulu10(value); */
     value *= 10;

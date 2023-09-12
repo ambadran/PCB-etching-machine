@@ -58,13 +58,16 @@ void protocol_main_loop(void) {
     }
 
     if (pid_execute_flag) {
-      RB0 = !RB0;  // for measuring on oscilloscope
+      RB0 = 1;  // for measuring on oscilloscope
       pid_execute();
+      RB0 = 0;
       pid_execute_flag = 0;
     }
 
     if (pid_report_show && !pid_report_shown) {
+      RB1 = 1;
       pid_report();
+      RB1 = 0;
       pid_report_shown = 1;
     }
     

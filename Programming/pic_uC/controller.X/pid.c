@@ -12,13 +12,13 @@ pid_t pid;
 
 void pid_reset(void) {
   // Zero Out all values
+  float tmp = pid.setpoint;
   memset(&pid, 0.0, sizeof(pid_t)); 
-
-  pid._integral = CLAMP(0.0);
+  pid.setpoint = tmp;
 }
 
-//TODO: try doing it in the terminal directly
-void pid_setpoint(float setpoint) { pid.setpoint = setpoint; }
+// do it directly 
+/* void pid_setpoint(float setpoint) { pid.setpoint = setpoint; } */
 
 uint8_t pid_calc(float current_input) {
   
@@ -32,7 +32,12 @@ uint8_t pid_calc(float current_input) {
 
   // Calculating integral term
   pid._integral += Ki*error*PID_dt;
-  pid._integral = CLAMP(pid._integral);  // avoid integral windup
+  pid._integral = CLAMP((int)pid._integral);  // avoid integral windup
+                                              // TODO: currently all integral values 
+                                              // will only be integers, as i don't
+                                              // want to typecast twice in CLAMP
+                                              // to avoid float comparasions from
+                                              // the math library.
 
   // Calculating derivative term
   pid._derivative = Kd*d_error*PID_dt_inv;
@@ -41,7 +46,12 @@ uint8_t pid_calc(float current_input) {
   pid._last_error = error;
   pid._last_input = current_input;
 
+#ifdef REPORT_LAST_OUTPUT
+  pid._last_output = CLAMP(pid._proportional+pid._integral+pid._derivative);
+  return pid._last_output;
+#else
   return CLAMP(pid._proportional+pid._integral+pid._derivative);
+#endif
 
 }
 
@@ -80,6 +90,11 @@ void pid_report(void) {
   print_char('\n');
   print_str("Derivative: ");
   print_float(pid._derivative);
+#ifdef REPORT_LAST_OUTPUT
+  print_char('\n');
+  print_str("Last Output: ");
+  print_float(pid._last_output);
+#endif
   print_str("\n\n");
 
 }

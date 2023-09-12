@@ -6,7 +6,7 @@ import sys
 
 machine.freq(250000000)
 
-uart = UART(0, baudrate=115200, tx=Pin(12), rx=Pin(1), timeout_char=50, invert=UART.INV_TX)
+uart = UART(0, baudrate=250000, tx=Pin(12), rx=Pin(1), timeout_char=50, invert=UART.INV_TX)
 
 # Second core will only print whatever read on terminal
 def print_read():

@@ -144,12 +144,14 @@ void terminal_execute_line(char* line) {
 
         // reading float argument
         if (!read_float(line, &char_count, &value)) {
-          print_str("Bad float Number Format\n");
+          print_str("Current pid value is set to: ");
+          print_float(pid.setpoint);
+          print_char('\n');
           break;
         }
 
         // setting PID setpoint
-        pid_setpoint(value.float_);
+        pid.setpoint = value.float_;
 
         // Reporting
         print_str("pid_setpoint(");

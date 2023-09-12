@@ -8,6 +8,7 @@
 /* User specific configs */
 
 // UART configs
+#define UART_BAUDRATE 250000
 #define INT_DIGITS 5
 #define FLOAT_WHOLE_DIGITS 3
 #define FLOAT_WHOLE_DECIMALS 3
@@ -21,7 +22,12 @@
 #define PID_MAX_OUTPUT 100
 #define PID_MIN_OUTPUT 0
 
+// put the function that returns the input to the pid controller, aka the the value to subtract from setpoint to find error
 #define PID_INPUT_FUNC read_T
+// put the function that takes in the output of the pid controller to influence the plant
 #define PID_OUTPUT_FUNC(v) heater_set(v)
+
+// comment out to not report outputs
+#define REPORT_LAST_OUTPUT
 
 #endif
