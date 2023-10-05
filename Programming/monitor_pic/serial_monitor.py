@@ -8,6 +8,24 @@ machine.freq(250000000)
 
 uart = UART(0, baudrate=250000, tx=Pin(12), rx=Pin(1), timeout_char=50, invert=UART.INV_TX)
 
+# This is the command list for the PIC temperature controller project
+command_list = """A: read_V
+B: read_V_averaged
+C: read_R_averaged
+D: read_T
+E<int>: read_int
+F<float>: read_float
+G<int>: cpp1_freq
+H<int>: cpp1_duty_cycle
+I<int>: heater_set
+J: current_heating_value
+K: pid.setpoint
+K<float>: pid.setpoint = float
+L: pid_activate
+M: pid_deactivate
+N: pid_report_show = !pid_report_show
+"""
+
 # Second core will only print whatever read on terminal
 def print_read():
     '''
@@ -50,6 +68,9 @@ def main():
     while True:
         sleep(0.2)
         k = input('-> ')
+        if k == 'help':
+            print(command_list)
+            continue
         send(k)
 
 if __name__ == '__main__':
