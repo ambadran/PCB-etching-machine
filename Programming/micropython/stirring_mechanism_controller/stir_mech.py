@@ -11,15 +11,15 @@ class Motor:
     CW = True
     CCW = False
 
-    def __init__(self, p1_pin_num: int, p2_pin_num: int, n1_pin_num: int, n2_pin_num: int):
+    def __init__(self, p1_pin_num: int, p2_pin_num: int, n1_pin_num: int, n2_pin_num: int, default_duty_cycle=512):
         '''
         Constructor
         '''
         # Motor control pins
         self.p1 = Pin(p1_pin_num, Pin.OUT)
         self.p2 = Pin(p2_pin_num, Pin.OUT)
-        self.n1 = Pin(n1_pin_num, Pin.OUT)
-        self.n2 = Pin(n2_pin_num, Pin.OUT)
+        self.n1 = PWM(Pin(n1_pin_num), freq=20000)
+        self.n2 = PWM(Pin(n2_pin_num), freq=20000)
 
         # Initializing with motor off
         self.off()
@@ -29,6 +29,8 @@ class Motor:
 
         # class dictionary to map cw_ccw value to corresponding activating cw/ccw method
         self.cw_values = {Motor.CW: self.cw, Motor.CCW: self.ccw}
+
+        self.default_duty_cycle = default_duty_cycle
 
     def on(self):
         '''
@@ -42,29 +44,37 @@ class Motor:
         '''
         self.p1.off()
         self.p2.off()
-        self.n1.on()
-        self.n2.on()
+        # self.n1.on()  # Remove this after checking everything
+        # self.n2.on()  # Remove this after checking everything
+        self.n1.duty(1023)  #TODO: test this if it's actually 100% duty cycle
+        self.n2.duty(1023)  #TODO: test this if it's actually 100% duty cycle
 
     @property
     def is_on(self):
         '''
         returns whether motor is on or off
         '''
-        return (self.p1.value() or self.p2.value()) or not (self.n1.value() and self.n2.value())
+        # return (self.p1.value() or self.p2.value()) or not (self.n1.value() and self.n2.value())
+        return self.p1.value() or self.p2.value() or (self.n1.duty() != 1023) or (self.n2.duty() != 1023)
 
     def cw(self):
         '''
         clockwise motion
+        #TODO: implement gradual duty_cycle incrementing to avoid motor sudden vibrations
         '''
         # first closing the circuit to ensure no dead-time short
-        self.n1.on()
-        self.n2.on()
+        # self.n1.on()
+        # self.n2.on()
+        self.n1.duty(1023)  #TODO: test this if it's actually 100% duty cycle
+        self.n2.duty(1023)  #TODO: test this if it's actually 100% duty cycle
 
         # openning n1 and p2
         self.p1.on()
         self.p2.off()
-        self.n1.on()
-        self.n2.off()
+        # self.n1.on()
+        # self.n2.off()
+        self.n1.duty(self.default_duty_cycle)
+        self.n2.duty(0)
 
         # Saving current state
         self._cw_ccw = True
@@ -74,14 +84,18 @@ class Motor:
         anti-clockwise motion
         '''
         # first closing the circuit to ensure no dead-time short
-        self.n1.on()
-        self.n2.on()
+        # self.n1.on()
+        # self.n2.on()
+        self.n1.duty(1023)  #TODO: test this if it's actually 100% duty cycle
+        self.n2.duty(1023)  #TODO: test this if it's actually 100% duty cycle
 
         # openning n2 and p1
         self.p1.off()
         self.p2.on()
-        self.n1.off()
-        self.n2.on()
+        # self.n1.off()
+        # self.n2.on()
+        self.n1.duty(0)
+        self.n2.duty(self.default_duty_cycle)
 
         # Saving current state
         self._cw_ccw = False
