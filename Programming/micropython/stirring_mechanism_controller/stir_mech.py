@@ -18,6 +18,8 @@ class Motor:
         # Motor control pins
         self.p1 = Pin(p1_pin_num, Pin.OUT)
         self.p2 = Pin(p2_pin_num, Pin.OUT)
+        # self.n1 = Pin(n1_pin_num, Pin.OUT)
+        # self.n2 = Pin(n2_pin_num, Pin.OUT)
         self.n1 = PWM(Pin(n1_pin_num), freq=20000)
         self.n2 = PWM(Pin(n2_pin_num), freq=20000)
 
