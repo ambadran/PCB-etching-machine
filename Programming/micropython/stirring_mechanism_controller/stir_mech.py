@@ -5,9 +5,28 @@ class Motor:
     '''
     H-Bridge controller for DC motors
 
-    H-bridge is two pnp and two npn
-    NOTE: pnp is active high, npn is active low
+    #TODO: rename p1, p2, n1, n2 to pins 1, 2, 3, 4
+        this is to include h-bridges made of 4 npns for example
+
+        differentiate between the underlying self.p1 (should be renamed to self._p1)
+        and the wanted transistor control
+
+        should only be controlled with .on() or .off(), the active high/active low should be
+        pre-choosen by the user
+
+        make .partial_on() for pwm pins (or sth)
+
     '''
+    # User settings
+    #NOTE: VERY IMPORTANT, here the default on/off state for npn and pnp values
+    #TODO: should be set automatically
+    P_ON = 1
+    P_OFF = 0
+    N_ON = 0 
+    N_OFF = 65535
+
+
+    # settings not supposed to change
     CW = True
     CCW = False
 
