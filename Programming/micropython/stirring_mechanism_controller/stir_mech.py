@@ -14,10 +14,10 @@ class MotorPin:
     '''
 
     # Mapping everything to everything :D
-    ON_OFF_FUNC = [Pin.on, PWM.duty_u16]
+    ON_OFF_FUNC = [Pin.value, PWM.duty_u16]
     STATE_FUNC = [Pin.value, PWM.duty]
-    ON_VALUE = [[0, 1], [0, 65535]]
-    OFF_VALUE = [[1, 0], [65535, 0]]
+    ON_VALUE = [[1, 0], [65535, 0]]
+    OFF_VALUE = [[0, 1], [0, 65535]]
     VALUES = [OFF_VALUE, ON_OFF_FUNC]
 
     def __init__(self, pin: Pin = None, pwm: PWM = None, is_active_low: bool = None, default_duty_cycle=None):
@@ -43,6 +43,7 @@ class MotorPin:
             self.pin_pwm_mode = 1
             self.motor_pin = pwm
 
+    @property
     def state(self):
         '''
         returns whether current pin is on/off, transistor is allowing current or not
@@ -58,7 +59,7 @@ class MotorPin:
 
         This function is maps pin_pwm_mode and is_active_low to the correct function that will turn on the motor pin
         '''
-        MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.ON_VALUE[self.pin_pwm_mode][is_active_low])
+        MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.ON_VALUE[self.pin_pwm_mode][self.is_active_low])
 
     def off(self):
         '''
@@ -66,7 +67,7 @@ class MotorPin:
 
         This function is maps pin_pwm_mode and is_active_low to the correct function that will turn off the motor pin
         '''
-        MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.OFF_VALUE[self.pin_pwm_mode][is_active_low])
+        MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.OFF_VALUE[self.pin_pwm_mode][self.is_active_low])
 
     def set(self, value: bool):
         '''
@@ -77,7 +78,7 @@ class MotorPin:
         
         :param value: must be boolean-like value. e.g- 0/1 or False/True
         '''
-        MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.VALUES[value][self.pin_pwm_mode][is_active_low])
+        MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.VALUES[value][self.pin_pwm_mode][self.is_active_low])
 
     def partial_on(self):
         '''
@@ -94,10 +95,10 @@ class MotorPin:
         self.motor_pin.duty(value)
 
     def __repr__(self):
-        return repr(self.motor_pin)
+        return f"{repr(self.motor_pin)}, state: {self.state}"
 
     def __str__(self):
-        return str(self.motor_pin)
+        return f"{str(self.motor_pin)}, state: {self.state}"
 
 class Motor:
     '''
@@ -190,7 +191,7 @@ class Motor:
         '''
         returns whether motor is on or off
         '''
-        return (self.v1.state() and self.g2.state()) or (self.v2.state() and self.g1.state())
+        return (self.v1.state and self.g2.state) or (self.v2.state and self.g1.state)
 
 
     def cw(self):
@@ -260,10 +261,11 @@ class Motor:
         '''
         if self.is_on:
             string_dir = 'CW' if self._cw_ccw else 'CCW'
-            return f"Motor is ON, moving {string_dir}"
+            return f"Motor is ON, moving {string_dir}, V1: {self.v1.state}, V2: {self.v2.state}, G1: {self.g1.state}, G2: {self.g2.state}"
 
         else:
-            return "Motor is OFF"
+            return "Motor is OFF, V1: {self.v1.state}, V2: {self.v2.state}, G1: {self.g1.state}, G2: {self.g2.state}"
+
 
 
 class LimitSwitch:
@@ -300,6 +302,7 @@ class LimitSwitch:
         #TODO: make specific method in Motor for calling in ISR
         '''
         self._motor_func()
+        print('irq happenned')  #TODO:
 
         # As measured from oscilloscope the limit switches bounces for about 700 ms
         # So to deal with it, will deactivate IRQ for 1ms
