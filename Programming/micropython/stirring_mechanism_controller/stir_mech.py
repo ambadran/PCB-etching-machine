@@ -1,3 +1,7 @@
+'''
+Timer0 is used for limit swtich debouncing
+Timer1 is used for motor pins PWM sweep functions
+'''
 from machine import Pin, PWM, Timer
 from time import sleep_ms
 
@@ -18,9 +22,12 @@ class MotorPin:
     STATE_FUNC = [Pin.value, PWM.duty]
     ON_VALUE = [[1, 0], [65535, 0]]
     OFF_VALUE = [[0, 1], [0, 65535]]
-    VALUES = [OFF_VALUE, ON_OFF_FUNC]
+    VALUES = [OFF_VALUE, ON_FUNC]
 
-    def __init__(self, pin: Pin = None, pwm: PWM = None, is_active_low: bool = None, default_duty_cycle=None):
+    # other constants
+    SAMPLE_TIME = 1  # ms 
+
+    def __init__(self, pin: Pin = None, pwm: PWM = None, is_active_low: bool = None, maximum_duty_cycle=None):
         '''
         contstructor
         '''
@@ -32,8 +39,13 @@ class MotorPin:
 
         self.is_active_low = is_active_low
 
-        if default_duty_cycle:
-            self.default_duty_cycle = default_duty_cycle
+        if maximum_duty_cycle:
+            self.maximum_duty_cycle = maximum_duty_cycle
+
+        else:
+            # must initialize internal variable nonetheless
+            self._maximum_duty_cycle = 65535
+
 
         if pin:
             self.pin_pwm_mode = 0
@@ -42,6 +54,26 @@ class MotorPin:
         else:
             self.pin_pwm_mode = 1
             self.motor_pin = pwm
+
+    @property
+    def maximum_duty_cycle(self):
+        '''
+        duty cycle when transistor is ON
+        '''
+        return self._maximum_duty_cycle
+
+    @maximum_duty_cycle.setter
+    def maximum_duty_cycle(self, value):
+        '''
+        value in 0 to 65535
+        '''
+        self._maximum_duty_cycle = value
+
+        MotorPin.ON_VALUE[1][0] = value
+        MotorPin.OFF_VALUE[1][1] = 65535 - value  # it's inverted!!
+
+        # if the transistor is already on, must call function again with updated value
+        self.set(self.state)
 
     @property
     def state(self):
@@ -80,19 +112,36 @@ class MotorPin:
         '''
         MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.VALUES[value][self.pin_pwm_mode][self.is_active_low])
 
-    def partial_on(self):
-        '''
-        Turns PWM pins to a pre-decided default_duty_cycle value,
-
-        used for when a specific lower rpm is needed most of the time
-        '''
-        self.motor_pin.duty(self.default_duty_cycle)
-
     def duty(self, value: int):
         '''
         sets PWM pins to wanted duty cycle
         '''
         self.motor_pin.duty(value)
+
+    def _update_pwm_duty_cycle(self, x):
+        '''
+        :param x: redundant variable for Timer class 
+        ISR function for Timer1, gets executed every MotorPin.sample_time, until samples list is finished
+        '''
+        self.motor_pin.duty_u16(self.samples[self.current_index])
+        self.current_index += 1
+        if self.current_index >= self.num_samples:
+            self.timer.deinit()
+
+    def sweep(self, sweep_time: int):
+        '''
+        :time in ms!!!!
+        sweeps PWM to wanted signal
+        '''
+        m = 1/sweep_time
+        self.num_samples = ceil(sweep_time/MotorPin.sample_time)
+
+        self.samples = []
+        for ind in range(1, num_samples+1):
+            self.samples.append(int(m*ind*65535))
+
+        self.current_index = 0
+        self.timer = Timer(1, Mode=Timer.PERIODIC, period=MotorPin.sample_time, callback=self._update_pwm_duty_cycle)
 
     def __repr__(self):
         return f"{repr(self.motor_pin)}, state: {self.state}"
@@ -122,7 +171,7 @@ class Motor:
     Also all pins have .state(value) where value is (0 or 1) or (False or True)
     
     Also g1 and g2 are actually PWM pins so their .on() is just 100% duty cycle,
-    They have .partial_on() for a 'default_duty_cycle' argument set by user
+    They have .partial_on() for a 'maximum_duty_cycle' argument set by user
     They also have .duty(value) to set a particular duty_cycle
 
 
@@ -141,12 +190,13 @@ class Motor:
 
     def __init__(self, v1_pin_num: int, v2_pin_num: int, g1_pin_num: int, g2_pin_num: int, 
                  v1_active_low, v2_active_low, g1_active_low, g2_active_low,
-                 default_duty_cycle=512):
+                 maximum_duty_cycle: int = None, sweep_time: int = 0):
         '''
         Constructor
+        :param maximum_duty_cycle: its default is set in class variables ON_VALUE and OFF_VALUE in MotorPin, if it's assigned it will be assigned there too
+        :param sweep_time: in ms, is the time where PWM turns from one state to the other
         '''
         # low-level Motor control pin variables
-        self.default_duty_cycle = default_duty_cycle
         self._v1_pin = Pin(v1_pin_num, Pin.OUT)
         self._v2_pin = Pin(v2_pin_num, Pin.OUT)
         self._g1_pwm = PWM(Pin(g1_pin_num), freq=20000)
@@ -157,6 +207,15 @@ class Motor:
         self.v2 = MotorPin(pin = self._v2_pin, is_active_low = v2_active_low)
         self.g1 = MotorPin(pwm = self._g1_pwm, is_active_low = g1_active_low)
         self.g2 = MotorPin(pwm = self._g2_pwm, is_active_low = g2_active_low)
+        if maximum_duty_cycle:
+            self.maximum_duty_cycle = maximum_duty_cycle
+
+        else:
+            # must initialize internal variable nonetheless
+            self._maximum_duty_cycle = 65535
+
+        # sweep time is the time where PWM turns from one state to the other
+        self.sweep_time = sweep_time 
 
         # Initializing with motor off
         self.off()
@@ -167,6 +226,21 @@ class Motor:
         # class dictionary to map cw_ccw value to corresponding activating cw/ccw method
         self.cw_values = {Dir.CW: self.cw, Dir.CCW: self.ccw}
 
+    @property
+    def maximum_duty_cycle(self):
+        '''
+        duty cycle when transistor is ON
+        '''
+        return self._maximum_duty_cycle
+
+    @maximum_duty_cycle.setter
+    def maximum_duty_cycle(self, value):
+        '''
+        value in 0 to 65535
+        '''
+        self._maximum_duty_cycle = value
+        self.g1.maximum_duty_cycle = value
+        self.g2.maximum_duty_cycle = value
 
     def on(self):
         '''
@@ -200,14 +274,15 @@ class Motor:
         #TODO: implement gradual duty_cycle incrementing to avoid motor sudden vibrations
         '''
         # first closing the circuit to ensure no dead-time short
-        self.v1.off()
-        self.v2.off()
+        self.off()
 
-        # openning n1 and p2
+        # setting all pins that won't sweep
         self.v1.on()
         self.v2.off()
         self.g1.off()
-        self.g2.on()
+
+        # sweeping (if there is a sweep_time value)
+        self.g2.sweep(self.sweep_time)
 
         # Saving current state
         self._cw_ccw = True
@@ -217,14 +292,15 @@ class Motor:
         anti-clockwise motion
         '''
         # first closing the circuit to ensure no dead-time short
-        self.v1.off()
-        self.v2.off()
+        self.off()
 
-        # openning n2 and p1
+        # setting all pins that won't sweep
         self.v1.off()
         self.v2.on()
-        self.g1.on()
         self.g2.off()
+
+        # sweeping (if there is a sweep_time value)
+        self.g1.sweep(self.sweep_time)
 
         # Saving current state
         self._cw_ccw = False
@@ -294,6 +370,13 @@ class LimitSwitch:
         self.activate_irq()
         # self.irq_pin.irq(handler = self._ISR, trigger = Pin.IRQ_FALLING)
 
+    def _fake_ISR(self, x):
+        '''
+        There is no clear way to disable a specific IRQ, and disabling all IRQ compromises rshell
+        This is a nop function to execute for when I don't want the IRQ
+        '''
+        pass
+
     def _ISR(self, x):
         '''
         I Must call the _motor_func from this to add the buffer argument
@@ -302,14 +385,18 @@ class LimitSwitch:
         #TODO: make specific method in Motor for calling in ISR
         '''
         self._motor_func()
-        print('irq happenned')  #TODO:
+        print('irq happenned')  #TODO: remove this after extensive testing
 
         # As measured from oscilloscope the limit switches bounces for about 700 ms
         # So to deal with it, will deactivate IRQ for 1ms
-        #TODO: fix this 
-        # self.irq_pin.irq(handler=None)
-        # self.timer0 = Timer(0)
-        # self.timer0.init(period=10, mode=Timer.ONE_SHOT, callback=lambda t: self.activate_irq)
+        self.deactivate_irq()
+        self.timer0 = Timer(0)
+        self.timer0.init(period=10, mode=Timer.ONE_SHOT, callback=lambda t: self.activate_irq)
+        # sleep_ms(10)
+        # self.activate_irq
+
+    def deactivate_irq(self):
+        self.irq_pin.irq(handler=self._fake_ISR)
 
     def activate_irq(self):
         self.irq_pin.irq(handler = self._ISR, trigger = Pin.IRQ_FALLING)
@@ -331,16 +418,28 @@ class StirringMechanism:
         '''
         activate IRQ
         '''
-        pass
+        self.limit_sw1.activate_irq()
+        self.limit_sw2.activate_irq()
 
     def off(self):
         '''
         deactivate motor and IRQ
         '''
+        self.limit_sw1.deactivate_irq()
+        self.limit_sw2.deactivate_irq()
         motor.off()
 
+    def monitor(self):
+        '''
+        prints current motor dir and last limit switch triggered
+        '''
+        while True:
+            print(f"Motor dir: {self.motor._cw_ccw \r"}
+
 # Object Initializations
-motor = Motor(4, 5, 6, 7, v1_active_low=False, v2_active_low=False, g1_active_low=True, g2_active_low=True)
+sweep_time = 100  # in ms
+motor = Motor(4, 5, 6, 7, v1_active_low=False, v2_active_low=False, g1_active_low=True, g2_active_low=True, sweep_time=100)
 limit_sw1 = LimitSwitch(15, motor, Dir.CW)
 limit_sw2 = LimitSwitch(16, motor, Dir.CCW)
+sr = StirringMechanism(motor, limit_sw1, limit_sw2)
 
