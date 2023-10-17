@@ -23,6 +23,8 @@
 #include "thermistor.h"
 #include "heater.h"
 #include "pid.h"
+#include "dc_motor.h"
+#include "limit_switches.h"
 #include "protocol.h"
 #include "terminal.h"
 
