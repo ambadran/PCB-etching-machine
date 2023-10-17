@@ -4,8 +4,9 @@ Timer1 is used for first PWM pin sweep function
 Timer2 is used for second PWM pin sweep function
 '''
 from machine import Pin, PWM, Timer
-from math import floor
+from math import floor, e
 from time import sleep_ms
+
 
 class Dir:
     '''
@@ -13,6 +14,7 @@ class Dir:
     '''
     CW = True
     CCW = False
+
 
 class MotorPin:
     '''
@@ -169,25 +171,59 @@ class MotorPin:
 
         sets the variables when the motor.sweep_time is set
         This is to not do complex computation every time we call .sweep_on()
+        #TODO: implement exponential set points instead of linear as DC motor is like that
         '''
+        # try:
+        #     m = 1/sweep_time
+
+        #     # try sweep/sample = 10/2.x
+        #     # must always have number rounded down then add the 10 at the end manually in any case
+        #     self.num_samples = floor(sweep_time/MotorPin.SAMPLE_TIME)
+
+        #     samples = []
+        #     for ind in range(0, self.num_samples):
+        #         samples.append(int(m*ind*MotorPin.SAMPLE_TIME*self.maximum_duty_cycle))
+
+        #     # Adding maximum value to ensure extremes are covered when uneven samples
+        #     samples.append(self.maximum_duty_cycle)
+
+        #     # inversing list order if necessary
+        #     self.samples_off = samples[::MotorPin.SAMPLE_ORDER_BIT[0][self.is_active_low]]
+        #     self.samples_on = samples[::MotorPin.SAMPLE_ORDER_BIT[1][self.is_active_low]]
+
+        #     # setting the on function, the function that will be used by user
+        #     self.on = self._sweep_on
+        #     self.off = self._sweep_off
+
+        # except ZeroDivisionError:
+        #     # setting the on function, the function that will be used by user
+        #     self.on = self._instantaneous_on
+        #     self.off = self._instantaneous_off
+        
+        #TODO: test the shit out of this >:)
         try:
-            m = 1/sweep_time
+            m = (e+1)/sweep_time
 
             # try sweep/sample = 10/2.x
             # must always have number rounded down then add the 10 at the end manually in any case
             self.num_samples = floor(sweep_time/MotorPin.SAMPLE_TIME)
 
-            samples = []
-            # This expression turns 1 to -1 and 0 to 1, aka reversing order if is_active_low
-            for ind in range(0, self.num_samples):
-                samples.append(int(m*ind*MotorPin.SAMPLE_TIME*self.maximum_duty_cycle))
+            self.samples_on = []
+            self.samples_off = []
+            for ind in range(0, self.num_samples+1):
+                # Equation derivation and graphs in iPad notes
+                self.samples_off.append(-e**(m*ind*MotorPin.SAMPLE_TIME -1 -e) + 1)
+                self.samples_on.append(-e**(-m*ind*MotorPin.SAMPLE_TIME) + 1)
 
-            # Adding maximum value to ensure extremes are covered when uneven samples
-            samples.append(self.maximum_duty_cycle)
+            # The expoenential equations I set is upto 97.57% of the value
+            # So must add the 65535 manually
+            self.samples_off.insert(0, self.maximum_duty_cycle)
+            self.samples_on.append(self.maximum_duty_cycle)
+            self.num_samples += 1  # I added a value so must samples++
 
-            # inversing list order if necessary
-            self.samples_off = samples[::MotorPin.SAMPLE_ORDER_BIT[0][self.is_active_low]]
-            self.samples_on = samples[::MotorPin.SAMPLE_ORDER_BIT[1][self.is_active_low]]
+            # Reverse for is_active_low
+            self.samples_off = self.samples_off[::MotorPin.SAMPLE_ORDER_BIT[0][self.is_active_low]]
+            self.samples_on = self.samples_on[::MotorPin.SAMPLE_ORDER_BIT[1][self.is_active_low]]
 
             # setting the on function, the function that will be used by user
             self.on = self._sweep_on
@@ -243,6 +279,7 @@ class MotorPin:
 
     def __str__(self):
         return f"{str(self.motor_pin)}, state: {self.state}"
+
 
 class Motor:
     '''
@@ -323,7 +360,6 @@ class Motor:
 
         # Default state is Clockwise
         self._cw_ccw: bool = Dir.CW 
-
 
     @property
     def sweep_time(self):
@@ -412,7 +448,6 @@ class Motor:
         '''
         return (self.v1.state and self.g2.state) or (self.v2.state and self.g1.state)
 
-
     def cw(self):
         '''
         clockwise motion
@@ -489,7 +524,6 @@ class Motor:
 
         else:
             return f"Motor is OFF, V1: {self.v1.state}, V2: {self.v2.state}, G1: {self.g1.state}, G2: {self.g2.state}"
-
 
 
 class LimitSwitch:
