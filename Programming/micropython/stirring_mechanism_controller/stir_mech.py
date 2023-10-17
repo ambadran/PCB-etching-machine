@@ -1,9 +1,10 @@
 '''
 Timer0 is used for limit swtich debouncing
-Timer1 is used for motor pins PWM sweep functions
+Timer1 is used for first PWM pin sweep function
+Timer2 is used for second PWM pin sweep function
 '''
 from machine import Pin, PWM, Timer
-from math import ceil
+from math import floor
 from time import sleep_ms
 
 class Dir:
@@ -20,16 +21,17 @@ class MotorPin:
 
     # Mapping everything to everything :D
     ON_OFF_FUNC = [Pin.value, PWM.duty_u16]
-    STATE_FUNC = [Pin.value, PWM.duty]
+    STATE_FUNC = [Pin.value, lambda motor_pin: PWM.duty_u16(motor_pin) == 65535]
     ON_VALUE = [[1, 0], [65535, 0]]
     OFF_VALUE = [[0, 1], [0, 65535]]
     VALUES = [OFF_VALUE, ON_VALUE]
+    SAMPLE_ORDER_BIT = [[-1, 1], [1, -1]]  # off/on then activehigh/low
 
     # other constants
     SAMPLE_TIME = 1  # ms 
 
     def __init__(self, pin: Pin = None, pwm: PWM = None, is_active_low: bool = None, 
-            maximum_duty_cycle: int = 65535, sweep_time: int = 0):
+            maximum_duty_cycle: int = 65535, sweep_time: int = 0, timer_ind: int=None):
         '''
         contstructor
         '''
@@ -53,17 +55,18 @@ class MotorPin:
             self.pin_pwm_mode = 1
             self.motor_pin = pwm
 
-            # self.maximum_duty_cycle = maximum_duty_cycle
-            self._maximum_duty_cycle = maximum_duty_cycle
+            self.maximum_duty_cycle = maximum_duty_cycle
 
             # Sweeping functions variables
-            self.timer = Timer(1)
-            self.current_index_on = 0
-            self.current_index_off = 0
+            if timer_ind is None:
+                raise ValueError("Must specify a distinct timer for this pwm value")
+            self.timer = Timer(timer_ind)
+
+            # initializing start index
+            self.current_index = 0
                 
             # here is where the .on and .off methods are assigned
-            self.set_sweep_on_variables(sweep_time)
-            self.set_sweep_off_variables(sweep_time)
+            self.set_sweep_variables(sweep_time)
 
     @property
     def maximum_duty_cycle(self):
@@ -77,13 +80,33 @@ class MotorPin:
         '''
         value in 0 to 65535
         '''
-        self._maximum_duty_cycle = value
 
-        MotorPin.ON_VALUE[1][0] = value
-        MotorPin.OFF_VALUE[1][1] = 65535 - value  # it's inverted!!
+        state_before = not not self.motor_pin.duty_u16()
 
-        # if the transistor is already on, must call function again with updated value
-        self.set(self.state)
+        self.motor_pin.duty_u16(value)
+        sleep_ms(5)  # I have no idea why this method takes time to load
+                     # If I don't stall for a bit, It will return the wrong
+                     # duty_cycle down
+                     # Fortunately, This method isn't time critical at all
+                     # only run once in the begginning and by the user if needed
+
+        # frequency affect degree of accuracy,
+        # so not all choosen values are actually choosen
+        actual_value = self.motor_pin.duty_u16()
+
+        # saving an internal variable
+        self._maximum_duty_cycle = actual_value
+
+        # updating class constants with the new ACTUAL maximum_duty_cycle value
+        MotorPin.ON_VALUE[1][0] = actual_value
+        MotorPin.OFF_VALUE[1][1] = actual_value
+        MotorPin.STATE_FUNC[1] = lambda motor_pin: PWM.duty_u16(motor_pin) == actual_value
+
+        # get pin to its original state
+        if not state_before:
+            self.motor_pin.duty_u16(0)
+
+
 
     @property
     def state(self):
@@ -93,7 +116,7 @@ class MotorPin:
         #TODO: optimize 
             remove the not not and use a bitwise operation to return 1 if the output is >1 or 0
         '''
-        return (not not MotorPin.STATE_FUNC[self.pin_pwm_mode](self.motor_pin)) ^ self.is_active_low
+        return MotorPin.STATE_FUNC[self.pin_pwm_mode](self.motor_pin) ^ self.is_active_low
 
     def _instantaneous_on(self):
         '''
@@ -128,7 +151,11 @@ class MotorPin:
         
         :param value: must be boolean-like value. e.g- 0/1 or False/True
         '''
-        MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.VALUES[value][self.pin_pwm_mode][self.is_active_low])
+        if value:
+            self.on()
+        else:
+            self.off()
+        # MotorPin.ON_OFF_FUNC[self.pin_pwm_mode](self.motor_pin, MotorPin.VALUES[value][self.pin_pwm_mode][self.is_active_low])
 
     def duty(self, value: int):
         '''
@@ -136,18 +163,7 @@ class MotorPin:
         '''
         self.motor_pin.duty(value)
 
-    def _update_pwm_duty_cycle_sweep_on(self, x):
-        '''
-        :param x: redundant variable for Timer class 
-        ISR function for Timer1, gets executed every MotorPin.SAMPLE_TIME, until samples list is finished
-        '''
-        self.motor_pin.duty_u16(self.samples_on[self.current_index_on])
-        self.current_index_on += 1
-        if self.current_index_on >= self.num_samples_on:
-            self.current_index_on = 0
-            self.timer.deinit()
-
-    def set_sweep_on_variables(self, sweep_time: int):
+    def set_sweep_variables(self, sweep_time: int):
         '''
         :time in ms!!!!
 
@@ -156,22 +172,42 @@ class MotorPin:
         '''
         try:
             m = 1/sweep_time
-            self.num_samples_on = ceil(sweep_time/MotorPin.SAMPLE_TIME)
 
-            self.samples_on = []
+            # try sweep/sample = 10/2.x
+            # must always have number rounded down then add the 10 at the end manually in any case
+            self.num_samples = floor(sweep_time/MotorPin.SAMPLE_TIME)
+
+            samples = []
             # This expression turns 1 to -1 and 0 to 1, aka reversing order if is_active_low
-            for ind in range(1, self.num_samples_on)[::(int(not self.is_active_low) -1*self.is_active_low)]:
-                self.samples_on.append(int(m*ind*self.maximum_duty_cycle))
+            for ind in range(0, self.num_samples):
+                samples.append(int(m*ind*MotorPin.SAMPLE_TIME*self.maximum_duty_cycle))
 
-            # last value MUST be 0 or maximum_duty_cycle
-            self.samples_on.append(MotorPin.ON_VALUE[self.pin_pwm_mode][self.is_active_low])
+            # Adding maximum value to ensure extremes are covered when uneven samples
+            samples.append(self.maximum_duty_cycle)
+
+            # inversing list order if necessary
+            self.samples_off = samples[::MotorPin.SAMPLE_ORDER_BIT[0][self.is_active_low]]
+            self.samples_on = samples[::MotorPin.SAMPLE_ORDER_BIT[1][self.is_active_low]]
 
             # setting the on function, the function that will be used by user
             self.on = self._sweep_on
+            self.off = self._sweep_off
 
         except ZeroDivisionError:
             # setting the on function, the function that will be used by user
             self.on = self._instantaneous_on
+            self.off = self._instantaneous_off
+
+    def _update_pwm_duty_cycle_sweep_on(self, x):
+        '''
+        :param x: redundant variable for Timer class 
+        ISR function for Timer1, gets executed every MotorPin.SAMPLE_TIME, until samples list is finished
+        '''
+        self.motor_pin.duty_u16(self.samples_on[self.current_index])
+        self.current_index += 1
+        if self.current_index > self.num_samples:
+            self.current_index = 0
+            self.timer.deinit()
 
     def _sweep_on(self):
         '''
@@ -187,37 +223,11 @@ class MotorPin:
         :param x: redundant variable for Timer class 
         ISR function for Timer1, gets executed every MotorPin.SAMPLE_TIME, until samples list is finished
         '''
-        self.motor_pin.duty_u16(self.samples_off[self.current_index_on])
-        self.current_index_off += 1
-        if self.current_index_off >= self.num_samples_off:
-            self.current_index_off = 0
+        self.motor_pin.duty_u16(self.samples_off[self.current_index])
+        self.current_index += 1
+        if self.current_index > self.num_samples:
+            self.current_index = 0
             self.timer.deinit()
-
-    def set_sweep_off_variables(self, sweep_time: int):
-        '''
-        :time in ms!!!!
-
-        sets the variables when the motor.sweep_time is set
-        This is to not do complex computation every time we call .sweep_on()
-        '''
-        try:
-            m = 1/sweep_time
-            self.num_samples_off = ceil(sweep_time/MotorPin.SAMPLE_TIME)
-
-            self.samples_off = []
-            # This expression turns 1 to -1 and 0 to 1, aka reversing order if is_active_low
-            for ind in range(self.num_samples_off, 1)[::(int(not self.is_active_low) -1*self.is_active_low)]:
-                self.samples_off.append(int(m*ind*self.maximum_duty_cycle))
-
-            # last value MUST be 0 or maximum_duty_cycle
-            self.samples_off.append(MotorPin.OFF_VALUE[self.pin_pwm_mode][self.is_active_low])
-
-            # setting the on function, the function that will be used by user
-            self.off = self._sweep_off
-
-        except ZeroDivisionError:
-            # setting the on function, the function that will be used by user
-            self.off = self._instantaneous_off
 
     def _sweep_off(self):
         '''
@@ -227,7 +237,6 @@ class MotorPin:
         sweeps PWM to wanted signal
         '''
         self.timer.init(mode=Timer.PERIODIC, period=MotorPin.SAMPLE_TIME, callback=self._update_pwm_duty_cycle_sweep_off)
-
 
     def __repr__(self):
         return f"{repr(self.motor_pin)}, state: {self.state}"
@@ -282,7 +291,7 @@ class Motor:
         :param maximum_duty_cycle: its default is set in class variables ON_VALUE and OFF_VALUE in MotorPin, if it's assigned it will be assigned there too
         :param sweep_time: in ms, is the time where PWM turns from one state to the other
         '''
-        #TODO: type an range check everything
+        #TODO: type check and range check everything
 
         # dictionary to map cw_ccw value to corresponding activating cw/ccw method
         self.cw_func = {Dir.CW: self.cw, Dir.CCW: self.ccw}
@@ -295,13 +304,15 @@ class Motor:
 
         # User Motor control pins
         self.v1 = MotorPin(pin = self._v1_pin, is_active_low = v1_active_low, 
-                sweep_time=sweep_time, maximum_duty_cycle=maximum_duty_cycle)
+                sweep_time=sweep_time)
         self.v2 = MotorPin(pin = self._v2_pin, is_active_low = v2_active_low,
-                 sweep_time=sweep_time, maximum_duty_cycle=maximum_duty_cycle)
+                 sweep_time=sweep_time)
         self.g1 = MotorPin(pwm = self._g1_pwm, is_active_low = g1_active_low,
-                 sweep_time=sweep_time, maximum_duty_cycle=maximum_duty_cycle)
+                 sweep_time=sweep_time, maximum_duty_cycle=maximum_duty_cycle,
+                 timer_ind=1)
         self.g2 = MotorPin(pwm = self._g2_pwm, is_active_low = g2_active_low,
-                 sweep_time=sweep_time, maximum_duty_cycle=maximum_duty_cycle)
+                 sweep_time=sweep_time, maximum_duty_cycle=maximum_duty_cycle,
+                 timer_ind=2)
 
         # must initialize internal variable nonetheless
         self._sweep_time = sweep_time
@@ -332,10 +343,8 @@ class Motor:
         which in turn assigns the .on() method to ._instantaneous_on/off or ._sweep_on/off
         and also calculates needed variables for PWM sweeping algorithm to work properly
         '''
-        self.g1.set_sweep_on_variables(value)
-        self.g2.set_sweep_on_variables(value)
-        self.g1.set_sweep_off_variables(value)
-        self.g2.set_sweep_off_variables(value)
+        self.g1.set_sweep_variables(value)
+        self.g2.set_sweep_variables(value)
         self._sweep_time = value
 
     @property
@@ -364,13 +373,37 @@ class Motor:
         '''
         deactivates H-bridge
         '''
-        # Turning off any power source
-        self.v1.off()
-        self.v2.off()
+        if self.v1.state:
 
-        # Grounding both motor pins
-        self.g1.on()
-        self.g2.on()
+            # prevent shorts
+            self.g1._instantaneous_off() 
+            
+            # Turning motor power off
+            if self.g2.state:
+                self.g2.off()
+                # without this +1, the ._instantaneous_on won't work for some reason ?!??!!
+                sleep_ms(self.sweep_time+1) 
+
+            self.v1.off()
+            self.v2.off() # just in case
+
+        elif self.v2.state:
+
+            # prevent shorts
+            self.g2._instantaneous_off()
+
+            # Turning motor power off
+            if self.g1.state:
+                self.g1.off()
+                # without this +1, the ._instantaneous_on won't work for some reason ?!??!!
+                sleep_ms(self.sweep_time+1)
+
+            self.v2.off()
+            self.v1.off() # just in case
+
+        # grounding both motor pins
+        self.g1._instantaneous_on()
+        self.g2._instantaneous_on()
 
     @property
     def is_on(self):
@@ -383,16 +416,20 @@ class Motor:
     def cw(self):
         '''
         clockwise motion
-        #TODO: implement gradual duty_cycle incrementing to avoid motor sudden vibrations
-        '''
-        # first closing the circuit to ensure no dead-time short
-        self.off()
 
-        # setting all pins that won't sweep
-        self.v1.on()
-        self.v2.off()
-        self.g1.off()
-        self.g2.on()
+        #TODO: try to make a routine that takes into consideration short circuits more without adding too much logic
+        '''
+        if self.g2.state:
+            self.g2.off()
+            sleep_ms(self.sweep_time)
+
+        self.v1.off()
+
+        self.v2.on()
+        
+        if not self.g1.state:
+            self.g1.on()
+            sleep_ms(self.sweep_time)
 
         # Saving current state
         self._cw_ccw = True
@@ -401,14 +438,17 @@ class Motor:
         '''
         anti-clockwise motion
         '''
-        # first closing the circuit to ensure no dead-time short
-        self.off()
+        if self.g1.state:
+            self.g1.off()
+            sleep_ms(self.sweep_time)
 
-        # setting all pins that won't sweep
-        self.v1.off()
-        self.v2.on()
-        self.g1.on()
-        self.g2.off()
+        self.v2.off()
+
+        self.v1.on()
+
+        if not self.g2.state:
+            self.g2.on()
+            sleep_ms(self.sweep_time)
 
         # Saving current state
         self._cw_ccw = False
@@ -448,7 +488,7 @@ class Motor:
             return f"Motor is ON, moving {string_dir}, V1: {self.v1.state}, V2: {self.v2.state}, G1: {self.g1.state}, G2: {self.g2.state}"
 
         else:
-            return "Motor is OFF, V1: {self.v1.state}, V2: {self.v2.state}, G1: {self.g1.state}, G2: {self.g2.state}"
+            return f"Motor is OFF, V1: {self.v1.state}, V2: {self.v2.state}, G1: {self.g1.state}, G2: {self.g2.state}"
 
 
 
