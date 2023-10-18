@@ -27,7 +27,7 @@
 // put the function that takes in the output of the pid controller to influence the plant
 #define PID_OUTPUT_FUNC(v) heater_set(v)
 
-// comment out to not report outputs
+// comment out to not report pid outputs
 #define REPORT_LAST_OUTPUT
 
 #endif

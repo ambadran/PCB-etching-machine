@@ -20,6 +20,7 @@ void main(void) {
   timer1_init();
   timer2_init();
   cpp1_init();
+  cpp2_init();
   heater_init();
 
   // Testing

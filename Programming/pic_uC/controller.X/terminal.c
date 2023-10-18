@@ -9,9 +9,18 @@
 
 void terminal_execute_line(char* line) {
 
+  // Mode functions are functions that don't pass argument
+  // with command word
+  // instead they pass function mode with command letter
+  // and then pass argument in argument letter 
+  // e.g- 'G' -> cpp funcs
+  uint8_t mode_func_ind = MODE_FUNC_NONE;
+
   uint8_t char_count = 0;
   char letter;
   value_t value;  // union of either float or long int depending on user input
+  uint8_t int_value; // meant to be assigned to x in Gx.0
+  uint16_t mantissa; // not really the mantissa defined by xc8 compiler, it's what the gerber code named it. It's basically the mantissa without the whole number digits.
   while (line[char_count] != 0) {
 
     // Reading letter argument, aka which function to execute
@@ -20,9 +29,12 @@ void terminal_execute_line(char* line) {
     // incrementing char_count for next iteration
     char_count++;
 
-    // only capital letters expected
-    if ((letter < 'A') || (letter > 'Z')) { 
-      print_str("Expected a capital command letter!\n"); 
+    // IMP: capital letters are command letters
+    //      small letters are argument letters
+    // Checking letter is a letter
+    // checking if it's before A or after z or any character in between Z and a in the ascii table
+    if ( letter < 'A' || letter > 'z' || (letter > 'Z' && letter < 'a')) {
+      print_str("Expected a letter!\n"); 
       continue;
     }
 
@@ -85,6 +97,13 @@ void terminal_execute_line(char* line) {
 
 
       case 'G':
+        // command letter value will only choose
+        // if we want to control cpp1 or cpp2
+        // and if we want to control frequency or duty cycle
+        // 
+        // So the loop will continue on to catch letter 'p'
+        // which has the frequency/duty_cycle value for cpp1/2
+        // only then will the actual function get executed
 
         // reading int argument
         if (!read_int(line, &char_count, &value)) {
@@ -92,35 +111,23 @@ void terminal_execute_line(char* line) {
           break;
         }
 
-        // controlling cpp frequency
-        cpp1_freq(value.long_int);
+        mode_func_ind = MODE_FUNC_CPP;
 
-        // Reporting
-        print_str("cpp1_freq(");
-        print_int((int)value.long_int);
-        print_str(")\n");
+        selected_cpp = trunc(value);
+        selected_freq_duty =  round(100*(value - int_value));
+
         break;
 
       case 'H':
-        // reading int argument
-        if (!read_int(line, &char_count, &value)) {
-          print_str("Bad int Number Format\n");
-          break;
-        }
 
-        // controlling cpp frequency
-        cpp1_duty_cycle((float)value.long_int);
-
-        // Reporting
-        print_str("cpp1_duty_cycle(");
-        print_int((int)value.long_int);
-        print_str(")\n");
         break;
 
       case 'I':
         // reading int argument
         if (!read_int(line, &char_count, &value)) {
-          print_str("Bad int Number Format\n");
+          print_str("Current Heating Value: ");
+          print_int((uint8_t)current_heating_value);
+          print_char('\n');
           break;
         }
 
@@ -133,14 +140,6 @@ void terminal_execute_line(char* line) {
         break;
 
       case 'J':
-
-        // printing current heatering value
-        print_str("Current Heating Value: ");
-        print_int((uint8_t)current_heating_value);
-        print_char('\n');
-        break;
-
-      case 'K':
 
         // reading float argument
         if (!read_float(line, &char_count, &value)) {
@@ -159,7 +158,7 @@ void terminal_execute_line(char* line) {
         print_str(")\n");
         break;
 
-      case 'L':
+      case 'K':
 
         // Activating PID controller !
         pid_activate();
@@ -169,7 +168,7 @@ void terminal_execute_line(char* line) {
 
         break;
 
-      case 'M':
+      case 'L':
 
         // Activating PID controller !
         pid_deactivate();
@@ -179,7 +178,7 @@ void terminal_execute_line(char* line) {
 
         break;
 
-      case 'N':
+      case 'M':
 
         // toggling PID report status
         pid_report_show = !pid_report_show;
@@ -192,10 +191,71 @@ void terminal_execute_line(char* line) {
         break;
 
       default:
+
+        switch(letter) {
+
+          case 'a':
+            // reading int argument
+            if (!read_int(line, &char_count, &value)) {
+              print_str("Bad int Number Format\n");
+            }
+            break;
+
+          case 'b':
+            // reading float argument
+            if (!read_float(line, &char_count, &value)) {
+              print_str("Bad float Number Format\n");
+              break;
+            }
+
+        }
         print_str("Command Letter Not Implemented\n");
         break;
 
     }
+
+  }
+  /* Parsing complete! (and non mode funcs are executed too)*/
+
+  // The rest of the steps are only Applicable for Mode funcs
+  if (mode_func_ind == MODE_FUNC_NONE) {
+    return;
+  }
+
+  /* [ Step 3: Error checking ] */
+  switch(mode_func_ind) {
+
+    case MODE_FUNC_CPP:
+      if (selected_cpp > 1) {
+
+        print_str("ERROR: selected cpp module is either 0 or 1 for cpp1 or cpp2 respectively.\n");
+        return;
+
+      } else if (selected_freq_duty > 1) {
+
+        print_str("ERROR: can only choose 0 for frequency control and 1 for duty cycle control");
+        return;
+
+      }
+
+  }
+
+  /* [ Step 4: Execute! ] */
+  switch (mode_func_ind) {
+
+    case MODE_FUNC_CPP:
+
+        // controlling cpp frequency
+        cpp1_freq(value.long_int);
+        // controlling cpp frequency
+        cpp1_duty_cycle((float)value.long_int);
+
+        // Reporting
+        print_str("cpp");
+        print_int(selected_cpp+1);
+        print_str(cpp_func_print_string[selected_freq_duty])
+        print_int((int)value.long_int);
+        print_str(")\n");
 
   }
 

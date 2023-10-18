@@ -27,7 +27,7 @@ class MotorPin:
     ON_VALUE = [[1, 0], [65535, 0]]
     OFF_VALUE = [[0, 1], [0, 65535]]
     VALUES = [OFF_VALUE, ON_VALUE]
-    SAMPLE_ORDER_BIT = [[-1, 1], [1, -1]]  # off/on then activehigh/low
+    SAMPLE_ORDER_SLICE_BIT = [1, -1]
 
     # other constants
     SAMPLE_TIME = 1  # ms 
@@ -108,8 +108,6 @@ class MotorPin:
         if not state_before:
             self.motor_pin.duty_u16(0)
 
-
-
     @property
     def state(self):
         '''
@@ -165,6 +163,34 @@ class MotorPin:
         '''
         self.motor_pin.duty(value)
 
+#     def a(self, sweep_time: int):
+#         try:
+#             m = 1/sweep_time
+
+#             # try sweep/sample = 10/2.x
+#             # must always have number rounded down then add the 10 at the end manually in any case
+#             self.num_samples = floor(sweep_time/MotorPin.SAMPLE_TIME)
+
+#             samples = []
+#             for ind in range(0, self.num_samples):
+#                 samples.append(int(m*ind*MotorPin.SAMPLE_TIME*self.maximum_duty_cycle))
+
+#             # Adding maximum value to ensure extremes are covered when uneven samples
+#             samples.append(self.maximum_duty_cycle)
+
+#             # inversing list order if necessary
+#             self.samples_off = samples[::MotorPin.SAMPLE_ORDER_SLICE_BIT[0][self.is_active_low]]
+#             self.samples_on = samples[::MotorPin.SAMPLE_ORDER_SLICE_BIT[1][self.is_active_low]]
+
+#             # setting the on function, the function that will be used by user
+#             self.on = self._sweep_on
+#             self.off = self._sweep_off
+
+#         except ZeroDivisionError:
+#             # setting the on function, the function that will be used by user
+#             self.on = self._instantaneous_on
+#             self.off = self._instantaneous_off
+ 
     def set_sweep_variables(self, sweep_time: int):
         '''
         :time in ms!!!!
@@ -173,33 +199,7 @@ class MotorPin:
         This is to not do complex computation every time we call .sweep_on()
         #TODO: implement exponential set points instead of linear as DC motor is like that
         '''
-        # try:
-        #     m = 1/sweep_time
-
-        #     # try sweep/sample = 10/2.x
-        #     # must always have number rounded down then add the 10 at the end manually in any case
-        #     self.num_samples = floor(sweep_time/MotorPin.SAMPLE_TIME)
-
-        #     samples = []
-        #     for ind in range(0, self.num_samples):
-        #         samples.append(int(m*ind*MotorPin.SAMPLE_TIME*self.maximum_duty_cycle))
-
-        #     # Adding maximum value to ensure extremes are covered when uneven samples
-        #     samples.append(self.maximum_duty_cycle)
-
-        #     # inversing list order if necessary
-        #     self.samples_off = samples[::MotorPin.SAMPLE_ORDER_BIT[0][self.is_active_low]]
-        #     self.samples_on = samples[::MotorPin.SAMPLE_ORDER_BIT[1][self.is_active_low]]
-
-        #     # setting the on function, the function that will be used by user
-        #     self.on = self._sweep_on
-        #     self.off = self._sweep_off
-
-        # except ZeroDivisionError:
-        #     # setting the on function, the function that will be used by user
-        #     self.on = self._instantaneous_on
-        #     self.off = self._instantaneous_off
-        
+      
         #TODO: test the shit out of this >:)
         try:
             m = (e+1)/sweep_time
@@ -212,8 +212,8 @@ class MotorPin:
             self.samples_off = []
             for ind in range(0, self.num_samples+1):
                 # Equation derivation and graphs in iPad notes
-                self.samples_off.append(-e**(m*ind*MotorPin.SAMPLE_TIME -1 -e) + 1)
-                self.samples_on.append(-e**(-m*ind*MotorPin.SAMPLE_TIME) + 1)
+                self.samples_off.append(round( (-e**(m*ind*MotorPin.SAMPLE_TIME -1 -e) + 1)*self.maximum_duty_cycle ))
+                self.samples_on.append(round( (-e**(-m*ind*MotorPin.SAMPLE_TIME) + 1)*self.maximum_duty_cycle ))
 
             # The expoenential equations I set is upto 97.57% of the value
             # So must add the 65535 manually
@@ -222,8 +222,8 @@ class MotorPin:
             self.num_samples += 1  # I added a value so must samples++
 
             # Reverse for is_active_low
-            self.samples_off = self.samples_off[::MotorPin.SAMPLE_ORDER_BIT[0][self.is_active_low]]
-            self.samples_on = self.samples_on[::MotorPin.SAMPLE_ORDER_BIT[1][self.is_active_low]]
+            self.samples_off = self.samples_off[::MotorPin.SAMPLE_ORDER_SLICE_BIT[self.is_active_low]]
+            self.samples_on = self.samples_on[::MotorPin.SAMPLE_ORDER_SLICE_BIT[self.is_active_low]]
 
             # setting the on function, the function that will be used by user
             self.on = self._sweep_on
@@ -233,7 +233,7 @@ class MotorPin:
             # setting the on function, the function that will be used by user
             self.on = self._instantaneous_on
             self.off = self._instantaneous_off
-
+       
     def _update_pwm_duty_cycle_sweep_on(self, x):
         '''
         :param x: redundant variable for Timer class 

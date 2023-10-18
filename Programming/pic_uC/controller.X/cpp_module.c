@@ -16,7 +16,19 @@ void cpp1_init(void) {
  
   // setting RC2 to be output
   CCP1_TRIS = 0;
-  TRISC2 = 0;
+
+  // Timer2 ON
+  TMR2ON = 1;
+
+}
+
+void cpp2_init(void) {
+
+  // setting CCP module to PWM mode
+  CCP2CONbits.CCP2M= 0b1100;
+ 
+  // setting RC1 to be output
+  CCP2_TRIS = 0;
 
   // Timer2 ON
   TMR2ON = 1;
@@ -74,5 +86,24 @@ void cpp1_duty_cycle(float duty_cycle) {
   DC1B0 = ((uint16_t)duty_cycle) & 1;
   DC1B1 = ((uint16_t)duty_cycle) & 2;
   CCPR1L = ((uint16_t)duty_cycle) >> 2;
+
+}
+
+void cpp2_duty_cycle(float duty_cycle) {
+  // NOTE: I regular try to optimize this function and make duty_cycle int8_t 
+  // PLEASE REMEMBER THE duty_cycle variable is also used to get assigned to 
+  // the duty_cycle registers, which means no extra variable has to be created!
+  // I HOPE I DON'T FORGET AGAIN ;)
+  //
+  // NOW, I have completely changed to a float ;)
+  // because it needs to be multiplied by a float!
+
+  // re-using the parameter variable to be the duty_cycle value
+  duty_cycle *= duty_cycle_constant;
+
+  // setting the duty_cycle
+  DC2B0 = ((uint16_t)duty_cycle) & 1;
+  DC2B1 = ((uint16_t)duty_cycle) & 2;
+  CCPR2L = ((uint16_t)duty_cycle) >> 2;
 
 }
