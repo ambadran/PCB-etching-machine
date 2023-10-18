@@ -62,12 +62,23 @@ class MotorPin:
             # Sweeping functions variables
             if timer_ind is None:
                 raise ValueError("Must specify a distinct timer for this pwm value")
-            self.timer = Timer(timer_ind)
 
+            # esp32sx supports Timer id, raspberry pi pico doesn't, it only takes -1 and it makes a virtual timer
+            try:
+                self.timer = Timer(timer_ind)
+
+            except ValueError:
+                self.timer = Timer()
             # initializing start index
             self.current_index = 0
                 
             # here is where the .on and .off methods are assigned
+            if is_active_low:
+                self.set_sweep_variables = self.set_sweep_variables_active_low
+
+            else:
+                self.set_sweep_variables = self.set_sweep_variables_active_high
+
             self.set_sweep_variables(sweep_time)
 
     @property
@@ -163,7 +174,10 @@ class MotorPin:
         '''
         self.motor_pin.duty(value)
 
-#     def a(self, sweep_time: int):
+#     def set_sweep_variables(self, sweep_time: int):
+        # '''
+        # PWM sweeping with a linear equation
+        # '''
 #         try:
 #             m = 1/sweep_time
 
@@ -190,8 +204,8 @@ class MotorPin:
 #             # setting the on function, the function that will be used by user
 #             self.on = self._instantaneous_on
 #             self.off = self._instantaneous_off
- 
-    def set_sweep_variables(self, sweep_time: int):
+
+    def set_sweep_variables_active_high(self, sweep_time: int):
         '''
         :time in ms!!!!
 
@@ -221,10 +235,6 @@ class MotorPin:
             self.samples_on.append(self.maximum_duty_cycle)
             self.num_samples += 1  # I added a value so must samples++
 
-            # Reverse for is_active_low
-            self.samples_off = self.samples_off[::MotorPin.SAMPLE_ORDER_SLICE_BIT[self.is_active_low]]
-            self.samples_on = self.samples_on[::MotorPin.SAMPLE_ORDER_SLICE_BIT[self.is_active_low]]
-
             # setting the on function, the function that will be used by user
             self.on = self._sweep_on
             self.off = self._sweep_off
@@ -234,6 +244,45 @@ class MotorPin:
             self.on = self._instantaneous_on
             self.off = self._instantaneous_off
        
+    def set_sweep_variables_active_low(self, sweep_time: int):
+        '''
+        :time in ms!!!!
+
+        sets the variables when the motor.sweep_time is set
+        This is to not do complex computation every time we call .sweep_on()
+        #TODO: implement exponential set points instead of linear as DC motor is like that
+        '''
+      
+        #TODO: test the shit out of this >:)
+        try:
+            m = (e+1)/sweep_time
+
+            # try sweep/sample = 10/2.x
+            # must always have number rounded down then add the 10 at the end manually in any case
+            self.num_samples = floor(sweep_time/MotorPin.SAMPLE_TIME)
+
+            self.samples_on = []
+            self.samples_off = []
+            for ind in range(0, self.num_samples+1):
+                # Equation derivation and graphs in iPad notes
+                self.samples_off.append(round( (e**(m*ind*MotorPin.SAMPLE_TIME - 1 -e))*self.maximum_duty_cycle ))
+                self.samples_on.append(round( (e**(-m*ind*MotorPin.SAMPLE_TIME))*self.maximum_duty_cycle ))
+
+            # The expoenential equations I set is upto 97.57% of the value
+            # So must add the 65535 manually
+            self.samples_off.insert(0, 0)
+            self.samples_on.append(0)
+            self.num_samples += 1  # I added a value so must samples++
+
+            # setting the on function, the function that will be used by user
+            self.on = self._sweep_on
+            self.off = self._sweep_off
+
+        except ZeroDivisionError:
+            # setting the on function, the function that will be used by user
+            self.on = self._instantaneous_on
+            self.off = self._instantaneous_off
+
     def _update_pwm_duty_cycle_sweep_on(self, x):
         '''
         :param x: redundant variable for Timer class 
@@ -336,8 +385,10 @@ class Motor:
         # low-level Motor control pin variables
         self._v1_pin = Pin(v1_pin_num, Pin.OUT)
         self._v2_pin = Pin(v2_pin_num, Pin.OUT)
-        self._g1_pwm = PWM(Pin(g1_pin_num), freq=pwm_freq)
-        self._g2_pwm = PWM(Pin(g2_pin_num), freq=pwm_freq)
+        self._g1_pwm = PWM(Pin(g1_pin_num))
+        self._g1_pwm.freq(pwm_freq)
+        self._g2_pwm = PWM(Pin(g2_pin_num))
+        self._g2_pwm.freq(pwm_freq)
 
         # User Motor control pins
         self.v1 = MotorPin(pin = self._v1_pin, is_active_low = v1_active_low, 
@@ -552,7 +603,12 @@ class LimitSwitch:
         self.activate_irq()
         
         # Timer variable
-        self.timer = Timer(0)
+        # esp32sx supports Timer id, raspberry pi pico doesn't, it only takes -1 and it makes a virtual timer
+        try:
+            self.timer = Timer(0)
+
+        except ValueError:
+            self.timer = Timer()
 
         # Tracking variable
         self.is_activated = False
