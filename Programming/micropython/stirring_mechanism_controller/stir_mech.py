@@ -469,7 +469,9 @@ class Motor:
             if self.g2.state:
                 self.g2.off()
                 # without this +1, the ._instantaneous_on won't work for some reason ?!??!!
-                sleep_ms(self.sweep_time+1) 
+                # sleep_ms(self.sweep_time+1) 
+                while self.g2.state:
+                    pass
 
             self.v1.off()
             self.v2.off() # just in case
@@ -483,7 +485,9 @@ class Motor:
             if self.g1.state:
                 self.g1.off()
                 # without this +1, the ._instantaneous_on won't work for some reason ?!??!!
-                sleep_ms(self.sweep_time+1)
+                # sleep_ms(self.sweep_time+1)
+                while self.g1.state:
+                    pass
 
             self.v2.off()
             self.v1.off() # just in case
@@ -507,7 +511,9 @@ class Motor:
         '''
         if self.g2.state:
             self.g2.off()
-            sleep_ms(self.sweep_time)
+            # sleep_ms(self.sweep_time)
+            while self.g2.state:
+                pass
 
         self.v1.off()
 
@@ -515,7 +521,9 @@ class Motor:
         
         if not self.g1.state:
             self.g1.on()
-            sleep_ms(self.sweep_time)
+            # sleep_ms(self.sweep_time)
+            while not self.g1.state:
+                pass
 
         # Saving current state
         self._cw_ccw = True
@@ -526,7 +534,9 @@ class Motor:
         '''
         if self.g1.state:
             self.g1.off()
-            sleep_ms(self.sweep_time)
+            # sleep_ms(self.sweep_time)
+            while self.g1.state:
+                pass
 
         self.v2.off()
 
@@ -534,7 +544,9 @@ class Motor:
 
         if not self.g2.state:
             self.g2.on()
-            sleep_ms(self.sweep_time)
+            # sleep_ms(self.sweep_time)
+            while not self.g2.state:
+                pass
 
         # Saving current state
         self._cw_ccw = False
@@ -583,27 +595,25 @@ class LimitSwitch:
 
     NB: ISR here is specifically implemented to change motor direction to a specific orientation
     '''
-    def __init__(self, pin_num: int, motor_object: Motor, motor_dir: bool):
+    def __init__(self, sw_pin_num: int, motor_object: Motor, motor_dir: Dir):
         '''
         constructor
         '''
         # initializing pin
-        self.irq_pin = Pin(pin_num, Pin.IN)
+        self.irq_pin = Pin(sw_pin_num, Pin.IN)
 
         # Setting interrupt service routine method
         self.motor: Motor = motor_object
 
-        if motor_dir == Dir.CW:
-            self._motor_func = self.motor.cw
-
-        elif motor_dir == Dir.CCW:
-            self._motor_func = self.motor.ccw
+        # setter function to set the ._motor_func and set an internal value holding current
+        # orientation the limit switch will point the motor to when engaged
+        self.orientation = motor_dir
 
         # Activating IRQ pin
         self.activate_irq()
         
         # Timer variable
-        # esp32sx supports Timer id, raspberry pi pico doesn't, it only takes -1 and it makes a virtual timer
+        # esp32sx supports Timer id, raspberry pi pico doesn't, it only takes -1 (virtual timer)
         try:
             self.timer = Timer(0)
 
@@ -612,6 +622,28 @@ class LimitSwitch:
 
         # Tracking variable
         self.is_activated = False
+
+    @property
+    def orientation(self):
+        '''
+        returns the internal variable that returns the direction the limit switch
+        points the motor to when engaged
+        '''
+        return self._orientation
+
+    @orientation.setter
+    def orientation(self, direction: Dir):
+        '''
+        sets the direction the motor will go to when limit switch is engaged
+        '''
+        self._motor_func = self.motor.cw_func[direction]
+        self._orientation = direction
+
+    def flip_orientation(self):
+        '''
+        reverses orientation set
+        '''
+        self.orientation = not self.orientation
 
     def _ISR(self):
         '''
@@ -633,13 +665,12 @@ class LimitSwitch:
 
             self._motor_func()
             self.is_activated = True
-            print('irq happenned', self.irq_pin, '\n')  #TODO: remove this after extensive testing
+            print('irq happenned', self.irq_pin, '\n')  # comment this after extensive testing
 
 
         # As measured from oscilloscope the limit switches bounces for about 700 ms
         # So to deal with it, will deactivate IRQ for 1ms
         # The timer solution didn't, I think the IRQ raised while function is being processed?!?
-
 
     def reset_activated_status(self):
         self.is_activated = False
@@ -662,13 +693,86 @@ class StirringMechanism:
     '''
     Class to handle the Whole Mechanism
     '''
-    def __init__(self, motor: Motor, limit_sw1: LimitSwitch, limit_sw2: LimitSwitch):
+    def __init__(self, **kwargs):
         '''
         Constructor
         '''
-        self.motor = motor
-        self.limit_sw1 = limit_sw1
-        self.limit_sw2 = limit_sw2
+        m = 'motor' in kwargs.keys()
+        if m:
+            if type(motor) != Motor:
+                raise ValueError("motor argument should contain a Motor class instance")
+
+        l1 = 'limit_sw1' in kwargs.keys()
+        if l1:
+            if type(kwargs['limit_sw1']) != LimitSwitch:
+                raise ValueError("limit_sw1 argument should contain a LimitSwitch class instance")
+        
+        l2 = 'limit_sw2' in kwargs.keys()
+        if l2:
+            if type(kwargs['limit_sw2']) != LimitSwitch:
+                raise ValueError("limit_sw2 argument should contain a LimitSwitch class instance")
+
+        if m^l1 or m^l2:
+            raise ValueError("You could either pass all Motor and 2 LimitSwitch instances together \n OR pass all wanted Motor.__init__ arguments and tuple of 2 values for limit switch pin numbers 'sw_pin_num' and this __init__ method will create the instances")
+
+        # Motor instance and 2 LimitSwitch instances are passed so will assign them
+        if m:  # or l1 or l2
+            self.motor = kwargs['motor']
+            self.limit_sw1 = kwargs['limit_sw1']
+            self.limit_sw2 = kwargs['limit_sw2']
+
+        # Instances are not passed, so will create them manually
+        else:
+
+            # checking if the necessary arguments needed to initialize .motor, .limit_sw1 and .limit_sw2 are passed            
+            for necessary_arg in ['v1_pin_num', 'v2_pin_num', 'g1_pin_num', 'g2_pin_num', 
+                     'v1_active_low', 'v2_active_low', 'g1_active_low', 'g2_active_low',
+                     'sw_pin_num']:
+                if kwargs.get(necessary_arg) is None:
+                    raise ValueError(f"{necessary_arg} necessary argument is not passed, thus can't create needed objects of stirring mechanism")
+
+            # extracting arguments and light type checking (most type checking is done in the respective class)
+            motor_args = {}
+            for key, value in kwargs.items():
+                if key in ['v1_pin_num', 'v2_pin_num', 'g1_pin_num', 'g2_pin_num', 
+                     'v1_active_low', 'v2_active_low', 'g1_active_low', 'g2_active_low',
+                     'maximum_duty_cycle', 'sweep_time', 'pwm_freq']:
+                    motor_args[key] = value
+
+                elif key == 'sw_pin_num':
+                    if type(value) not in [list, tuple]:
+                        if len(value) != 2:
+                            raise ValueError("'sw_pin_num' argument must be a list or tuple of 2 values holding pin_num of limit_sw1 and limit_sw2 respectively")
+
+                    sw_pin_num1 = kwargs[key][0]
+                    sw_pin_num2 = kwargs[key][1]
+
+                else:
+                    raise ValueError("unknown argument")
+
+            if motor_args.get('maximum_duty_cycle') is None:
+                motor_args['maximum_duty_cycle'] = 65535  # setting a default value if it isn't passed in sr __init__
+
+            if motor_args.get('sweep_time') is None:
+                motor_args['sweep_time'] = 0  # setting a default value if it isn't passed in sr __init__
+
+            if motor_args.get('pwm_freq') is None:
+                motor_args['pwm_freq'] = 20000  # setting a default value if it isn't passed in sr __init__
+
+            self.motor = Motor(motor_args['v1_pin_num'], motor_args['v2_pin_num'], motor_args['g1_pin_num'], 
+                    motor_args['g2_pin_num'], motor_args['v1_active_low'], motor_args['v2_active_low'], 
+                    motor_args['g1_active_low'], motor_args['g2_active_low'], 
+                    maximum_duty_cycle=motor_args['maximum_duty_cycle'], sweep_time=motor_args['sweep_time'],
+                    pwm_freq=motor_args['pwm_freq'])
+            self.limit_sw1 = LimitSwitch(sw_pin_num1, self.motor, Dir.CW) 
+            self.limit_sw2 = LimitSwitch(sw_pin_num2, self.motor, Dir.CCW)
+
+    def flip_limit_switches(self):
+        '''
+        inverts Dir.CW and Dir.CCW  for sw1/2 or vice versa
+        '''
+        self.limit_sw1.flip_orientation()
+        self.limit_sw2.flip_orientation()
 
     def on(self):
         '''
@@ -693,11 +797,21 @@ class StirringMechanism:
             print(f"Motor dir: {self.motor._cw_ccw} \r")
 
 # Object Initializations
-# sweep_time = 100  # in ms
+
 motor = Motor(v1_pin_num=4, v2_pin_num=5, g1_pin_num=6, g2_pin_num=7, v1_active_low=False, v2_active_low=False, g1_active_low=True, g2_active_low=True, sweep_time=100, pwm_freq=1000)
+
 limit_sw1 = LimitSwitch(17, motor, Dir.CW)
+
 limit_sw2 = LimitSwitch(16, motor, Dir.CCW)
-sr = StirringMechanism(motor, limit_sw1, limit_sw2)
+
+sr = StirringMechanism(motor=motor, limit_sw1=limit_sw1, limit_sw2=limit_sw2)
+
+# sr2 = StirringMechanism(v1_pin_num=4, v2_pin_num=5, g1_pin_num=6, g2_pin_num=7, 
+#     v1_active_low=False, v2_active_low=False, g1_active_low=True, g2_active_low=True, 
+#     sweep_time=100, pwm_freq=1000, sw_pin_num=[17, 16])
+
+
+
 
 
 
