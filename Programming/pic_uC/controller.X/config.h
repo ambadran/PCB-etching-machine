@@ -5,16 +5,16 @@
 // uC specific configs
 #define _XTAL_FREQ (float)48000000.0
 
-/* User specific configs */
+/********* User specific configs **********/
 
-// UART configs
+/********************** UART configs **********************/
 #define UART_BAUDRATE 250000
 #define INT_DIGITS 5
 #define FLOAT_WHOLE_DIGITS 3
 #define FLOAT_WHOLE_DECIMALS 3
+/***************************************************/
 
-
-// PID configs
+/********************* PID configs **********************/
 #define Kp 22.4303
 #define Ki 0.005
 #define Kd 21.336
@@ -29,5 +29,16 @@
 
 // comment out to not report pid outputs
 #define REPORT_LAST_OUTPUT
+/***************************************************/
+
+
+/********************* DC Motor configs **********************/
+
+#define V1_ACTIVE_LOW_STATE 0
+#define V2_ACTIVE_LOW_STATE 0
+#define G1_ACTIVE_LOW_STATE 1
+#define G2_ACTIVE_LOW_STATE 1
+
+/***************************************************/
 
 #endif
