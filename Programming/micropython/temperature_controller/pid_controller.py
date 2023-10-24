@@ -6,58 +6,64 @@ from math import log
 from time import ticks_ms, ticks_ms, sleep_ms, sleep
 import _thread
 
+class Device:
+    ESP32S3 = 0
+    PICO = 0
+
+# Pin assignments
+ADC_PIN = {Device.PICO: 26, Device.ESP32S3: 15}
+PWM_PIN = {Device.PICO: 1, Device.ESP32S3: 8}
+
+# Choosing wanted device to select proper pin
+# device = Device.PICO
+device_name = Device.ESP32S3
+
+# For esp32s3, must choose a timer index
+PID_TIMER_IND = 2
+HEATER_STEP_SIGNAL_TIMER_IND = 3 
 
 def do_nothing():
     pass
-
 
 class Heater:
     '''
     Class to control Heater
     '''
-    pwm_pin = 1
 
-    def __init__(self):
+    def __init__(self, pwm_pin):
         '''
         setter method
         '''
         # attribute defs
-        self.pwm = PWM(Pin(Heater.pwm_pin))
+        self.pwm = PWM(Pin(pwm_pin))
+        self.pwm.freq(20000)
 
         # heater init
-        self.set_heat(0)
+        self.set(0)
 
         # constant attributes
         self.state_funcs = {False: self.off, True: self.on}
 
-    def set_heat_u16(self, value_u_16):
+    def set_u16(self, value_u_16):
         '''
         controls pwm with 16-bit value
-
-        NOTE: it also inverts the percentage (65534-value_u_16) as the pwm value is put through an inverter npn first for buffering the darlington npn
         '''
-        self.pwm.duty_u16((65534-value_u_16))
+        self.pwm.duty_u16((value_u_16))
 
-    def set_heat(self, percentage):
+    def set(self, percentage):
         '''
         controls pwm with percentage out of 100% instead of 65534
 
         NOTE: it also inverts the percentage (100-percentage) as the pwm value is put through an inverter npn first for buffering the darlington npn
         '''
-        self.pwm.duty_u16(int(((100-percentage)/100)*65534))
-
-    def off(self):
-        '''
-        just sets heater power to 0
-        '''
-        self.set_heat(0)
+        self.pwm.duty_u16(round((percentage/100)*65534))
 
     @property
     def percent(self):
         '''
         return current heating value
         '''
-        return round(100-(self.pwm.duty_u16()/65534)*100, 3)
+        return round((self.pwm.duty_u16()/65534)*100, 3)
 
     @property
     def raw_value(self):
@@ -72,20 +78,21 @@ class Heater:
 
         :param delay: in ms
         '''
-        self.set_heat(100)
-        temp_timer = Timer(period=delay, mode=Timer.ONE_SHOT, callback=lambda t:self.set_heat(0))
+        self.set(100)
+        temp_timer = Timer(HEATER_STEP_SIGNAL_TIMER_IND)
+        temp_timer.init(period=delay, mode=Timer.ONE_SHOT, callback=lambda t:self.set(0))
 
     def on(self):
         '''
         turns heater 100%
         '''
-        self.set_heat(100)
+        self.set(100)
 
     def off(self):
         '''
         turns heater 0%
         '''
-        self.set_heat(0)
+        self.set(0)
     
     def state(self, state):
         '''
@@ -97,16 +104,14 @@ class Heater:
         '''
         displays current heating value
         '''
-        return f"Heater at {self.percent}% which is {self.raw_value} pwm u_16 NOT INVERTED"
+        return f"Heater at {self.percent}% which is {self.raw_value} pwm u_16 "
 
 
 class Thermistor:
     '''
     Class to read and process Thermistor
     '''
-    adc_pin = 26
-
-    def __init__(self, Vcc, R_10k, num_samples, B_factor, R_nominal, room_temp):
+    def __init__(self, adc_pin, Vcc, R_10k, num_samples, B_factor, R_nominal, room_temp):
         '''
 
         :param Vcc: Vcc of micropython board, measure with multimeter to get exact value for more accuracy
@@ -116,7 +121,10 @@ class Thermistor:
         :param R_nominal: Thermistor resistance value at room temperature
         '''
         # User defined attributes
-        self.adc = ADC(Pin(Thermistor.adc_pin))
+        self.adc = ADC(Pin(adc_pin))
+        if device_name == Device.ESP32S3:
+            self.adc.atten(3)
+
         self.Vcc = Vcc
         self.R_10k = R_10k
         self.num_samples = num_samples
@@ -381,7 +389,15 @@ class PID:
         self.output_func = output_func if output_func is not None else self.output_func
 
         # Initializing the Hardware timer to start continiously calling .execute method
-        self._pid_timer = Timer(period=PID.HARDWARE_TIMER_dt, mode=Timer.PERIODIC, callback=self.execute)
+        if device_name == Device.ESP32S3:
+            self._pid_timer = Timer(PID_TIMER_IND)
+            self._pid_timer.init(period=PID.HARDWARE_TIMER_dt, mode=Timer.PERIODIC, callback=self.execute)
+
+        elif device_name == Device.PICO:
+            self._pid_timer = Timer(period=PID.HARDWARE_TIMER_dt, mode=Timer.PERIODIC, callback=self.execute)
+
+        else:
+            raise ValueError("unkonwn device")
 
         # activating Monitor if wanted
         if monitor:
@@ -468,16 +484,18 @@ def open_loop_step_response_test():
 # Creating Output Object -> Heater
 
 ### Initialize Thermistor Object 
+adc_pin = ADC_PIN[device_name]
 Vcc = 3.28
 R_10k = 9880
 num_samples = 5
 B_factor = 4300
 R_nominal = 9360
 room_temp = 25  # input here in celcuis, but in calculations, it will be converted to kelvin
-thermistor = Thermistor(Vcc, R_10k, num_samples, B_factor, R_nominal, room_temp)
+thermistor = Thermistor(adc_pin, Vcc, R_10k, num_samples, B_factor, R_nominal, room_temp)
 
 ### Initialize Heater Object
-heater = Heater()
+pwm_pin = PWM_PIN[device_name]
+heater = Heater(pwm_pin)
 
 ### Initialize PID Control Object
 Kp = 22.4303
@@ -487,7 +505,7 @@ setpoint = 45  # degrees celcuis
 min_output = 0  # output power unit in percentage
 max_output = 100
 
-pid = PID(Kp, Ki, Kd, setpoint, min_output, max_output, input_func=thermistor.read_T, output_func=heater.set_heat)
+pid = PID(Kp, Ki, Kd, setpoint, min_output, max_output, input_func=thermistor.read_T, output_func=heater.set)
 
 
 if __name__ == '__main__':
@@ -495,7 +513,7 @@ if __name__ == '__main__':
     # for ampyrun
     # pid.activate(monitor=True)
     # open_loop_step_response_test()
-    heater.set_heat(100)
+    heater.set(100)
     thermistor.monitor()
 
 

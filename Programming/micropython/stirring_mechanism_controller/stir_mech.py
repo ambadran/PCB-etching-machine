@@ -7,14 +7,19 @@ from machine import Pin, PWM, Timer, ADC
 from math import floor, e
 from time import sleep_ms
 
+# For esp32s3, must choose a timer index
+G1_Pin_SWEEP_FUNC_TIMER_IND = 0
+G2_Pin_SWEEP_FUNC_TIMER_IND = 1
+# LIMIT_SWITCH_TIMER_IND = 2  # not being used currently
 
+#TODO: import the enum library and make it so
+#       will be greatly benefited from when checking Motor._cw_ccw type and when displaying it in StirringMechanism2.on()
 class Dir:
     '''
     acts like an enum
     '''
     CW = True
     CCW = False
-
 
 class MotorPin:
     '''
@@ -61,7 +66,7 @@ class MotorPin:
 
             # Sweeping functions variables
             if timer_ind is None:
-                raise ValueError("Must specify a distinct timer for this pwm value")
+                raise ValueError("Must specify a distinct timer for this pwm value, for pico choose -1")
 
             # esp32sx supports Timer id, raspberry pi pico doesn't, it only takes -1 and it makes a virtual timer
             try:
@@ -69,6 +74,7 @@ class MotorPin:
 
             except ValueError:
                 self.timer = Timer()
+
             # initializing start index
             self.current_index = 0
                 
@@ -371,7 +377,8 @@ class Motor:
 
     def __init__(self, v1_pin_num: int, v2_pin_num: int, g1_pin_num: int, g2_pin_num: int, 
                  v1_active_low: bool, v2_active_low: bool, g1_active_low: bool, g2_active_low: bool,
-                 adc_pin_num: int=None, maximum_duty_cycle: int = 65535, sweep_time: int = 0, pwm_freq: int = 20000):
+                 adc_pin_num: int = None, default_atten: int = ADC.ATTN_11DB, maximum_duty_cycle: int = 65535,
+                 sweep_time: int = 0, pwm_freq: int = 20000):
         '''
         Constructor
         :param maximum_duty_cycle: its default is set in class variables ON_VALUE and OFF_VALUE in MotorPin, if it's assigned it will be assigned there too
@@ -397,10 +404,10 @@ class Motor:
                  sweep_time=sweep_time)
         self.g1 = MotorPin(pwm = self._g1_pwm, is_active_low = g1_active_low,
                  sweep_time=sweep_time, maximum_duty_cycle=maximum_duty_cycle,
-                 timer_ind=1)
+                 timer_ind=G1_Pin_SWEEP_FUNC_TIMER_IND)  #1
         self.g2 = MotorPin(pwm = self._g2_pwm, is_active_low = g2_active_low,
                  sweep_time=sweep_time, maximum_duty_cycle=maximum_duty_cycle,
-                 timer_ind=2)
+                 timer_ind=G2_Pin_SWEEP_FUNC_TIMER_IND)  #2
 
         # must initialize internal variable nonetheless
         self._sweep_time = sweep_time
@@ -415,7 +422,8 @@ class Motor:
         if adc_pin_num:
             # adc_pin_num given, so will initialize adc
             self.adc = ADC(Pin(adc_pin_num))
-            self.current = self.adc.read_uv
+            self.adc.atten(default_atten)
+            self.current = self.adc.read_u16
 
     @property
     def sweep_time(self):
@@ -621,7 +629,7 @@ class LimitSwitch:
         # Timer variable
         # esp32sx supports Timer id, raspberry pi pico doesn't, it only takes -1 (virtual timer)
         try:
-            self.timer = Timer(0)
+            self.timer = Timer(LIMIT_SWITCH_TIMER_IND)  #0
 
         except ValueError:
             self.timer = Timer()
@@ -698,6 +706,8 @@ class LimitSwitch:
 class StirringMechanism1:
     '''
     Class to handle the Whole Mechanism
+
+    Uses limit switches for feedback
     '''
     def __init__(self, **kwargs):
         '''
@@ -803,39 +813,42 @@ class StirringMechanism1:
         while True:
             print(f"Motor dir: {self.motor._cw_ccw} \r")
 
+
 class StirringMechanism2:
     '''
     Class to handle the Whole Mechanism
+
+    Uses current sensor for feedback
     '''
-    MINIMUM_VOLTAGE = 1000000  # 1M uV == 1V
     SLEEP_TIME = 150
-    def __init__(self, motor: Motor):
+    def __init__(self, motor: Motor, min_voltage: int, do_monitor: bool=True):
         '''
         Constructor
+
+        :param min_voltage: The voltage at which if the adc reads more than, will Motor.toggle_dir() 
+            MEASURED RANGE IN (0-65535)
         '''
         self.motor = motor
-        self.do_monitor = True
-
-    @classmethod
-    def update_min_voltage(cls, value):
-        '''
-        updates class variable
-        '''
-        cls.MINIMUM_VOLTAGE = value
+        self.min_voltage = min_voltage
+        self.do_monitor = do_monitor
 
     def on(self):
         '''
         Implementing a software latch
         '''
         try:
+            print("Starting Stirring Mechanism Control Algorithm... ")
             motor.on()
             while True:
-                while self.motor.current() < StirringMechanism2.MINIMUM_VOLTAGE:
-                    pass
+                current_now = self.motor.current()
+                while current_now < self.min_voltage:
+                    if self.do_monitor:
+                        print(f"Current: {current_now} \r", end='')
+                    current_now = self.motor.current()
 
                 self.motor.toggle_dir()
                 if self.do_monitor:
-                    print(f"Flipping to: {self.motor}\n")
+                    print(f"Flipping to: {self.motor._cw_ccw} @ current: {current_now}\n")
                 sleep_ms(StirringMechanism2.SLEEP_TIME)
 
         except KeyboardInterrupt:
@@ -847,19 +860,19 @@ class StirringMechanism2:
 
 # Object Initializations
 
-motor = Motor(v1_pin_num=4, v2_pin_num=5, g1_pin_num=6, g2_pin_num=7, v1_active_low=False, v2_active_low=False, g1_active_low=True, g2_active_low=True, adc_pin_num=14, sweep_time=100, pwm_freq=1000)
+motor = Motor(v1_pin_num=4, v2_pin_num=5, g1_pin_num=6, g2_pin_num=7, v1_active_low=False, v2_active_low=False, g1_active_low=True, g2_active_low=True, adc_pin_num=14, default_atten=3, sweep_time=100, pwm_freq=1000)
 
-limit_sw1 = LimitSwitch(17, motor, Dir.CW)
+# limit_sw1 = LimitSwitch(17, motor, Dir.CW)
 
-limit_sw2 = LimitSwitch(16, motor, Dir.CCW)
+# limit_sw2 = LimitSwitch(16, motor, Dir.CCW)
 
-sr1 = StirringMechanism1(motor=motor, limit_sw1=limit_sw1, limit_sw2=limit_sw2)
+# sr1 = StirringMechanism1(motor=motor, limit_sw1=limit_sw1, limit_sw2=limit_sw2)
 # sr1 = StirringMechanism(v1_pin_num=4, v2_pin_num=5, g1_pin_num=6, g2_pin_num=7, 
 #     v1_active_low=False, v2_active_low=False, g1_active_low=True, g2_active_low=True, 
 #     sweep_time=100, pwm_freq=1000, sw_pin_num=[17, 16])
 
 
-sr2 = StirringMechanism2(motor=motor)
+sr2 = StirringMechanism2(motor=motor, min_voltage=40000)
 
 
 
