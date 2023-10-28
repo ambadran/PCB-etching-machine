@@ -1,0 +1,6 @@
+
+#ifndef DIGITAL_POTENTIOMETER_H
+#define DIGITAL_POTENTIOMETER_H
+
+
+#endif

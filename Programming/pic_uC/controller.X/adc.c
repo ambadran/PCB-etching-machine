@@ -21,9 +21,8 @@ void adc_init(void) {
   // Result Format
   ADFM = 1;
 
-  // Configuration Pin A0 to be the only analogue pin and choosing it permenantly
-  ADCON1bits.PCFG = 0b1110; 
-  ADCON0bits.CHS = 0;
+  // Configuration Pin A0 and Pin A1 to be the only analogue pin
+  ADCON1bits.PCFG = 0b1101; 
 
   // Module ON
   ADON = 1;
@@ -31,7 +30,10 @@ void adc_init(void) {
 }
 
 // Reading ADC value
-int read_adc(void) {
+int read_adc(ADC_UTILIZING_DEVICE adc_utilizing_device) {
+    
+    ADCON0bits.CHS = adc_utilizing_device
+
     __delay_us(22); // delaying the acquisition time
     GO_DONE = 1;
     while(GO_DONE) {

@@ -9,7 +9,7 @@
 #include "includes.h"
 
 float read_V(void) {
-  return ((read_adc()*VCC)/1024);
+  return ((read_adc(THERMISTOR_ADC)*VCC)/1024);
   /* return (read_adc()*READ_V_CONSTANT) */
 }
 

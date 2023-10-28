@@ -22,7 +22,10 @@
 #define g2_set(v)
 #define g2_state()
 
-enum CW_CCW_STATE {CW, CCW};
+typedef enum {
+  CW,
+  CCW
+} CW_CCW_STATE;
 extern CW_CCW_STATE cw_ccw_state;
 
 void dc_motor_init(void);

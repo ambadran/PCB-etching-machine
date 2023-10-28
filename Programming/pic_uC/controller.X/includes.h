@@ -20,11 +20,12 @@
 #include "cpp_module.h"
 #include "uart.h"
 #include "comparators.h"
+#include "SPI.h"
 #include "thermistor.h"
 #include "heater.h"
 #include "pid.h"
+#include "digital_potentiometer.h"
 #include "dc_motor.h"
-#include "limit_switches.h"
 #include "protocol.h"
 #include "terminal.h"
 

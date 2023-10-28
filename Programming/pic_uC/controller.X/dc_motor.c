@@ -12,7 +12,7 @@ void dc_motor_init(void) {
 
   V1_TRIS = 0;
   V2_TRIS = 0;
-  DEMULTIPLEXER_TRIS = 0;
+  DEMULTIPLEXER_SELECT_TRIS = 0;
 
 }
 
